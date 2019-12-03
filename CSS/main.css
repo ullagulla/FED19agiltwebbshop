@@ -1,2 +1,10 @@
 .container-fluid header .nav-bar .navbar-toggler {
   border-color: white; }
+
+footer#sticky-footer {
+  flex-shrink: none; }
+  footer#sticky-footer #footer-container {
+    background-color: darkgray; }
+  footer#sticky-footer #img-box img {
+    height: 50%;
+    width: 50%; }
