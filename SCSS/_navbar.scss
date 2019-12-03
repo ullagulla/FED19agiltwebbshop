@@ -1,7 +1,6 @@
 @mixin font-style {
     font-family: nudista-web, sans-serif;
     font-style: normal;
-    font-weight: 100;
 }
 
 body {
@@ -49,8 +48,9 @@ body {
                     border-color: rgba(128, 128, 128, 0.733);
                     width: 100px;
                 }
-                h2 {
+                p {
                     text-transform: uppercase;
+                    font-weight: bold;
                 }
             }
         }
