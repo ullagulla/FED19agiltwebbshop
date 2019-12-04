@@ -75,7 +75,7 @@ body {
     @media (min-width: 600px) {
       body .container-fluid .container-fluid .row .img-container {
         background-image: url(../images/Serenity-image.jpg);
-        height: 400px; } }
+        height: 500px; } }
   body .container-fluid .container-fluid .row .txt-container {
     border-bottom: 1px solid rgba(128, 128, 128, 0.425); }
     body .container-fluid .container-fluid .row .txt-container h5 {
