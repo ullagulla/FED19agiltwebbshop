@@ -59,8 +59,7 @@ body {
 
 footer#sticky-footer {
   padding: 0px;
-  margin-top: 10px;
-  flex-shrink: none; }
+  margin-top: 10px; }
   footer#sticky-footer #footer-container {
     background-color: darkgray;
     height: 500px; }
