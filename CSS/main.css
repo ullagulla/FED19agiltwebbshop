@@ -42,25 +42,26 @@ footer#sticky-footer {
   padding: 0px;
   margin-top: 10px; }
   footer#sticky-footer #footer-container {
-    background-color: lightgray;
-    height: 500px;
+    height: 100%;
     margin: -10px; }
   footer#sticky-footer #inner-container {
-    background-color: lightgray;
     max-width: 100%;
-    flex: none; }
-  footer#sticky-footer .footer-info {
-    list-style: none;
-    font-size: 16px;
-    font-family: nudista-web, sans-serif;
-    font-style: normal;
-    font-weight: 300; }
-    footer#sticky-footer .footer-info li a {
-      color: black; }
-      footer#sticky-footer .footer-info li a:hover {
-        text-decoration: none; }
-  footer#sticky-footer #img-box img {
-    width: 100%; }
+    flex: none;
+    background-color: lightgray; }
+    footer#sticky-footer #inner-container .footer-info {
+      list-style: none;
+      font-size: 16px;
+      font-family: nudista-web, sans-serif;
+      font-style: normal;
+      font-weight: 300; }
+      footer#sticky-footer #inner-container .footer-info li a {
+        color: black; }
+        footer#sticky-footer #inner-container .footer-info li a:hover {
+          text-decoration: none; }
+  footer#sticky-footer #img-box {
+    margin: auto; }
+    footer#sticky-footer #img-box img {
+      width: 100%; }
   footer#sticky-footer #icon-box {
     background-color: #BAA6A4;
     height: 50px; }
