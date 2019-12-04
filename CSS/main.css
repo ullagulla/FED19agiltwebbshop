@@ -42,21 +42,18 @@ footer#sticky-footer {
   padding: 0px;
   margin-top: 10px; }
   footer#sticky-footer #footer-container {
-    height: 100%;
-    margin: -10px; }
-  footer#sticky-footer #inner-container {
-    max-width: 100%;
     flex: none;
     background-color: lightgray; }
-    footer#sticky-footer #inner-container .footer-info {
-      list-style: none;
+    footer#sticky-footer #footer-container .footer-info {
+      padding-left: 0;
+      list-style-type: none;
       font-size: 16px;
       font-family: nudista-web, sans-serif;
       font-style: normal;
       font-weight: 300; }
-      footer#sticky-footer #inner-container .footer-info li a {
+      footer#sticky-footer #footer-container .footer-info li a {
         color: black; }
-        footer#sticky-footer #inner-container .footer-info li a:hover {
+        footer#sticky-footer #footer-container .footer-info li a:hover {
           text-decoration: none; }
   footer#sticky-footer #img-box {
     margin: auto; }
