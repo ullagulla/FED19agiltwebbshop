@@ -15,6 +15,18 @@ body {
                     border: none;
                     color: black;
                 }
+                .navbar-collapse {
+                    .navbar-nav {
+                        .nav-item {
+                            .dropdown-menu {
+                                border: none;
+                                .dropdown-divider {
+                                    border-top: none;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .logo-wrapper {
                 position: absolute;
