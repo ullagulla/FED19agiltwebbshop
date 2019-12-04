@@ -12,7 +12,7 @@ body {
         border-top: none; }
     body .container-fluid .row .header-container .search {
       display: none; }
-      @media (min-width: 800px) {
+      @media (min-width: 768px) {
         body .container-fluid .row .header-container .search {
           display: inline-block;
           position: absolute;
@@ -66,9 +66,7 @@ footer#sticky-footer {
     height: 50px; }
 
 body {
-  font-family: nudista-web, sans-serif;
-  font-style: normal;
-  font-weight: 300; }
+  font-family: nudista-web, sans-serif; }
   body .container-fluid .row .img-container {
     background-image: url(../images/image-lp-mob.jpg);
     width: 100%;
@@ -98,10 +96,14 @@ body {
       body .container-fluid .row .prod-wrapper .prod-img img {
         width: 100%; }
     body .container-fluid .row .prod-wrapper .prod-info {
-      text-transform: uppercase;
       opacity: 0.7;
       position: absolute;
       top: 1px; }
+      body .container-fluid .row .prod-wrapper .prod-info .prod-name {
+        text-transform: uppercase; }
+      body .container-fluid .row .prod-wrapper .prod-info .prod-price {
+        text-transform: capitalize;
+        font-size: 12px; }
     body .container-fluid .row .prod-wrapper .prod-icons {
       position: absolute;
       opacity: 0.7;
@@ -110,6 +112,41 @@ body {
       body .container-fluid .row .prod-wrapper .prod-icons img {
         cursor: pointer; }
 
-.container-fluid .row .txt-container .txt-header {
+body .container-fluid .row .txt-container .txt-header {
   text-transform: capitalize;
   font-size: 45px; }
+
+body .container-fluid .row .prod-container {
+  position: relative;
+  flex-wrap: wrap;
+  width: 80%; }
+  body .container-fluid .row .prod-container .prod-img {
+    box-shadow: 0px 0px 14px -3px #8c898c; }
+    body .container-fluid .row .prod-container .prod-img img {
+      width: 100%; }
+  body .container-fluid .row .prod-container .prod-info {
+    text-transform: uppercase;
+    opacity: 0.7;
+    position: absolute;
+    top: 1px; }
+    body .container-fluid .row .prod-container .prod-info .prod-name {
+      text-transform: uppercase; }
+    body .container-fluid .row .prod-container .prod-info .prod-price {
+      text-transform: capitalize;
+      font-size: 12px; }
+  body .container-fluid .row .prod-container .prod-icons {
+    position: absolute;
+    opacity: 0.7;
+    bottom: 40px;
+    right: 10px; }
+    body .container-fluid .row .prod-container .prod-icons img {
+      cursor: pointer; }
+
+body .container-fluid .row #hide-mobile {
+  display: none; }
+  @media (min-width: 768px) {
+    body .container-fluid .row #hide-mobile {
+      display: block; } }
+  @media (min-width: 768px) and (min-width: 990px) {
+    body .container-fluid .row #hide-mobile {
+      display: none; } }
