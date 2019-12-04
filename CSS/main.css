@@ -31,7 +31,7 @@ footer#sticky-footer {
     background-color: darkgray;
     height: 500px; }
   footer#sticky-footer #img-box img {
-    width: 50%; }
+    width: 100%; }
 
 body {
   font-family: nudista-web, sans-serif;
