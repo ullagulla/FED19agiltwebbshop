@@ -13,6 +13,9 @@
 
     <link rel="stylesheet" href="CSS/main.css">
 
+    <script src="https://code.jquery.com/jquery-3.4.1.js" 
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
     <script src="JS/main.js"></script>
 
 </head>
@@ -87,7 +90,7 @@
         <div class="row">
 
             <div class="prod-container col-6 col-md-4 col-lg-3 pb-4">
-                <div class="prod-img pb-3">
+                <div class="prod-img pb-3 pb-lg-0">
                     <img src="images/serenity-supercedar.jpg" alt="perfume super cedar">
                 </div>
                 <div class="prod-info">
@@ -101,7 +104,7 @@
             </div>
 
             <div class="prod-container col-6 col-md-4 col-lg-3 pb-4">
-                <div class="prod-img pb-3">
+                <div class="prod-img pb-3 pb-lg-0">
                     <img src="images/serenity-sundaycologne.jpg" alt="perfume sunday cologne">
                 </div>
                 <div class="prod-info">
@@ -115,7 +118,7 @@
             </div>
 
             <div class="prod-container col-6 col-md-4 col-lg-3 pb-4">
-                <div class="prod-img pb-3">
+                <div class="prod-img pb-3 pb-lg-0">
                     <img src="images/serenity-bibliotheque.jpg" alt="perfume bibliotheque">
                 </div>
                 <div class="prod-info">
@@ -129,7 +132,7 @@
             </div>
 
             <div class="prod-container col-6 col-md-4 col-lg-3 pb-4">
-                <div class="prod-img pb-3">
+                <div class="prod-img pb-3 pb-lg-0">
                     <img src="images/serenity-baldafrique.jpg" alt="perfume ba d´afrique">
                 </div>
                 <div class="prod-info">
@@ -143,7 +146,7 @@
             </div>
 
             <div class="prod-container col-6 col-md-4 col-lg-3 pb-4">
-                <div class="prod-img pb-3">
+                <div class="prod-img pb-3 pb-lg-0">
                     <img src="images/serenity-latulipe.jpg" alt="perfume la tulipe">
                 </div>
                 <div class="prod-info">
@@ -157,7 +160,7 @@
             </div>
 
             <div class="prod-container col-6 col-md-4 col-lg-3 pb-4">
-                <div class="prod-img pb-3">
+                <div class="prod-img pb-3 pb-lg-0">
                     <img src="images/serenity-sundazed.jpg" alt="perfume sundazed">
                 </div>
                 <div class="prod-info">
@@ -171,7 +174,7 @@
             </div>
 
             <div class="prod-container col-6 col-md-4 col-lg-3 pb-4">
-                <div class="prod-img pb-3">
+                <div class="prod-img pb-3 pb-lg-0">
                     <img src="images/serenity-pulp.jpg" alt="perfume pulp">
                 </div>
                 <div class="prod-info">
@@ -185,7 +188,7 @@
             </div>
 
             <div class="prod-container col-6 col-md-4 col-lg-3 pb-4">
-                <div class="prod-img pb-3">
+                <div class="prod-img pb-3 pb-lg-0">
                     <img src="images/serenity-blanche.jpg" alt="perfume blanche">
                 </div>
                 <div class="prod-info">
@@ -199,7 +202,7 @@
             </div>
 
             <div class="prod-container col-6 col-md-4 col-lg-3 pb-4" id="hide-mobile">
-                <div class="prod-img pb-3">
+                <div class="prod-img pb-3 pb-lg-0">
                     <img src="images/serenity-roseofnomansland.jpg" alt="perfume rose of no mans land">
                 </div>
                 <div class="prod-info">
@@ -215,10 +218,10 @@
         </div>
     </div>
 
-    <footer class="col-12" id="sticky-footer">
-        <div class="d-flex justify-content-center" id="footer-container">
-            <div class="col-12" id="inner-container">
-                <div class="col-6" id="f-menu1">
+    <footer id="sticky-footer">
+        <div class="container-fluid">
+            <div class="row" id="footer-container">
+                <div class="col-12 col-md-6 col-lg-4" id="f-menu1">
                     <h4>SERENITY</h4>
                     <ul class="footer-info">
                         <li id="menu-item1">
@@ -231,20 +234,21 @@
                             <a href="#">Jobba med oss</a>
                         </li>
                     </ul>
-                </div>
-                <div class="col-6" id="f-menu2">
-                        <h4>Hjälp</h4>
-                        <ul class="footer-info">
-                                <li id="menu-item4">
-                                    <a href="#">Våra villkor</a>
-                                </li>
-                        </ul>
-                <div id="img-box">
-                <img src="images/betalningsmetoder.png" alt="betalningsmetoder"> 
-                </div>
-            <div id="icon-box">
-                <p> &copy;SERENITY</p>
             </div>
+            <div class="col-12 col-md-6 col-lg-4" id="f-menu2">
+                    <h4>Hjälp</h4>
+                        <ul class="footer-info">
+                            <li id="menu-item4">
+                                <a href="#">Våra villkor</a>
+                            </li>
+                        </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4" id="img-box">
+                    <img src="images/betalningsmetoder.png" alt="betalningsmetoder"> 
+            </div>
+        </div>
+            <div class="col-12" id="icon-box">
+            <p> &copy;SERENITY</p>
             </div>
         </div>
     </footer>
