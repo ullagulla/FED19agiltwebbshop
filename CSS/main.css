@@ -70,3 +70,31 @@ body {
       right: 1px; }
       body .container-fluid .flow-container .prod-wrapper .prod-icons img {
         cursor: pointer; }
+
+body {
+  font-family: nudista-web, sans-serif;
+  font-style: normal;
+  font-weight: 300; }
+  body .container-fluid .header-container {
+    position: relative;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.425); }
+    body .container-fluid .header-container nav .navbar-toggler {
+      border: none;
+      color: black; }
+    body .container-fluid .header-container nav .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
+      border: none; }
+    body .container-fluid .header-container .logo-wrapper {
+      position: absolute;
+      left: 50%;
+      z-index: 10;
+      transform: translate(-50%); }
+      body .container-fluid .header-container .logo-wrapper img {
+        width: 180px;
+        height: 60px; }
+    body .container-fluid .header-container .icons {
+      position: absolute;
+      top: 10px;
+      right: 1px;
+      opacity: 0.7; }
+      body .container-fluid .header-container .icons img {
+        cursor: pointer; }
