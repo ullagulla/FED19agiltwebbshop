@@ -9,10 +9,12 @@ footer#sticky-footer{
     margin-top: 10px;
     
         #footer-container{
-            background-color: darkgray;
+            background-color: rgb(211, 211, 211);
             height: 500px;
+            margin: -10px;
         }
         #inner-container{
+            background-color: rgb(211, 211, 211);
             max-width: 100%;
             flex: none;
         }
@@ -33,5 +35,9 @@ footer#sticky-footer{
             img{
             width: 100%;
             }
+        }
+        #icon-box{
+            background-color: #BAA6A4;
+            height: 50px;
         }
 }
