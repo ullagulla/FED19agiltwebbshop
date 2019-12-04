@@ -1,0 +1,52 @@
+body {
+    @include font-style;
+    .container-fluid {    
+        .flow-container {
+            .img-container{
+                width: 100%;
+                img {
+                width: 100%;
+                }
+            }
+            .txt-container {
+                border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+                h5 {
+                    text-transform: uppercase;
+                }
+                hr {
+                    border-color: rgba(128, 128, 128, 0.425);
+                    width: 112px;
+                }
+                h2 {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+            .prod-wrapper {
+                position: relative;
+                width: 80%;
+                .prod-img {
+                    box-shadow: 0px 0px 14px -3px rgba(140,137,140,1);
+                    img {
+                        width: 100%;
+                    }
+                }
+                .prod-info {
+                    text-transform: uppercase;
+                    opacity: 0.7;
+                    position: absolute;
+                    top: 1px;
+                }
+                .prod-icons {
+                    position: absolute;
+                    opacity: 0.7;
+                    top: 1px;
+                    right: 1px;
+                    img {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
