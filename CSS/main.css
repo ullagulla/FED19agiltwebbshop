@@ -1,43 +1,41 @@
 body {
-  font-family: nudista-web, sans-serif;
-  font-style: normal;
-  font-weight: 300; }
-  body .container-fluid .header-container {
+  font-family: nudista-web, sans-serif; }
+  body .container-fluid .row .header-container {
     position: relative;
     border-bottom: 1px solid rgba(128, 128, 128, 0.425); }
-    body .container-fluid .header-container nav .navbar-toggler {
+    body .container-fluid .row .header-container nav .navbar-toggler {
       border: none;
       color: black; }
-    body .container-fluid .header-container nav .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
+    body .container-fluid .row .header-container nav .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
       border: none; }
-      body .container-fluid .header-container nav .navbar-collapse .navbar-nav .nav-item .dropdown-menu .dropdown-divider {
+      body .container-fluid .row .header-container nav .navbar-collapse .navbar-nav .nav-item .dropdown-menu .dropdown-divider {
         border-top: none; }
-    body .container-fluid .header-container .search {
+    body .container-fluid .row .header-container .search {
       display: none; }
       @media (min-width: 800px) {
-        body .container-fluid .header-container .search {
+        body .container-fluid .row .header-container .search {
           display: inline-block;
           position: absolute;
           left: 50px;
           top: 15px;
           opacity: 0.7;
           cursor: pointer; }
-          body .container-fluid .header-container .search:hover {
+          body .container-fluid .row .header-container .search:hover {
             background-color: black; } }
-    body .container-fluid .header-container .logo-wrapper {
+    body .container-fluid .row .header-container .logo-wrapper {
       position: absolute;
       left: 50%;
       z-index: 10;
       transform: translate(-50%); }
-      body .container-fluid .header-container .logo-wrapper img {
+      body .container-fluid .row .header-container .logo-wrapper img {
         width: 180px;
         height: 60px; }
-    body .container-fluid .header-container .icons {
+    body .container-fluid .row .header-container .icons {
       position: absolute;
       top: 10px;
       right: 1px;
       opacity: 0.7; }
-      body .container-fluid .header-container .icons img {
+      body .container-fluid .row .header-container .icons img {
         cursor: pointer; }
 
 footer#sticky-footer {
@@ -106,3 +104,7 @@ body {
       right: 1px; }
       body .container-fluid .container-fluid .row .prod-wrapper .prod-icons img {
         cursor: pointer; }
+
+.container-fluid .row .txt-container .txt-header {
+  text-transform: capitalize;
+  font-size: 45px; }

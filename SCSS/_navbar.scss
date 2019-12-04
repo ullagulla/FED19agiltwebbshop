@@ -12,65 +12,65 @@
 
 @mixin font-style {
     font-family: nudista-web, sans-serif;
-    font-style: normal;
-    font-weight: 300;
 }
 
 body {
     @include font-style;
     .container-fluid {
-        .header-container {
-            position: relative;
-            border-bottom: 1px solid rgba(128, 128, 128, 0.425);
-            nav {
-                .navbar-toggler {
-                    border: none;
-                    color: black;
-                }
-                .navbar-collapse {
-                    .navbar-nav {
-                        .nav-item {
-                            .dropdown-menu {
-                                border: none;
-                                .dropdown-divider {
-                                    border-top: none;
+        .row {
+            .header-container {
+                position: relative;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+                nav {
+                    .navbar-toggler {
+                        border: none;
+                        color: black;
+                    }
+                    .navbar-collapse {
+                        .navbar-nav {
+                            .nav-item {
+                                .dropdown-menu {
+                                    border: none;
+                                    .dropdown-divider {
+                                        border-top: none;
+                                    }
                                 }
                             }
                         }
                     }
                 }
-            }
-            .search {
-                display: none;
-                @include large-tablet {
-                    display: inline-block;
-                    position: absolute;
-                    left: 50px;
-                    top: 15px;
-                    opacity: 0.7;
-                    cursor: pointer;
-                    &:hover {
-                        background-color: black;
+                .search {
+                    display: none;
+                    @include large-tablet {
+                        display: inline-block;
+                        position: absolute;
+                        left: 50px;
+                        top: 15px;
+                        opacity: 0.7;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: black;
+                        }
                     }
                 }
-            }
-            .logo-wrapper {
-                position: absolute;
-                left: 50%;
-                z-index: 10;
-                transform: translate(-50%);
-                img {
-                    width: 180px;
-                    height: 60px;
+                .logo-wrapper {
+                    position: absolute;
+                    left: 50%;
+                    z-index: 10;
+                    transform: translate(-50%);
+                    img {
+                        width: 180px;
+                        height: 60px;
+                    }
                 }
-            }
-            .icons {
-                position: absolute;
-                top: 10px;
-                right: 1px;
-                opacity: 0.7;
-                img {
-                    cursor: pointer;
+                .icons {
+                    position: absolute;
+                    top: 10px;
+                    right: 1px;
+                    opacity: 0.7;
+                    img {
+                        cursor: pointer;
+                    }
                 }
             }
         }
