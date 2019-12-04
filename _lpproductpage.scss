@@ -14,6 +14,9 @@ body {
                         .nav-item {
                             .dropdown-menu {
                                 border: none;
+                                .dropdown-divider {
+                                    border-top: none;
+                                }
                             }
                         }
                     }

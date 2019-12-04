@@ -83,6 +83,8 @@ body {
       color: black; }
     body .container-fluid .header-container nav .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
       border: none; }
+      body .container-fluid .header-container nav .navbar-collapse .navbar-nav .nav-item .dropdown-menu .dropdown-divider {
+        border-top: none; }
     body .container-fluid .header-container .logo-wrapper {
       position: absolute;
       left: 50%;
