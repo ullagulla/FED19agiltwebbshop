@@ -1,6 +1,7 @@
 body {
   font-family: nudista-web, sans-serif;
-  font-style: normal; }
+  font-style: normal;
+  font-weight: 300; }
   body .container-fluid .header-container {
     position: relative;
     border-bottom: 1px solid rgba(128, 128, 128, 0.425); }
