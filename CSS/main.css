@@ -10,10 +10,9 @@ body {
       color: black; }
     body .container-fluid .header-container .logo-wrapper {
       position: absolute;
-      top: 50%;
       left: 50%;
       z-index: 10;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%); }
       body .container-fluid .header-container .logo-wrapper img {
         width: 180px;
         height: 60px; }
@@ -22,6 +21,8 @@ body {
       top: 10px;
       right: 1px;
       opacity: 0.7; }
+      body .container-fluid .header-container .icons img {
+        cursor: pointer; }
   body .container-fluid .flow-container .img-container {
     width: 100%; }
     body .container-fluid .flow-container .img-container img {
@@ -53,6 +54,8 @@ body {
       opacity: 0.7;
       top: 1px;
       right: 1px; }
+      body .container-fluid .flow-container .prod-wrapper .prod-icons img {
+        cursor: pointer; }
 
 footer#sticky-footer {
   padding: 0px;
