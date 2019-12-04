@@ -1,12 +1,15 @@
 footer#sticky-footer{
+    padding: 0px;
+    margin-top: 10px;
     flex-shrink: none;
         #footer-container{
             background-color: darkgray;
+            height: 500px;
         }
         #img-box{
             img{
-            height: 50%;
             width: 50%;
+            
             }
         }
 }

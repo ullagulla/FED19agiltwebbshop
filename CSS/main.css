@@ -55,9 +55,11 @@ body {
       right: 1px; }
 
 footer#sticky-footer {
+  padding: 0px;
+  margin-top: 10px;
   flex-shrink: none; }
   footer#sticky-footer #footer-container {
-    background-color: darkgray; }
+    background-color: darkgray;
+    height: 500px; }
   footer#sticky-footer #img-box img {
-    height: 50%;
     width: 50%; }
