@@ -9,31 +9,33 @@ footer#sticky-footer{
     margin-top: 10px;
     
         #footer-container{
-            background-color: rgb(211, 211, 211);
-            height: 500px;
+            height: 100%;
             margin: -10px;
         }
         #inner-container{
-            background-color: rgb(211, 211, 211);
             max-width: 100%;
             flex: none;
-        }
-        .footer-info{
-            list-style: none;
-            font-size: 16px;
-            @include font-style;
-            li{
-                a {
-                    color: black;
-                    &:hover{
-                        text-decoration: none;
+            background-color: rgb(211, 211, 211);
+            .footer-info{
+                list-style: none;
+                font-size: 16px;
+                @include font-style;
+                li{
+                    a {
+                        color: black;
+                        &:hover{
+                            text-decoration: none;
+                        }
                     }
                 }
             }
         }
+       
         #img-box{
+            margin: auto;
             img{
             width: 100%;
+            
             }
         }
         #icon-box{
