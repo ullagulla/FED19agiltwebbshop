@@ -40,14 +40,6 @@ body {
                             filter: brightness(40%);
                             transition: all 0.5s;
                         }
-                    }
-                    &:hover .prod-info {
-                        @include desktop(){
-                            visibility: visible;
-                            opacity: 1;
-                            color: white;
-                        }
-                    }
                     img {
                         width: 100%;
                         vertical-align: top;
