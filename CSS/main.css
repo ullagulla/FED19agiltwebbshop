@@ -253,4 +253,5 @@ body .container-fluid .row #hide-mobile {
   font-style: normal;
   font-weight: 300;
   border-radius: 2px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  width: 215px; }
