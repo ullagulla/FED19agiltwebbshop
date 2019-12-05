@@ -3,13 +3,19 @@
     font-style: normal;
     font-weight: 300;
 }
+@mixin desktop {
+    @media (min-width: 1000px) {@content;}
+}
 
 footer#sticky-footer{
     padding: 0px;
     margin-top: 10px;
+    h4{
+        @include font-style;
+    }
         #footer-container{
             flex: none;
-            background-color: rgb(211, 211, 211);
+            background-color: #EAEAEA;
             .footer-info{
                 padding-left: 0;
                 list-style-type: none;
@@ -34,7 +40,27 @@ footer#sticky-footer{
             }
         }
         #icon-box{
-            background-color: #BAA6A4;
-            height: 50px;
+            background-color:#EADCCF;
+            justify-content: center;
+            color: white;
+            li{
+                color: white;
+                size: 20px;
+                &:hover{
+                    text-decoration: none;
+            }
         }
+        p{
+            justify-content: center;
+        }
+        #icon-link{
+            margin: auto;
+        }
+        #brand{
+            margin: auto;
+            @include desktop{
+                float: right;
+            }
+        }
+    }   
 }

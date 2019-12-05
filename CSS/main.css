@@ -44,9 +44,13 @@ body {
 footer#sticky-footer {
   padding: 0px;
   margin-top: 10px; }
+  footer#sticky-footer h4 {
+    font-family: nudista-web, sans-serif;
+    font-style: normal;
+    font-weight: 300; }
   footer#sticky-footer #footer-container {
     flex: none;
-    background-color: lightgray; }
+    background-color: #EAEAEA; }
     footer#sticky-footer #footer-container .footer-info {
       padding-left: 0;
       list-style-type: none;
@@ -63,8 +67,23 @@ footer#sticky-footer {
     footer#sticky-footer #img-box img {
       width: 100%; }
   footer#sticky-footer #icon-box {
-    background-color: #BAA6A4;
-    height: 50px; }
+    background-color: #EADCCF;
+    justify-content: center;
+    color: white; }
+    footer#sticky-footer #icon-box li {
+      color: white;
+      size: 20px; }
+      footer#sticky-footer #icon-box li:hover {
+        text-decoration: none; }
+    footer#sticky-footer #icon-box p {
+      justify-content: center; }
+    footer#sticky-footer #icon-box #icon-link {
+      margin: auto; }
+    footer#sticky-footer #icon-box #brand {
+      margin: auto; }
+      @media (min-width: 1000px) {
+        footer#sticky-footer #icon-box #brand {
+          float: right; } }
 
 body {
   font-family: nudista-web, sans-serif; }
