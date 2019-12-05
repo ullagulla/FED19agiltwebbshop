@@ -39,11 +39,14 @@ body {
                             background:rgba(0, 0, 0, 0.671);
                             filter: brightness(40%);
                             transition: all 0.5s;
+                            }
                         }
+                    &:hover .prod-info-desktop {
+                        visibility: visible;
+                    }
                     img {
                         width: 100%;
                         vertical-align: top;
-                        
                     }
                 }
                 .prod-info {
@@ -61,6 +64,23 @@ body {
                     .prod-price {
                         text-transform: capitalize;
                         font-size: 12px;
+                    }
+                }
+                .prod-info-desktop {
+                    visibility: hidden;
+                    @include desktop(){
+                        position: absolute;
+                        top: 30px;
+                        left: 50%;
+                        transform: translate(-50%);
+                    }
+                    .desktop-name {
+                        font-size: 20px;
+                        color: white;
+                    }
+                    .desktop-price {
+                        font-size: 13px;
+                        color: white;
                     }
                 }
                 .prod-icons {

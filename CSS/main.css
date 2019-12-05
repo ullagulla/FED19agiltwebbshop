@@ -124,11 +124,8 @@ body .container-fluid .row .prod-container {
         background: rgba(0, 0, 0, 0.671);
         filter: brightness(40%);
         transition: all 0.5s; } }
-    @media (min-width: 990px) {
-      body .container-fluid .row .prod-container .prod-img:hover .prod-info {
-        visibility: visible;
-        opacity: 1;
-        color: white; } }
+    body .container-fluid .row .prod-container .prod-img:hover .prod-info-desktop {
+      visibility: visible; }
     body .container-fluid .row .prod-container .prod-img img {
       width: 100%;
       vertical-align: top; }
@@ -146,6 +143,20 @@ body .container-fluid .row .prod-container {
     body .container-fluid .row .prod-container .prod-info .prod-price {
       text-transform: capitalize;
       font-size: 12px; }
+  body .container-fluid .row .prod-container .prod-info-desktop {
+    visibility: hidden; }
+    @media (min-width: 990px) {
+      body .container-fluid .row .prod-container .prod-info-desktop {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%); } }
+    body .container-fluid .row .prod-container .prod-info-desktop .desktop-name {
+      font-size: 20px;
+      color: white; }
+    body .container-fluid .row .prod-container .prod-info-desktop .desktop-price {
+      font-size: 13px;
+      color: white; }
   body .container-fluid .row .prod-container .prod-icons {
     position: absolute;
     opacity: 0.7;
