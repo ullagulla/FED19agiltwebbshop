@@ -50,7 +50,9 @@ footer#sticky-footer {
     font-weight: 300; }
   footer#sticky-footer #footer-container {
     flex: none;
-    background-color: #EAEAEA; }
+    background-color: #EAEAEA;
+    padding-top: 10px;
+    padding-bottom: 20px; }
     footer#sticky-footer #footer-container .footer-info {
       padding-left: 0;
       list-style-type: none;
@@ -62,6 +64,17 @@ footer#sticky-footer {
         color: black; }
         footer#sticky-footer #footer-container .footer-info li a:hover {
           text-decoration: none; }
+    footer#sticky-footer #footer-container #f-menu3 input {
+      margin: 4px;
+      width: -webkit-fill-available; }
+    footer#sticky-footer #footer-container #f-menu3 p {
+      font-family: nudista-web, sans-serif;
+      font-style: normal;
+      font-weight: 300; }
+    footer#sticky-footer #footer-container #f-menu3 button {
+      font-family: nudista-web, sans-serif;
+      font-style: normal;
+      font-weight: 300; }
   footer#sticky-footer #img-box {
     margin: auto; }
     footer#sticky-footer #img-box img {
@@ -69,16 +82,25 @@ footer#sticky-footer {
   footer#sticky-footer #icon-box {
     background-color: #EADCCF;
     justify-content: center;
-    color: white; }
-    footer#sticky-footer #icon-box li {
-      color: white;
-      size: 20px; }
-      footer#sticky-footer #icon-box li:hover {
-        text-decoration: none; }
+    color: white;
+    padding-top: 10px; }
+    footer#sticky-footer #icon-box ul {
+      padding-left: 0; }
+      footer#sticky-footer #icon-box ul li {
+        color: white;
+        size: 20px;
+        padding: 4px; }
+        footer#sticky-footer #icon-box ul li:hover {
+          text-decoration: none; }
     footer#sticky-footer #icon-box p {
-      justify-content: center; }
+      text-align: center;
+      font-family: nudista-web, sans-serif;
+      font-style: normal;
+      font-weight: 300; }
     footer#sticky-footer #icon-box #icon-link {
-      margin: auto; }
+      margin: auto;
+      text-align: center;
+      padding: 0; }
     footer#sticky-footer #icon-box #brand {
       margin: auto; }
       @media (min-width: 1000px) {
@@ -197,3 +219,31 @@ body .container-fluid .row #hide-mobile {
   @media (min-width: 768px) and (min-width: 990px) {
     body .container-fluid .row #hide-mobile {
       display: none; } }
+
+.container .row h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: nudista-web, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-weight: lighter; }
+
+.container .row h4 {
+  font-size: 16px;
+  font-family: nudista-web, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-weight: lighter; }
+
+.container .row .price {
+  font-family: nudista-web, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-weight: bolder; }
+
+.container .row label {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: nudista-web, sans-serif;
+  font-style: normal;
+  font-weight: 300; }
