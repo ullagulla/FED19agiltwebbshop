@@ -88,7 +88,14 @@ body {
                     opacity: 0.7;
                     bottom: 40px;
                     right: 10px;
-                    img {
+                    .heart-icon {
+                        width: 30px;
+                        height: 45px;
+                        cursor: pointer;
+                    }
+                    .cart-icon {
+                        width: 40px;
+                        height: 40px;
                         cursor: pointer;
                     }
                 }
