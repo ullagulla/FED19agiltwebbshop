@@ -20,7 +20,6 @@ body {
         .row {
             .header-container {
                 position: relative;
-                border-bottom: 1px solid rgba(128, 128, 128, 0.425);
                 nav {
                     .navbar-toggler {
                         border: none;
@@ -52,27 +51,41 @@ body {
                 }
                 .logo-wrapper {
                     position: absolute;
+                    top: 23px;
                     left: 50%;
                     z-index: 10;
                     transform: translate(-50%);
                     img {
-                        width: 180px;
-                        height: 60px;
+                        width: 140px;
+                        height: 40px;
                     }
                 }
                 .shipping {
-                    position: absolute;
-                    right: 120px;
-                    top: 35px;
-                    font-size: 12px;
+                    visibility: hidden;
+                    @include desktop(){
+                        visibility: visible;
+                        position: absolute;
+                        right: 120px;
+                        top: 35px;
+                        font-size: 12px;
+                    }
                 }
                 .icons {
                     position: absolute;
                     top: 30px;
-                    right: 30px;
-                    opacity: 0.7;
-                    img {
+                    right: 20px;
+                    @include desktop(){
+                        right: 30px;
+                    }
+                    .heart-icon {
                         cursor: pointer;
+                        width: 23px;
+                        height: 25px;
+                    }
+                    .cart-icon {
+                        cursor: pointer;
+                        width: 22px;
+                        height: 20px;
                     }
                 }
             }
