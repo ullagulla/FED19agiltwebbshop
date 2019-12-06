@@ -29,6 +29,10 @@
                 .carousel-slide{
                     display: none;
                 }
+                .carousel-item{
+                    float: none;
+                    display: block;
+                }
         }
         h1{
             text-transform: uppercase;
