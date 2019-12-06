@@ -1,9 +1,35 @@
 @mixin font-style {
     font-family: 'Work Sans', sans-serif;
 }
-
+@mixin tablet {
+    @media (min-width: 616px) {@content;}
+}
+@mixin desktop {
+    @media (min-width: 990px) {@content;}
+}
 .container{
     .row{
+        @include desktop {
+            #main{
+                width: 60%;
+                height: 200vh;
+                min-height: 1000px;
+                display: flex;
+                flex-direction: column;
+            }
+            #sidebar{
+                width: 25%;
+                height: 80vh;
+                min-height: 200px;
+                overflow: auto;
+                position: -webkit-sticky;
+                position: sticky;
+                top:5%;
+                }
+                .carousel-slide{
+                    display: none;
+                }
+        }
         h1{
             text-transform: uppercase;
             font-size: 30px;
@@ -24,11 +50,15 @@
                 text-transform: uppercase;
                 @include font-style;
             }
+            #theBtn{
+                padding: 0px;
         .btn {
             @include font-style;
             border-radius: 1px;
             text-transform: uppercase;
-            width: 215px;
+            padding: 2px;
+            margin: 2px;
             }
         }
+     }
 }
