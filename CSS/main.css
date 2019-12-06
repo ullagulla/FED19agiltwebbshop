@@ -237,14 +237,17 @@ body .container-fluid .row #hide-mobile {
     flex-direction: column; }
   .container .row #sidebar {
     width: 25%;
-    height: 80vh;
+    height: 70vh;
     min-height: 200px;
     overflow: auto;
     position: -webkit-sticky;
     position: sticky;
     top: 5%; }
   .container .row .carousel-slide {
-    display: none; } }
+    display: none; }
+  .container .row .carousel-item {
+    float: none;
+    display: block; } }
 
 .container .row h1 {
   text-transform: uppercase;
