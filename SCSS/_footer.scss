@@ -1,7 +1,5 @@
 @mixin font-style {
-    font-family: nudista-web, sans-serif;
-    font-style: normal;
-    font-weight: 300;
+    font-family: 'Work Sans', sans-serif;
 }
 @mixin desktop {
     @media (min-width: 1000px) {@content;}
@@ -80,6 +78,7 @@ footer#sticky-footer{
         }
         #brand{
             margin: auto;
+            font-weight: bold;
             @include desktop{
                 float: right;
             }

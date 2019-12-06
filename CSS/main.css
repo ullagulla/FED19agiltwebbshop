@@ -1,5 +1,5 @@
 body {
-  font-family: nudista-web, sans-serif; }
+  font-family: 'Heebo', sans-serif; }
   body .container-fluid .row .header-container {
     position: relative;
     border-bottom: 1px solid rgba(128, 128, 128, 0.425); }
@@ -45,9 +45,7 @@ footer#sticky-footer {
   padding: 0px;
   margin-top: 10px; }
   footer#sticky-footer h4 {
-    font-family: nudista-web, sans-serif;
-    font-style: normal;
-    font-weight: 300; }
+    font-family: 'Work Sans', sans-serif; }
   footer#sticky-footer #footer-container {
     flex: none;
     background-color: #EAEAEA;
@@ -57,9 +55,7 @@ footer#sticky-footer {
       padding-left: 0;
       list-style-type: none;
       font-size: 16px;
-      font-family: nudista-web, sans-serif;
-      font-style: normal;
-      font-weight: 300; }
+      font-family: 'Work Sans', sans-serif; }
       footer#sticky-footer #footer-container .footer-info li a {
         color: black; }
         footer#sticky-footer #footer-container .footer-info li a:hover {
@@ -68,13 +64,9 @@ footer#sticky-footer {
       margin: 4px;
       width: -webkit-fill-available; }
     footer#sticky-footer #footer-container #f-menu3 p {
-      font-family: nudista-web, sans-serif;
-      font-style: normal;
-      font-weight: 300; }
+      font-family: 'Work Sans', sans-serif; }
     footer#sticky-footer #footer-container #f-menu3 button {
-      font-family: nudista-web, sans-serif;
-      font-style: normal;
-      font-weight: 300; }
+      font-family: 'Work Sans', sans-serif; }
   footer#sticky-footer #img-box {
     margin: auto; }
     footer#sticky-footer #img-box img {
@@ -94,21 +86,20 @@ footer#sticky-footer {
           text-decoration: none; }
     footer#sticky-footer #icon-box p {
       text-align: center;
-      font-family: nudista-web, sans-serif;
-      font-style: normal;
-      font-weight: 300; }
+      font-family: 'Work Sans', sans-serif; }
     footer#sticky-footer #icon-box #icon-link {
       margin: auto;
       text-align: center;
       padding: 0; }
     footer#sticky-footer #icon-box #brand {
-      margin: auto; }
+      margin: auto;
+      font-weight: bold; }
       @media (min-width: 1000px) {
         footer#sticky-footer #icon-box #brand {
           float: right; } }
 
 body {
-  font-family: nudista-web, sans-serif; }
+  font-family: 'Work Sans', sans-serif; }
   body .container-fluid .row .img-container {
     background-image: url(../images/image-lp-mob.jpg);
     width: 100%;
@@ -223,35 +214,25 @@ body .container-fluid .row #hide-mobile {
 .container .row h1 {
   text-transform: uppercase;
   font-size: 30px;
-  font-family: nudista-web, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-family: 'Work Sans', sans-serif;
   font-weight: lighter; }
 
 .container .row h4 {
   font-size: 16px;
-  font-family: nudista-web, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-family: 'Work Sans', sans-serif;
   font-weight: lighter; }
 
 .container .row .price {
-  font-family: nudista-web, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-family: 'Work Sans', sans-serif;
   font-weight: bolder; }
 
 .container .row label {
   font-size: 14px;
   text-transform: uppercase;
-  font-family: nudista-web, sans-serif;
-  font-style: normal;
-  font-weight: 300; }
+  font-family: 'Work Sans', sans-serif; }
 
 .container .row .btn {
-  font-family: nudista-web, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-family: 'Work Sans', sans-serif;
   border-radius: 1px;
   text-transform: uppercase;
   width: 215px; }
