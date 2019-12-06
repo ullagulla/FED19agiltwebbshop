@@ -231,13 +231,13 @@ body .container-fluid .row #hide-mobile {
 @media (min-width: 990px) {
   .container .row #main {
     width: 60%;
-    height: 200vh;
+    height: 300vh;
     min-height: 1000px;
     display: flex;
     flex-direction: column; }
   .container .row #sidebar {
     width: 25%;
-    height: 70vh;
+    height: 80vh;
     min-height: 200px;
     overflow: auto;
     position: -webkit-sticky;
@@ -245,9 +245,13 @@ body .container-fluid .row #hide-mobile {
     top: 5%; }
   .container .row .carousel-slide {
     display: none; }
+  .container .row .carousel-inner img {
+    margin-top: 10px; }
   .container .row .carousel-item {
-    float: none;
-    display: block; } }
+    clear: both;
+    display: block;
+    height: fit-content;
+    margin-top: 10px; } }
 
 .container .row h1 {
   text-transform: uppercase;
