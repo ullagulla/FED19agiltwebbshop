@@ -237,7 +237,7 @@ body .container-fluid .row #hide-mobile {
 @media (min-width: 990px) {
   .container .row #main {
     width: 60%;
-    height: 200vh;
+    height: 300vh;
     min-height: 1000px;
     display: flex;
     flex-direction: column; }
@@ -250,7 +250,14 @@ body .container-fluid .row #hide-mobile {
     position: sticky;
     top: 5%; }
   .container .row .carousel-slide {
-    display: none; } }
+    display: none; }
+  .container .row .carousel-inner img {
+    margin-top: 10px; }
+  .container .row .carousel-item {
+    clear: both;
+    display: block;
+    height: fit-content;
+    margin-top: 10px; } }
 
 .container .row h1 {
   text-transform: uppercase;

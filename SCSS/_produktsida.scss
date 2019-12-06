@@ -12,7 +12,7 @@
         @include desktop {
             #main{
                 width: 60%;
-                height: 200vh;
+                height: 300vh;
                 min-height: 1000px;
                 display: flex;
                 flex-direction: column;
@@ -28,6 +28,17 @@
                 }
                 .carousel-slide{
                     display: none;
+                }
+                .carousel-inner{
+                    img{
+                        margin-top: 10px;
+                    }
+                }
+                .carousel-item{
+                    clear: both;
+                    display: block;
+                    height: fit-content;
+                    margin-top:10px;
                 }
         }
         h1{
