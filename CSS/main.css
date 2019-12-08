@@ -1,14 +1,53 @@
 body {
   font-family: 'Heebo', sans-serif; }
   body .container-fluid .row .header-container {
-    position: relative; }
-    body .container-fluid .row .header-container nav .navbar-toggler {
-      border: none;
-      color: black; }
-    body .container-fluid .row .header-container nav .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
-      border: none; }
-      body .container-fluid .row .header-container nav .navbar-collapse .navbar-nav .nav-item .dropdown-menu .dropdown-divider {
-        border-top: none; }
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px; }
+    body .container-fluid .row .header-container .openbtn {
+      position: absolute;
+      top: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      text-align: center; }
+      body .container-fluid .row .header-container .openbtn div {
+        width: 30px;
+        height: 3px;
+        border-bottom: 1px solid black;
+        margin: 6px 0; }
+    body .container-fluid .row .header-container .sidenav {
+      height: 100%;
+      visibility: hidden;
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      background-color: white;
+      overflow-x: hidden;
+      padding-top: 60px;
+      border-right: 1px solid rgba(128, 128, 128, 0.425); }
+    body .container-fluid .row .header-container .active {
+      visibility: visible;
+      width: 100%;
+      transition: all 10s ease-out; }
+      @media (min-width: 600px) {
+        body .container-fluid .row .header-container .active {
+          width: 300px; } }
+    body .container-fluid .row .header-container .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      transition: all 0.1s ease-out;
+      color: #818181;
+      display: block; }
+      body .container-fluid .row .header-container .sidenav a:hover {
+        color: #f1f1f1; }
+    body .container-fluid .row .header-container .closebtn {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 40px;
+      margin-left: 50px; }
     body .container-fluid .row .header-container .search {
       display: none; }
       @media (min-width: 768px) {
@@ -16,14 +55,16 @@ body {
           display: inline-block;
           position: absolute;
           left: 100px;
-          top: 30px;
+          top: 15px;
           opacity: 0.7;
           cursor: pointer; } }
+      body .container-fluid .row .header-container .search img {
+        width: 20px;
+        height: 20px; }
     body .container-fluid .row .header-container .logo-wrapper {
       position: absolute;
-      top: 23px;
+      top: 10px;
       left: 50%;
-      z-index: 10;
       transform: translate(-50%); }
       body .container-fluid .row .header-container .logo-wrapper img {
         width: 140px;
@@ -35,11 +76,11 @@ body {
           visibility: visible;
           position: absolute;
           right: 120px;
-          top: 35px;
+          top: 25px;
           font-size: 12px; } }
     body .container-fluid .row .header-container .icons {
       position: absolute;
-      top: 30px;
+      top: 20px;
       right: 20px; }
       @media (min-width: 990px) {
         body .container-fluid .row .header-container .icons {
@@ -143,7 +184,8 @@ body {
       body .container-fluid .row .prod-wrapper .prod-info {
         opacity: 0.7;
         position: absolute;
-        top: 1px; }
+        top: 30px;
+        left: 30px; }
         body .container-fluid .row .prod-wrapper .prod-info .prod-name {
           text-transform: uppercase; }
         body .container-fluid .row .prod-wrapper .prod-info .prod-price {
@@ -152,13 +194,13 @@ body {
       body .container-fluid .row .prod-wrapper .prod-icons {
         position: absolute;
         opacity: 0.7;
-        top: 1px;
-        right: 10px; }
+        top: 20px;
+        right: 20px; }
         body .container-fluid .row .prod-wrapper .prod-icons .heart-icon {
-          width: 25px;
+          width: 23px;
           height: 43px; }
         body .container-fluid .row .prod-wrapper .prod-icons .cart-icon {
-          width: 40px;
+          width: 35px;
           height: 37px;
           cursor: pointer; }
 
@@ -217,7 +259,7 @@ body .container-fluid .row .prod-container {
     bottom: 40px;
     right: 10px; }
     body .container-fluid .row .prod-container .prod-icons .heart-icon {
-      width: 30px;
+      width: 25px;
       height: 45px;
       cursor: pointer; }
     body .container-fluid .row .prod-container .prod-icons .cart-icon {
