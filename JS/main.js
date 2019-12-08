@@ -14,6 +14,10 @@ $(document).ready(function(){
 
     })
 
+    $(".search").on("click", function(){
+        $(".search-field").toggleClass("active");
+    });
+
     //Klass med alla egenskaper för våra objekt som finns längre ned
 
     function Product(n, sp, lp, pic) {

@@ -29,14 +29,14 @@ body {
     body .container-fluid .row .header-container .active {
       visibility: visible;
       width: 100%;
-      transition: all 10s ease-out; }
+      transition: .5s; }
       @media (min-width: 600px) {
         body .container-fluid .row .header-container .active {
+          transition: all .5s ease-in-out;
           width: 300px; } }
     body .container-fluid .row .header-container .sidenav a {
       padding: 8px 8px 8px 32px;
       text-decoration: none;
-      transition: all 0.1s ease-out;
       color: #818181;
       display: block; }
       body .container-fluid .row .header-container .sidenav a:hover {
@@ -48,6 +48,10 @@ body {
       right: 25px;
       font-size: 40px;
       margin-left: 50px; }
+    body .container-fluid .row .header-container .search-field {
+      display: none; }
+    body .container-fluid .row .header-container .search-field.active {
+      display: inline-block; }
     body .container-fluid .row .header-container .search {
       display: none; }
       @media (min-width: 768px) {
@@ -56,7 +60,6 @@ body {
           position: absolute;
           left: 100px;
           top: 15px;
-          opacity: 0.7;
           cursor: pointer; } }
       body .container-fluid .row .header-container .search img {
         width: 20px;
@@ -87,12 +90,12 @@ body {
           right: 30px; } }
       body .container-fluid .row .header-container .icons .heart-icon {
         cursor: pointer;
-        width: 23px;
-        height: 25px; }
+        width: 28px;
+        height: 23px; }
       body .container-fluid .row .header-container .icons .cart-icon {
         cursor: pointer;
-        width: 22px;
-        height: 20px; }
+        width: 28px;
+        height: 25px; }
 
 footer#sticky-footer {
   padding: 0px;
@@ -220,61 +223,32 @@ body .container-fluid .row .prod-container {
         background: rgba(0, 0, 0, 0.671);
         filter: brightness(40%);
         transition: all 0.5s; } }
-    body .container-fluid .row .prod-container .prod-img:hover .prod-info-desktop {
-      visibility: visible; }
+    body .container-fluid .row .prod-container .prod-img:hover .prod-info {
+      opacity: 1; }
     body .container-fluid .row .prod-container .prod-img img {
       width: 100%;
       vertical-align: top; }
   body .container-fluid .row .prod-container .prod-info {
     text-transform: uppercase;
-    opacity: 0.7;
     position: absolute;
     top: 1px; }
-    @media (min-width: 990px) {
-      body .container-fluid .row .prod-container .prod-info {
-        visibility: hidden;
-        opacity: 0; } }
     body .container-fluid .row .prod-container .prod-info .prod-name {
       text-transform: uppercase; }
     body .container-fluid .row .prod-container .prod-info .prod-price {
       text-transform: capitalize;
       font-size: 12px; }
-  body .container-fluid .row .prod-container .prod-info-desktop {
-    visibility: hidden; }
-    @media (min-width: 990px) {
-      body .container-fluid .row .prod-container .prod-info-desktop {
-        position: absolute;
-        top: 30px;
-        left: 50%;
-        transform: translate(-50%); } }
-    body .container-fluid .row .prod-container .prod-info-desktop .desktop-name {
-      font-size: 20px;
-      color: white; }
-    body .container-fluid .row .prod-container .prod-info-desktop .desktop-price {
-      font-size: 13px;
-      color: white; }
   body .container-fluid .row .prod-container .prod-icons {
     position: absolute;
-    opacity: 0.7;
     bottom: 40px;
     right: 10px; }
     body .container-fluid .row .prod-container .prod-icons .heart-icon {
-      width: 25px;
-      height: 45px;
+      width: 27px;
+      height: 38px;
       cursor: pointer; }
     body .container-fluid .row .prod-container .prod-icons .cart-icon {
-      width: 40px;
+      width: 38px;
       height: 40px;
       cursor: pointer; }
-
-body .container-fluid .row #hide-mobile {
-  display: none; }
-  @media (min-width: 768px) {
-    body .container-fluid .row #hide-mobile {
-      display: block; } }
-  @media (min-width: 768px) and (min-width: 990px) {
-    body .container-fluid .row #hide-mobile {
-      display: none; } }
 
 @media (min-width: 990px) {
   .container .row #main {
