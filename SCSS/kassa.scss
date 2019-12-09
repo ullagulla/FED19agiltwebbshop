@@ -38,13 +38,13 @@ body {
                         }
                         img {
                             width: 80%;
-                            box-shadow: 0px 0px 14px -3px rgba(140,137,140,1);
+                            box-shadow: 0px 0px 14px -6px rgba(140,137,140,1);
                         }
                     }
                     .prod-wrapper {
                         font-weight: bold;
                         span {
-                            font-size: 13px;
+                            font-size: 14px;
                         }
                         .name {
                             display: inline-block;
@@ -60,7 +60,7 @@ body {
                             }
                             .quantity-field {
                                 border: none;
-                                width: 15px;
+                                width: 10px;
                                 height: 30px;
                                 &[type=number]::-webkit-inner-spin-button, 
                                 &[type=number]::-webkit-outer-spin-button {
@@ -72,9 +72,74 @@ body {
                             }
                         }
                     }
+                    .col-4 {
+                        .text-right {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .prod-info {
+                    font-size: 14px;
                 }
                 .address-info {
                     font-size: 10px;
+                }
+                form {
+                    .col-12 {
+                        .form-row {
+                            #inputEmail {
+                                border-bottom: none;
+                                border-bottom-right-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
+                            #inputZip {
+                                border-bottom: none;
+                                border-top-right-radius: 0;
+                                border-top-left-radius: 0;
+                                border-bottom-right-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
+                            #inputPersonal {
+                                border-bottom: none;
+                                border-top-right-radius: 0;
+                                border-top-left-radius: 0;
+                                border-bottom-right-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
+                            #inputFirstname {
+                                border-bottom: none;
+                                border-top-right-radius: 0;
+                                border-top-left-radius: 0;
+                                border-bottom-right-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
+                            #inputLastname {
+                                border-bottom: none;
+                                border-top-right-radius: 0;
+                                border-top-left-radius: 0;
+                                border-bottom-right-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
+                            #inputAddress {
+                                border-bottom: none;
+                                border-top-right-radius: 0;
+                                border-top-left-radius: 0;
+                                border-bottom-right-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
+                            #inputCity {
+                                border-bottom: none;
+                                border-top-right-radius: 0;
+                                border-top-left-radius: 0;
+                                border-bottom-right-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
+                            #inputPhone {
+                                border-top-right-radius: 0;
+                                border-top-left-radius: 0;
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -381,11 +381,11 @@ body .container .row .col-12 .row {
       font-weight: bold; }
     body .container .row .col-12 .row .pic-wrapper img {
       width: 80%;
-      box-shadow: 0px 0px 14px -3px #8c898c; }
+      box-shadow: 0px 0px 14px -6px #8c898c; }
   body .container .row .col-12 .row .prod-wrapper {
     font-weight: bold; }
     body .container .row .col-12 .row .prod-wrapper span {
-      font-size: 13px; }
+      font-size: 14px; }
     body .container .row .col-12 .row .prod-wrapper .name {
       display: inline-block;
       text-transform: uppercase; }
@@ -397,15 +397,71 @@ body .container .row .col-12 .row {
           outline: none; }
       body .container .row .col-12 .row .prod-wrapper .input-group .quantity-field {
         border: none;
-        width: 15px;
+        width: 10px;
         height: 30px; }
         body .container .row .col-12 .row .prod-wrapper .input-group .quantity-field[type=number]::-webkit-inner-spin-button, body .container .row .col-12 .row .prod-wrapper .input-group .quantity-field[type=number]::-webkit-outer-spin-button {
           -webkit-appearance: none; }
       body .container .row .col-12 .row .prod-wrapper .input-group .button-plus {
         width: fit-content; }
+  body .container .row .col-12 .row .col-4 .text-right {
+    font-size: 14px; }
+
+body .container .row .col-12 .prod-info {
+  font-size: 14px; }
 
 body .container .row .col-12 .address-info {
   font-size: 10px; }
+
+body .container .row .col-12 form .col-12 .form-row #inputEmail {
+  border-bottom: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+body .container .row .col-12 form .col-12 .form-row #inputZip {
+  border-bottom: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+body .container .row .col-12 form .col-12 .form-row #inputPersonal {
+  border-bottom: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+body .container .row .col-12 form .col-12 .form-row #inputFirstname {
+  border-bottom: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+body .container .row .col-12 form .col-12 .form-row #inputLastname {
+  border-bottom: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+body .container .row .col-12 form .col-12 .form-row #inputAddress {
+  border-bottom: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+body .container .row .col-12 form .col-12 .form-row #inputCity {
+  border-bottom: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+body .container .row .col-12 form .col-12 .form-row #inputPhone {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0; }
 
 * {
   box-sizing: border-box; }
