@@ -17,7 +17,6 @@
 body {
     @include font-style;   
     .container-fluid {
-        border-top: 1px solid rgba(128, 128, 128, 0.425);
         .row {
             .img-container{
                 background-image: url(../images/image-lp-mob.jpg);
