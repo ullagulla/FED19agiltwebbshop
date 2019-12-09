@@ -16,7 +16,7 @@
   
 body {
     @include font-style;
-    .container-fluid {
+    .header-wrapper {
         background-color: white;
         border-bottom: 1px solid rgba(128, 128, 128, 0.425);
         .row {
@@ -25,6 +25,7 @@ body {
                 padding-top: 40px;
                 padding-bottom: 40px;
                 .openbtn {
+                    transition: .2s;
                     position: absolute;
                     top: 10px;
                     cursor: pointer;
@@ -72,6 +73,7 @@ body {
                 cursor: pointer;
                 position: absolute;
                 top: 0;
+                transition: .2s;
                 right: 25px;
                 font-size: 40px;
                 margin-left: 50px;
