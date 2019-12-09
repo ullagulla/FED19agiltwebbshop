@@ -1,0 +1,79 @@
+@mixin tablet {
+    @media (min-width: 600px) { @content; }
+}
+
+@mixin large-tablet {
+    @media (min-width: 768px) { @content; }
+}
+
+@mixin desktop {
+    @media (min-width: 990px) { @content; }
+}
+
+@mixin font-style {
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    .container {
+        .row {
+            .col-12 {
+                .items {
+                    text-transform: capitalize;
+                    font-weight: bold;
+                }
+                .d-flex {
+                    border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+                    font-weight: bold;
+                }
+                .row {
+                    border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+                    .pic-wrapper {
+                        position: relative;
+                        .remove {
+                            position: absolute;
+                            top: 3px;
+                            left: 15px;
+                            font-weight: bold;
+                        }
+                        img {
+                            width: 80%;
+                            box-shadow: 0px 0px 14px -3px rgba(140,137,140,1);
+                        }
+                    }
+                    .prod-wrapper {
+                        font-weight: bold;
+                        span {
+                            font-size: 13px;
+                        }
+                        .name {
+                            display: inline-block;
+                            text-transform: uppercase;
+                        }
+                        .input-group {
+                            display: inline!important;
+                            .button-minus {
+                                width: fit-content;
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                            .quantity-field {
+                                border: none;
+                                width: 15px;
+                                height: 30px;
+                                &[type=number]::-webkit-inner-spin-button, 
+                                &[type=number]::-webkit-outer-spin-button {
+                                    -webkit-appearance: none;
+                                  }
+                            }
+                            .button-plus {
+                                width: fit-content;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -5,83 +5,96 @@
     @media (min-width: 1000px) {@content;}
 }
 
-footer#sticky-footer{
-    padding: 0px;
-    margin-top: 10px;
-    h4{
-        @include font-style;
-    }
-        #footer-container{
-            flex: none;
+body {
+    @include font-style();
+    font-size: 13px;
+    #sticky-footer {
+        padding: 0px;
+        margin-top: 10px;
+        .container-fluid{
             background-color: #EAEAEA;
-            padding-top: 10px;
-            padding-bottom: 20px;
-            .footer-info{
-                padding-left: 0;
-                list-style-type: none;
-                font-size: 16px;
-                @include font-style;
-                li{
-                    a {
-                        color: black;
-                        &:hover{
-                            text-decoration: none;
+            h4 {
+                text-transform: uppercase;
+            }
+            #footer-container {
+                flex: none;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                .footer-info {
+                    padding-left: 0;
+                    list-style-type: none;
+                    li {
+                        a {
+                            color: black;
+                            &:hover {
+                                text-decoration: none;
+                            }
                         }
                     }
                 }
-            }
-            #f-menu3{
-                    input{
-                        margin: 4px;
-                        width: -webkit-fill-available;
+                #f-menu2 {
+                    h4 {
+                        text-transform: uppercase;
                     }
-                    p{
-                        @include font-style;
-                     }
-                    button{
-                        @include font-style;
+                    .faq {
+                        text-transform: uppercase;
+                    }
+                }
+                #f-menu3 {
+                    h4 {
+                        text-transform: uppercase;
+                    }
+                    span {
+                        width: 80%;
+                    }
+                    input {
+                        border: none;
+                        width: 80%;
+                        &:focus {
+                            outline: none;
+                        }
+                        &::placeholder {
+                            padding-left: 10px;
+                        }
+                    }
+                    button {
+                        width: 80%;
+                        border-radius: 0;
                     }   
+                }
+            }
+            #img-box {
+                img {
+                    width: 300px;
+                }
             }
         }
-       
-        #img-box{
-            margin: auto;
-            img{
-            width: 100%;
-            
-            }
-        }
-        #icon-box{
+        #icon-box {
             background-color:#EADCCF;
             justify-content: center;
             color: white;
             padding-top: 10px;
-            ul{
+            ul {
                 padding-left: 0;
-                li{
+                li  {
                     color: white;
                     size: 20px;
                     padding: 4px;
                     &:hover{
                         text-decoration: none;
                     }
+                }
             }
-        }
-        p{
-            text-align: center;
-            @include font-style;
-        }
-        #icon-link{
-            margin: auto;
-            text-align: center;
-            padding: 0;
-        }
-        #brand{
+            #icon-link {
+                text-align: end;
+                margin: auto;
+                padding: 0;
+            }
+            #brand {
+            text-transform: uppercase;
             margin: auto;
             font-weight: bold;
-            @include desktop{
-                float: right;
             }
-        }
-    }   
+        }   
+    }
 }
