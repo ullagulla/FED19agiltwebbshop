@@ -66,6 +66,7 @@ body {
                 display: block;
                 transition: .2s;
                     &:hover {
+                        transition: .2s;
                         color: #f1f1f1;
                     }
                 }
