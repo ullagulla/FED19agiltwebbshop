@@ -14,7 +14,9 @@ $(document).ready(function(){
 
     })
 
-    $(".search").on("click", function(){
+    //Search field
+
+    $(".search-glass").on("click", function(){
         $(".search-field").toggleClass("active");
     });
 
@@ -47,6 +49,8 @@ $(document).ready(function(){
 
     //Nedan loopar igenom alla våra objekt och skapar upp dom i html
 
+    let cart = [];
+
     $(products).each(function(i){
 
         $(".wrapper").append([
@@ -66,6 +70,14 @@ $(document).ready(function(){
                 ])
             ]),
         ]);
+
+        $(".cart-icon").on("click", function(){
+            cart.push(products[i]);
+            $(".badge-icon").html(cart.length);
+
+            console.log("consol-loggar " + cart.length);
+
+        });
 
     });
 
