@@ -301,6 +301,13 @@ body .container-fluid .row .prod-container {
 .container .row .tab-content {
   margin-top: 20px; }
 
+.container .row h3 {
+  font-size: 20px;
+  text-transform: uppercase; }
+
+.container .row p {
+  font-size: 15px; }
+
 .container .row h1 {
   text-transform: uppercase;
   font-size: 30px;
