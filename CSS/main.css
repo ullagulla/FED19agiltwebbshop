@@ -45,6 +45,7 @@ body {
         display: block;
         transition: .2s; }
         body .header-wrapper .row .header-container .sidenav a:hover {
+          transition: .2s;
           color: #f1f1f1; }
       body .header-wrapper .row .header-container .closebtn {
         cursor: pointer;
@@ -180,6 +181,14 @@ body {
 
 body {
   font-family: 'Work Sans', sans-serif; }
+  body .container-fluid .row .col-12 .products-link a {
+    font-size: 16px;
+    color: black;
+    transition: all .2s ease-in-out; }
+    body .container-fluid .row .col-12 .products-link a:hover {
+      transition: all .2s ease-in-out;
+      color: rgba(0, 0, 0, 0.486);
+      text-decoration: none; }
   body .container-fluid .row .img-container {
     background-image: url(../images/image-lp-mob.jpg);
     width: 100%;
@@ -194,7 +203,7 @@ body {
     text-transform: uppercase; }
   body .container-fluid .row .txt-container hr {
     border-color: rgba(128, 128, 128, 0.425);
-    width: 112px; }
+    width: 105px; }
   body .container-fluid .row .txt-container h2 {
     text-transform: uppercase;
     font-weight: bold; }
@@ -206,6 +215,11 @@ body {
       box-shadow: 0px 0px 14px -3px #8c898c; }
       body .container-fluid .row .prod-wrapper .prod-img img {
         width: 100%; }
+      @media (min-width: 990px) {
+        body .container-fluid .row .prod-wrapper .prod-img:hover {
+          background: rgba(0, 0, 0, 0.671);
+          filter: brightness(40%);
+          transition: all 0.3s; } }
     body .container-fluid .row .prod-wrapper .prod-info {
       opacity: 0.7;
       position: absolute;
