@@ -116,24 +116,28 @@
                             <button type="button" class="btn btn-outline-secondary w-100" id="btn1">Add to bag</button>
                             <button type="button" class="btn btn-outline-secondary w-100" id="btn2">Add to wishlist</button>
                         </div>
-                        <div class="tab">
-                            <button class="tablinks" onclick="openCity(event,'Description')"></button>
-                            <button class="tablinks" onclick="openCity(event,'Notes')"></button>
-                            <button class="tablinks" onclick="openCity(event,'Delivery')"></button>
-                        </div>
+                        <!-- Tabs -->
 
-                        <div id="Description" class="tabcontent">
+                        <div class="tab">
+                            <button class="tablinks" onclick="openCity(event, 'description')">Description</button>
+                            <button class="tablinks" onclick="openCity(event, 'notes')">Notes</button>
+                            <button class="tablinks" onclick="openCity(event, 'delivery')">Delivery</button>
+                            </div>
+
+                            <div id="description" class="tabcontent">
                             <h3>Description</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates dicta quis dolore.</p>
-                        </div>
-                        <div id="Notes" class="tabcontent">
+                            <p>London is the capital city of England.</p>
+                            </div>
+
+                            <div id="notes" class="tabcontent">
                             <h3>Notes</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates dicta quis dolore.</p>
-                        </div>
-                        <div id="Delivery" class="tabcontent">
+                            <p>Paris is the capital of France.</p> 
+                            </div>
+
+                            <div id="delivery" class="tabcontent">
                             <h3>Delivery</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates dicta quis dolore.</p>
-                        </div>
+                            <p>Tokyo is the capital of Japan.</p>
+                            </div>
 
                             <!-- <ul class="meny">
                                 <li class="description">
