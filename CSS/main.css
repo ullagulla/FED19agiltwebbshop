@@ -268,7 +268,7 @@ body .container-fluid .row .prod-container {
 @media (min-width: 990px) {
   .container .row #main {
     width: 60%;
-    height: 188vh;
+    height: 222vh;
     min-height: 1000px;
     display: flex;
     flex-direction: column; }
