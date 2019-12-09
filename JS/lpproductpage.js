@@ -63,8 +63,8 @@ $(document).ready(function(){
                     $("<p>", {"class": "prod-price mb-0 pl-3"}).append("From " + products[i].smallprice + " :-")
                 ]).css("opacity", "0"),
                 $("<div>", {"class": "prod-icons pr-1 pb-1"}).append([
-                    $("<img>", {"class": "heart-icon pr-1 pt-3", "src": "../images/heart.PNG", "alt": "heart-icon"}),
-                    $("<img>", {"class": "cart-icon p1-1 pr-3 pt-3", "src": "../images/cart.PNG", "alt": "cart-icon"})
+                    $("<img>", {"class": "heart-icon pr-1 pt-3", "src": "../images/heart.PNG", "alt": "heart-icon", "id": "heart" +i}),
+                    $("<img>", {"class": "cart-icon p1-1 pr-3 pt-3", "src": "../images/cart.PNG", "alt": "cart-icon", "id": "cart" +i})
                 ])
             ]),
         ]);

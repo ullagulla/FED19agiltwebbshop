@@ -105,4 +105,33 @@ body {
             }
         }
     }
+    .cart-notification {
+        position: absolute;
+        right: -10px;
+        top: 16px;
+        font-size: 0.65rem;
+        opacity: 0;
+        text-align: left;
+        z-index: 9999999;
+        visibility: hidden;
+        border-radius: 16px;
+        border-top-right-radius: 0px;
+        width: 200px;
+        height: 100px;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+    .active {
+        visibility: visible;
+        -webkit-animation: fadeinout 4s linear forwards;
+        animation: fadeinout 10s linear forwards;
+        opacity: 0;
+    }
 }
+
+@-webkit-keyframes fadeinout {
+    50% { opacity: 1; }
+  }
+  
+  @keyframes fadeinout {
+    50% { opacity: 1; }
+  }
