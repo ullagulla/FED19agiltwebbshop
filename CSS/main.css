@@ -290,6 +290,9 @@ body .container-fluid .row .prod-container {
     height: fit-content;
     margin-top: 10px; } }
 
+.container .row .nav {
+  justify-content: space-around; }
+
 .container .row h1 {
   text-transform: uppercase;
   font-size: 30px;
