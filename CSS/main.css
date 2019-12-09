@@ -404,5 +404,8 @@ body .container .row .col-12 .row {
       body .container .row .col-12 .row .prod-wrapper .input-group .button-plus {
         width: fit-content; }
 
+body .container .row .col-12 .address-info {
+  font-size: 10px; }
+
 * {
   box-sizing: border-box; }
