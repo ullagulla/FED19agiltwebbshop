@@ -52,35 +52,55 @@ $(document).ready(function(){
     $(products).each(function(i){
 
         $(".wrapper").append([
-            $("<div>", {"class": "prod-container col-6 col-md-4 col-lg-3 pb-4"}).append([
-                $("<div>", {"class": "prod-img pb-3 pb-lg-0"}).append([
-                    $("<a>", {"href": "produktsida.html"}).append([
-                        $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i})
+            $("<div>", {"class": "prod-container col-6 col-md-4 col-lg-4 pb-4"}).append([
+                $("<a>", {"href": "produktsida.html"}).append([
+                    $("<div>", {"class": "hover-div", "id": "hover" +i}).append([
+                        $("<div>", {"class": "prod-img pb-3 pb-lg-0"}).append([
+                            $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i})
+                        ]),
+                        $("<div>", {"class": "prod-info", "id": "info"+i}).append([
+                            $("<p>", {"class": "prod-name mb-0 pl-3 pt-3"}).append(products[i].name),
+                            $("<p>", {"class": "prod-price mb-0 pl-3"}).append("From " + products[i].smallprice + " :-")
+                        ]),
+                        $("<div>", {"class": "icons-hover d-flex", "id": "icons-hover" +i}).append([
+                            $("<img>", {"class": "prod-heart pr-1", "src": "../images/heart-white.PNG", "id": "hover-heart" +i}),
+                            $("<img>", {"class": "prod-cart pl-1", "src": "../images/cart-white.PNG", "id": "hover-cart" +i})
+                        ]),
+                        $("<div>", {"class": "prod-icons pr-1 pb-1"}).append([
+                            $("<img>", {"class": "heart-icon pr-1 pt-3", "src": "../images/heart.PNG", "alt": "heart-icon", "id": "heart" +i}),
+                            $("<img>", {"class": "cart-icon p1-1 pr-3 pt-3", "src": "../images/cart.PNG", "alt": "cart-icon", "id": "cart" +i})
+                        ])
                     ]),
                 ]),
-                $("<div>", {"class": "prod-info", "id": "info"+i}).append([
-                    $("<p>", {"class": "prod-name mb-0 pl-3 pt-3"}).append(products[i].name),
-                    $("<p>", {"class": "prod-price mb-0 pl-3"}).append("From " + products[i].smallprice + " :-")
-                ]).css("opacity", "0"),
-                $("<div>", {"class": "prod-icons pr-1 pb-1"}).append([
-                    $("<img>", {"class": "heart-icon pr-1 pt-3", "src": "../images/heart.PNG", "alt": "heart-icon", "id": "heart" +i}),
-                    $("<img>", {"class": "cart-icon p1-1 pr-3 pt-3", "src": "../images/cart.PNG", "alt": "cart-icon", "id": "cart" +i})
-                ])
             ]),
         ]);
 
-        $("#pic"+i).on("mouseover", function(){
-            $("#info"+i).css("opacity", "1");
+        $("#hover"+i).on("mouseover", function(){
 
-            $(".icons-hover").css("opacity", "1");
-        })
+            $("#info"+i).css({
+                opacity: "1",
+                transition: "all 0.5s"
+            })
 
-        $("#pic"+i).on("mouseleave", function(){
-            $("#info"+i).css("opacity", "0");
+            $("#icons-hover" +i).css({
+                opacity: "1",
+                transition: "all 0.5s"
+            })
 
-            $(".icons-hover").css("opacity", "0");
-        })
+        });
 
+        $("#hover"+i).on("mouseleave", function(){
+
+            $("#info"+i).css({
+                opacity: "0",
+                transition: "all 0.5s"
+            })
+
+            $("#icons-hover" +i).css({
+                opacity: "0",
+                transition: "all 0.5s"
+            })
+
+        });
     });
-
 });

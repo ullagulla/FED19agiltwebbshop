@@ -17,12 +17,18 @@
 body {
     @include font-style;
     .header-wrapper {
-        background-color: white;
-        border-bottom: 1px solid rgba(128, 128, 128, 0.425);
         .row {
-            background-color: white;
+            .sticky {
+                position: fixed;
+                top:0; 
+                left:0;
+                width: 100%;
+                z-index: 100;
+            }
             .header-container {
-                height: 88px;
+                background-color: white;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+                height: 70px;
                 .openbtn {
                     transition: .2s;
                     cursor: pointer;
@@ -87,6 +93,7 @@ body {
                 .search {
                     width: 60%;
                     .glass-wrapper {
+                        position: relative;
                         width: 40px;
                         height: 40px;
                         &:hover {
@@ -98,6 +105,10 @@ body {
                             background-image: url(../images/magnifying-glass-white.png);
                         }
                         .search-glass {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
                             background-image: url(../images/magnifying-glass.png);
                             background-size: cover;
                             width: 20px;
@@ -117,9 +128,10 @@ body {
                     }
                 }
                 .shipping {
-                    visibility: hidden;
+                    padding-top: 28px;
+                    display: none;
                     @include desktop(){
-                        visibility: visible;
+                        display: inline-block;
                         font-size: 12px;
                     }
                 }
