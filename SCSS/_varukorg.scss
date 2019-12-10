@@ -15,34 +15,50 @@
 }
 body {
     @include font-style;
-
-    .openbtn {
-                    transition: .2s;
-                    position: absolute;
-                    top: 10px;
-                    cursor: pointer;
-                    font-size: 20px;
-                    text-align: center;
-                    div {
-                        width: 30px;
-                        height: 3px;
-                        border-bottom: 1px solid black;
-                        margin: 6px 0;
-                    }
-                }
+ 
                 .cartnav {
+                    #rubrik{
+                        margin-left: 6px;
+                        border-bottom: 1px gray solid;
+                    }
+                    width: 300px;
                     height: 100%;
                     visibility: hidden;
                     position: fixed;
                     z-index: 100;
                     transition: .2s;
                     top: 0;
-                    left: 0;
+                    right: 0;
                     background-color: white;
                     overflow-x: hidden;
                     padding-top: 60px;
-                    border-right: 1px solid rgba(128, 128, 128, 0.425);
-                }
+                    border-left: 1px solid rgba(128, 128, 128, 0.425);
+                    img{
+                        width: 30%;
+                        height: 30%;
+                    }
+                    .input-group {
+                        .button-minus {
+                            width: fit-content;
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                        .quantity-field {
+                            margin: 4px;
+                            border: none;
+                            width: 10px;
+                            height: 30px;
+                            &[type=number]::-webkit-inner-spin-button, 
+                            &[type=number]::-webkit-outer-spin-button {
+                                -webkit-appearance: none;
+                              }
+                        }
+                        .button-plus {
+                            width: fit-content;
+                        }
+                    }
+            }
                 .active {
                     transition: .2s;
                     visibility: visible;
@@ -56,19 +72,17 @@ body {
             text-decoration: none;
             color: #818181;
             display: block;
-            transition: .2s;
                 &:hover {
-                transition: .2s;
                 color: #f1f1f1;
             }
         }
-        .closebtn {
+        .cartbtn{
         cursor: pointer;
         position: absolute;
         top: 0;
-        transition: .2s;
         right: 25px;
         font-size: 40px;
         margin-left: 50px;
         }
+    
 }
