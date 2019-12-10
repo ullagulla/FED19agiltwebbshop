@@ -598,6 +598,9 @@ body .container .row .col-12 .payment-wrapper {
 body .container .row .col-12 .modal-content h1 {
   font-size: 20px; }
 
+body .container .row .col-12 .modal-content p {
+  font-size: 12px; }
+
 body .container .row .col-12 .modal-dialog {
   position: fixed;
   top: 40% !important;
