@@ -14,32 +14,21 @@ $(document).ready(function(){
 
     })
 
-    $.each(stringCart, function(i){
+    let information = localStorage.getItem("product");
+    let productInfo = JSON.parse(information);
 
-        $(".active").append($("<img>"), {"src": stringCart[i].picture, "alt": stringCart[i].name + " perfume", "id": "pic" +i})
+    console.log("../" + productInfo[0].picture);
 
-        $("pic"+i).on("click", function(){
+    $("#product-img").append($("<img>").attr({"src": "../" + productInfo[0].picture, "class": "d-block w-100", "alt": productInfo[0].name + " perfume"}));
 
-            storage.push(products[i]);
-            putInStorage();
-            location.href = "produktsida.html";
+    $("#product-name").append(productInfo[0].name);
 
-            console.log(theStorage);
+    //Nedan funktion höjer värdet på badge (varukorg) med 1
 
-        });
+    $("#cart0").on("click", function(){
 
-        //Nedan funktion höjer värdet på badge (varukorg) med 1
-
-        $("#cart"+i).on("click", function(){
-
-            // cart.push(products[i]);
-            // $(".badge-icon").html(cart.length);
-
-            $(".cart-notification").toggleClass("message-active");
-
-        });
+        $(".cart-notification").toggleClass("message-active");
 
     });
-
 
 });
