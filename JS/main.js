@@ -20,6 +20,19 @@ $(document).ready(function(){
         $(".search-field").toggleClass("active");
     });
 
+    // Varukorgen
+    $(".cart-icon pl-1").on("click", function(){
+
+        $(".cartnav").toggleClass("active");
+
+    });
+
+    $(".closebtn").on("click", function(){
+
+        $(".cartnav").toggleClass("active");
+
+    })
+
     //Klass med alla egenskaper för våra objekt som finns längre ned
 
     function Product(n, sp, lp, pic) {
