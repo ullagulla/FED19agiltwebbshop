@@ -110,6 +110,7 @@ body {
 body {
   font-family: 'Work Sans', sans-serif; }
   body .cartnav {
+    width: 300px;
     height: 100%;
     visibility: hidden;
     position: fixed;
