@@ -206,6 +206,12 @@ body {
                         font-size: 20px;
                     }
                 }
+                .modal-dialog{
+                    position: fixed;
+                    top: 40% !important;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
         }
     }
