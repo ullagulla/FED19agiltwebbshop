@@ -78,7 +78,7 @@ $(document).ready(function(){
             cart.push(products[i]);
             $(".badge-icon").html(cart.length);
 
-            $(".cart-notification").toggleClass("active");
+            $(".cart-notification").toggleClass("message-active");
 
         });
 
