@@ -345,7 +345,9 @@ body .container-fluid .row .prod-container {
     clear: both;
     display: block;
     height: fit-content;
-    margin-top: 10px; } }
+    margin-top: 10px; }
+    .container .row .carousel-item .carousel-item.active {
+      display: block; } }
 
 .container .row .nav {
   justify-content: space-around;
