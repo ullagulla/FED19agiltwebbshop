@@ -41,7 +41,6 @@ body {
                     visibility: hidden;
                     position: fixed;
                     z-index: 100;
-                    transition: .2s;
                     top: 0;
                     left: 0;
                     background-color: white;
@@ -50,7 +49,6 @@ body {
                     border-right: 1px solid rgba(128, 128, 128, 0.425);
                 }
                 .active {
-                    transition: .2s;
                     visibility: visible;
                     width: 100%;
                     @include tablet(){
@@ -62,9 +60,7 @@ body {
                 text-decoration: none;
                 color: #818181;
                 display: block;
-                transition: .2s;
                     &:hover {
-                        transition: .2s;
                         color: #f1f1f1;
                     }
                 }
@@ -72,7 +68,6 @@ body {
                 cursor: pointer;
                 position: absolute;
                 top: 0;
-                transition: .2s;
                 right: 25px;
                 font-size: 40px;
                 margin-left: 50px;
