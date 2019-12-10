@@ -51,7 +51,7 @@ $(document).ready(function(){
 
     let cart = [];
 
-    $(products).each(function(i){
+    $.each(products, function(i){
 
         $(".wrapper").append([
             $("<div>", {"class": "prod-wrapper col-12 col-md-6 col-lg-4"}).append([
@@ -65,17 +65,20 @@ $(document).ready(function(){
                     $("<p>", {"class": "prod-price"}).append("From " + products[i].smallprice + " :-")
                 ]),
                 $("<div>", {"class": "prod-icons"}).append([
-                    $("<img>", {"class": "heart-icon pr-1 pt-3", "src": "images/heart.PNG", "alt": "heart-icon"}),
-                    $("<img>", {"class": "cart-icon p1-1 pr-3 pt-3", "src": "images/cart.PNG", "alt": "cart-icon"})
+                    $("<img>", {"class": "heart-icon pr-1 pt-3", "src": "images/heart.PNG", "alt": "heart-icon", "id": "heart" +i}),
+                    $("<img>", {"class": "cart-icon p1-1 pr-3 pt-3", "src": "images/cart.PNG", "alt": "cart-icon", "id": "cart" +i})
                 ])
             ]),
         ]);
 
-        $(".cart-icon").on("click", function(){
+        //Nedan funktion höjer värdet på badge (varukorg) med 1
+
+        $("#cart"+i).on("click", function(){
+
             cart.push(products[i]);
             $(".badge-icon").html(cart.length);
 
-            console.log("consol-loggar " + cart.length);
+            $(".cart-notification").toggleClass("active");
 
         });
 
