@@ -337,6 +337,10 @@ body .container-fluid .row .prod-container {
     display: none; }
   .container .row .carousel-inner img {
     margin-top: 10px; }
+  .container .row span.carousel-control-prev-icon {
+    display: none; }
+  .container .row span.carousel-control-next-icon {
+    display: none; }
   .container .row .carousel-item {
     clear: both;
     display: block;
