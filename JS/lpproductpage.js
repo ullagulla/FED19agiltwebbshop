@@ -71,10 +71,14 @@ $(document).ready(function(){
 
         $("#pic"+i).on("mouseover", function(){
             $("#info"+i).css("opacity", "1");
+
+            $(".icons-hover").css("opacity", "1");
         })
 
         $("#pic"+i).on("mouseleave", function(){
             $("#info"+i).css("opacity", "0");
+
+            $(".icons-hover").css("opacity", "0");
         })
 
     });

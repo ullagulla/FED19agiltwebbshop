@@ -6,7 +6,6 @@ body {
     body .header-wrapper .row {
       background-color: white; }
       body .header-wrapper .row .header-container {
-        position: relative;
         height: 88px; }
         body .header-wrapper .row .header-container .openbtn {
           transition: .2s;
@@ -356,6 +355,7 @@ body .container-fluid .row .prod-info {
       transform: translate(-45%, -20%);
       font-size: 20px; } }
   body .container-fluid .row .prod-info .prod-name {
+    text-align: center;
     text-transform: uppercase; }
   body .container-fluid .row .prod-info .prod-price {
     text-transform: capitalize;
@@ -377,6 +377,13 @@ body .container-fluid .row .prod-icons {
     width: 38px;
     height: 40px;
     cursor: pointer; }
+
+body .container-fluid .row .icons-hover {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 @media (min-width: 990px) {
   .container .row #main {
