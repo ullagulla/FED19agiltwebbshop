@@ -545,5 +545,8 @@ body .container .row .col-12 .payment-wrapper {
     font-family: FontAwesome;
     font-weight: 900; }
 
+body .container .row .col-12 .modal-content h1 {
+  font-size: 10px; }
+
 * {
   box-sizing: border-box; }
