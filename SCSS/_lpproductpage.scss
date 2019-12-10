@@ -41,8 +41,6 @@ body {
                             transition: all 0.5s;
                             }
                         }
-                    &:hover .prod-info {
-                        opacity: 1;
                     }
                     img {
                         width: 100%;
@@ -53,12 +51,20 @@ body {
                     text-transform: uppercase;
                     position: absolute;
                     top: 1px;
+                    @include desktop {
+                        left: 50%;
+                        transform: translate(-50%);
+                        font-size: 20px;
+                    }
                     .prod-name {
                         text-transform: uppercase;
                     }
                     .prod-price {
                         text-transform: capitalize;
                         font-size: 12px;
+                        @include desktop(){
+                            font-size: 16px;
+                        }
                     }
                 }
                 .prod-icons {
@@ -79,4 +85,3 @@ body {
             }
         }
     }
-}

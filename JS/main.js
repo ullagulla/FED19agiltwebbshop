@@ -20,6 +20,19 @@ $(document).ready(function(){
         $(".search-field").toggleClass("active");
     });
 
+    // Varukorgen
+    $(".cart-icon pl-1").on("click", function(){
+
+        $(".cartnav").toggleClass("active");
+
+    });
+
+    $(".closebtn").on("click", function(){
+
+        $(".cartnav").toggleClass("active");
+
+    })
+
     //Klass med alla egenskaper för våra objekt som finns längre ned
 
     function Product(n, sp, lp, pic) {
@@ -50,6 +63,8 @@ $(document).ready(function(){
     //Nedan loopar igenom alla våra objekt och skapar upp dom i html
 
     let cart = [];
+    let storage = [];
+    let amount = [];
 
     $.each(products, function(i){
 
@@ -57,7 +72,7 @@ $(document).ready(function(){
             $("<div>", {"class": "prod-wrapper col-12 col-md-6 col-lg-4"}).append([
                 $("<div>", {"class": "prod-img my-3"}).append([
                     $("<a>", {"href": "html/produktsida.html"}).append([
-                        $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume"})
+                        $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic" +i})
                     ]),
                 ]),
                 $("<div>", {"class": "prod-info"}).append([
@@ -71,17 +86,44 @@ $(document).ready(function(){
             ]),
         ]);
 
+        $("pic"+i).on("click", function(){
+
+            theStorage.push(products[i]);
+            storage();
+            location.href = "produktsida.html";
+
+            console.log(theStorage);
+
+        });
+
         //Nedan funktion höjer värdet på badge (varukorg) med 1
 
         $("#cart"+i).on("click", function(){
 
+            amount[products[i].name] += 1;
             cart.push(products[i]);
-            $(".badge-icon").html(cart.length);
+            putInStorage();
+            let babo = localStorage.getItem("stringCart");
+            let boba = JSON.parse(babo);
+            $(".badge-icon").text(boba.length);
+
+            console.log(amount);
+
+            // cart.push(products[i]);
+            // $(".badge-icon").html(cart.length);
 
             $(".cart-notification").toggleClass("message-active");
 
         });
 
     });
+
+    function putInStorage() {
+            let stringStorage = JSON.stringify(storage);
+            let cartStringify = JSON.stringify(cart);
+            localStorage.clear("product");
+            localStorage.setItem("product", stringStorage);
+            localStorage.setItem("stringCart", cartStringify);
+    }
 
 });

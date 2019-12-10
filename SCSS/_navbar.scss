@@ -20,10 +20,10 @@ body {
         background-color: white;
         border-bottom: 1px solid rgba(128, 128, 128, 0.425);
         .row {
+            background-color: white;
             .header-container {
                 position: relative;
-                padding-top: 40px;
-                padding-bottom: 40px;
+                height: 88px;
                 .openbtn {
                     transition: .2s;
                     position: absolute;
@@ -80,6 +80,7 @@ body {
                 margin-left: 50px;
                 }
                 .search-field {
+                    top: 20px;
                     display: none;
                     input {
                         border: none;
@@ -94,22 +95,36 @@ body {
                 }
                 .search {
                     position: absolute;
-                    top: 18px;
+                    top: 8px;
                     left: 90px;
                     width: 40px;
                     height: 40px;
-                    .search-glass {
-                        width: 20px;
-                        height: 20px;
-                        display: none;
-                        @include large-tablet {
-                            display: inline-block;
-                            cursor: pointer;
-                        }
+                    .glass-wrapper {
+                        position: relative;
+                        width: 40px;
+                        height: 40px;
                         &:hover {
                             background-color: black;
-                            transition: 0.2s;
+                            transition: 0.5s;
                             border-radius: 50%;
+                        }
+                        &:hover .search-glass {
+                            background-image: url(../images/magnifying-glass-white.png);
+                        }
+                        .search-glass {
+                            background-image: url(../images/magnifying-glass.png);
+                            background-size: cover;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 20px;
+                            height: 20px;
+                            display: none;
+                            @include large-tablet {
+                                display: inline-block;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }

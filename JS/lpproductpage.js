@@ -55,10 +55,10 @@ $(document).ready(function(){
             $("<div>", {"class": "prod-container col-6 col-md-4 col-lg-3 pb-4"}).append([
                 $("<div>", {"class": "prod-img pb-3 pb-lg-0"}).append([
                     $("<a>", {"href": "produktsida.html"}).append([
-                        $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume"})
+                        $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i})
                     ]),
                 ]),
-                $("<div>", {"class": "prod-info"}).append([
+                $("<div>", {"class": "prod-info", "id": "info"+i}).append([
                     $("<p>", {"class": "prod-name mb-0 pl-3 pt-3"}).append(products[i].name),
                     $("<p>", {"class": "prod-price mb-0 pl-3"}).append("From " + products[i].smallprice + " :-")
                 ]).css("opacity", "0"),
@@ -68,6 +68,14 @@ $(document).ready(function(){
                 ])
             ]),
         ]);
+
+        $("#pic"+i).on("mouseover", function(){
+            $("#info"+i).css("opacity", "1");
+        })
+
+        $("#pic"+i).on("mouseleave", function(){
+            $("#info"+i).css("opacity", "0");
+        })
 
     });
 
