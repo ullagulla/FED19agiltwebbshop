@@ -122,7 +122,8 @@ body {
     padding-top: 60px;
     border-left: 1px solid rgba(128, 128, 128, 0.425); }
     body .cartnav #rubrik {
-      margin-left: 6px; }
+      margin-left: 6px;
+      border-bottom: 1px gray solid; }
     body .cartnav img {
       width: 30%;
       height: 30%; }
