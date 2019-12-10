@@ -21,13 +21,13 @@ $(document).ready(function(){
     });
 
     // Varukorgen
-    $(".cart-icon pl-1").on("click", function(){
+    $(".cart-icon").on("click", function(){
 
         $(".cartnav").toggleClass("active");
 
     });
 
-    $(".closebtn").on("click", function(){
+    $(".cartbtn").on("click", function(){
 
         $(".cartnav").toggleClass("active");
 

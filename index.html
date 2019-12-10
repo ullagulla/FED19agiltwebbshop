@@ -63,14 +63,25 @@
 
                 <div class="icons mx-auto pt-3">
                     <img class="heart-icon pr-1" src="images/heart.PNG" alt="heart-like">
-                    <img class="cart-icon pl-1" src="images/cart.PNG" alt="shopping cart" id="cartBtn">
+                    <img class="cart-icon pl-1" src="images/cart.PNG" alt="shopping cart">
                     <span class="badge-icon">0</span>
                 </div>
                 <div id="myCart" class="cartnav">
-                        <a class="closebtn">&times;</a>
-                        <a href="html/lp_produktsida.html">Products</a>
+                    <span id="rubrik">YOUR CART</span>
+                        <a class="cartbtn">&times;</a>
                         <div>
-                            <img class="ml-2" src="../FED19agiltwebbshop/images/serenity-baldafrique.jpg"></div>
+                            <img class="ml-2" src="../FED19agiltwebbshop/images/serenity-baldafrique.jpg">
+                            <span id="name">Slow dance</span>
+                            <span id="price">1200 KR</span>
+                            <span class="input-group px-2">
+                                    <input type="button" value="-" class="button-minus btn pl-0 pr-1" data-field="quantity">
+                                    <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                                    <input type="button" value="+" class="button-plus btn p-0 mr-2" data-field="quantity">
+                                </span>
+
+                        </div>
+                        
+
                     </div>
             </header>
         </div>
