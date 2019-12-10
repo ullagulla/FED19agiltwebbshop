@@ -132,7 +132,10 @@ body {
       body .cartnav .totalDiv #total {
         font-size: 20px; }
       body .cartnav .totalDiv #frakt {
-        font-size: 20px; }
+        font-size: 16px; }
+      body .cartnav .totalDiv #shipping {
+        margin: 10px;
+        float: right; }
     body .cartnav #btnCO {
       text-transform: uppercase; }
     body .cartnav .input-group .button-minus {
