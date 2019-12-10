@@ -63,6 +63,8 @@ $(document).ready(function(){
     //Nedan loopar igenom alla våra objekt och skapar upp dom i html
 
     let cart = [];
+    let myStorage = [];
+    let amount = [];
 
     $.each(products, function(i){
 
@@ -70,7 +72,7 @@ $(document).ready(function(){
             $("<div>", {"class": "prod-wrapper col-12 col-md-6 col-lg-4"}).append([
                 $("<div>", {"class": "prod-img my-3"}).append([
                     $("<a>", {"href": "html/produktsida.html"}).append([
-                        $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume"})
+                        $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic" +i})
                     ]),
                 ]),
                 $("<div>", {"class": "prod-info"}).append([
@@ -88,13 +90,30 @@ $(document).ready(function(){
 
         $("#cart"+i).on("click", function(){
 
+            amount[products[i].name] += 1;
             cart.push(products[i]);
-            $(".badge-icon").html(cart.length);
+            storage();
+            let localInfo = localStorage.getItem("stringCart");
+            let myStorage = JSON.parse(localInfo);
+            $(".badge-icon").html(myStorage.length);
+
+            console.log(amount);
+
+            // cart.push(products[i]);
+            // $(".badge-icon").html(cart.length);
 
             $(".cart-notification").toggleClass("message-active");
 
         });
 
     });
+
+    function storage() {
+            let stringStorage = JSON.stringify(myStorage);
+            let cartStringify = JSON.stringify(cart);
+            localStorage.clear("product");
+            localStorage.setItem("product", stringStorage);
+            localStorage.setItem("stringCart", cartStringify);
+    }
 
 });
