@@ -203,6 +203,8 @@ body {
                 }
                 .modal-title{
                     text-transform: uppercase;
+                    text-align: center;
+                    width: 100%;
                 }
                 .modal-content{
                     h1{
@@ -220,7 +222,11 @@ body {
                 }
                 .modal-body{
                     font-weight: bold;
-                    justify-content: center;
+                    text-align: center;
+                }
+                #order{
+                    font-size: 15px;
+                    font-weight: bold;
                 }
             }
         }
