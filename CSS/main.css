@@ -595,6 +595,9 @@ body .container .row .col-12 .payment-wrapper {
     font-family: FontAwesome;
     font-weight: 900; }
 
+body .container .row .col-12 .modal-title {
+  text-transform: uppercase; }
+
 body .container .row .col-12 .modal-content h1 {
   font-size: 20px; }
 
@@ -606,6 +609,10 @@ body .container .row .col-12 .modal-dialog {
   top: 40% !important;
   left: 50%;
   transform: translate(-50%, -50%); }
+
+body .container .row .col-12 .modal-body {
+  font-weight: bold;
+  justify-content: center; }
 
 * {
   box-sizing: border-box; }

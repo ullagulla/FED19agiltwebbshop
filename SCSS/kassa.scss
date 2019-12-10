@@ -201,6 +201,9 @@ body {
                         font-weight: 900;
                     }
                 }
+                .modal-title{
+                    text-transform: uppercase;
+                }
                 .modal-content{
                     h1{
                         font-size: 20px;
@@ -214,6 +217,10 @@ body {
                     top: 40% !important;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                }
+                .modal-body{
+                    font-weight: bold;
+                    justify-content: center;
                 }
             }
         }
