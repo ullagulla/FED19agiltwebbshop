@@ -71,7 +71,6 @@ $(document).ready(function(){
         $(".wrapper").append([
             $("<div>", {"class": "prod-wrapper col-12 col-md-6 col-lg-4"}).append([
                 $("<div>", {"class": "prod-img my-3"}).append([
-                    $("<a>", {"href": "html/produktsida.html"}).append([
                         $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic" +i})
                     ]),
                 ]),
@@ -84,15 +83,14 @@ $(document).ready(function(){
                     $("<img>", {"class": "cart-icon p1-1 pr-3 pt-3", "src": "images/cart.PNG", "alt": "cart-icon", "id": "cart" +i})
                 ])
             ]),
-        ]);
 
-        $("pic"+i).on("click", function(){
+        $("#pic"+i).on("click", function(){
 
-            theStorage.push(products[i]);
-            storage();
-            location.href = "produktsida.html";
+            storage.push(products[i]);
+            putInStorage();
+            location.href = "html/produktsida.html";
 
-            console.log(theStorage);
+            console.log(storage);
 
         });
 
