@@ -136,12 +136,12 @@ body {
         -webkit-appearance: none; }
     body .cartnav .input-group .button-plus {
       width: fit-content; }
-  body .active {
+  body .cart-active {
     transition: .2s;
     visibility: visible;
     width: 100%; }
     @media (min-width: 600px) {
-      body .active {
+      body .cart-active {
         width: 300px; } }
   body .cartnav a {
     padding: 8px 8px 8px 32px;
