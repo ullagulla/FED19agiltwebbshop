@@ -80,6 +80,7 @@ body {
                 margin-left: 50px;
                 }
                 .search-field {
+                    top: 20px;
                     display: none;
                     input {
                         border: none;
@@ -94,20 +95,25 @@ body {
                 }
                 .search {
                     position: absolute;
-                    top: 14px;
+                    top: 8px;
                     left: 90px;
                     width: 40px;
                     height: 40px;
                     .glass-wrapper {
                         position: relative;
-                        width: 30px;
-                        height: 30px;
+                        width: 40px;
+                        height: 40px;
                         &:hover {
                             background-color: black;
-                            transition: 0.2s;
+                            transition: 0.5s;
                             border-radius: 50%;
                         }
+                        &:hover .search-glass {
+                            background-image: url(../images/magnifying-glass-white.png);
+                        }
                         .search-glass {
+                            background-image: url(../images/magnifying-glass.png);
+                            background-size: cover;
                             position: absolute;
                             top: 50%;
                             left: 50%;

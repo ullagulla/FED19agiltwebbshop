@@ -50,7 +50,7 @@ $(document).ready(function(){
     //Nedan loopar igenom alla våra objekt och skapar upp dom i html
 
     let cart = [];
-    let myStorage = [];
+    let theStorage = [];
     let amount = [];
 
     $.each(products, function(i){
@@ -73,16 +73,26 @@ $(document).ready(function(){
             ]),
         ]);
 
+        $("pic"+i).on("click", function(){
+
+            theStorage.push(products[i]);
+            storage();
+            location.href = "produktsida.html";
+
+            console.log(theStorage);
+
+        });
+
         //Nedan funktion höjer värdet på badge (varukorg) med 1
 
         $("#cart"+i).on("click", function(){
 
             amount[products[i].name] += 1;
             cart.push(products[i]);
-            storage();
-            let localInfo = localStorage.getItem("stringCart");
-            let myStorage = JSON.parse(localInfo);
-            $(".badge-icon").html(myStorage.length);
+            putInStorage();
+            let babo = localStorage.getItem("stringCart");
+            let boba = JSON.parse(babo);
+            $(".badge-icon").text(boba.length);
 
             console.log(amount);
 
@@ -95,8 +105,8 @@ $(document).ready(function(){
 
     });
 
-    function storage() {
-            let stringStorage = JSON.stringify(myStorage);
+    function putInStorage() {
+            let stringStorage = JSON.stringify(storage);
             let cartStringify = JSON.stringify(cart);
             localStorage.clear("product");
             localStorage.setItem("product", stringStorage);
