@@ -63,7 +63,7 @@ $(document).ready(function(){
     //Nedan loopar igenom alla våra objekt och skapar upp dom i html
 
     let cart = [];
-    let theStorage = [];
+    let storage = [];
     let amount = [];
 
     $.each(products, function(i){
