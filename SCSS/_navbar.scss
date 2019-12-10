@@ -26,8 +26,6 @@ body {
                 height: 88px;
                 .openbtn {
                     transition: .2s;
-                    position: absolute;
-                    top: 10px;
                     cursor: pointer;
                     font-size: 20px;
                     text-align: center;
@@ -80,7 +78,6 @@ body {
                 margin-left: 50px;
                 }
                 .search-field {
-                    top: 20px;
                     display: none;
                     input {
                         border: none;
@@ -94,13 +91,8 @@ body {
                     display: inline-block;
                 }
                 .search {
-                    position: absolute;
-                    top: 8px;
-                    left: 90px;
-                    width: 40px;
-                    height: 40px;
+                    width: 60%;
                     .glass-wrapper {
-                        position: relative;
                         width: 40px;
                         height: 40px;
                         &:hover {
@@ -114,10 +106,6 @@ body {
                         .search-glass {
                             background-image: url(../images/magnifying-glass.png);
                             background-size: cover;
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
                             width: 20px;
                             height: 20px;
                             display: none;
@@ -129,10 +117,6 @@ body {
                     }
                 }
                 .logo-wrapper {
-                    position: absolute;
-                    top: 10px;
-                    left: 50%;
-                    transform: translate(-50%);
                     img {
                         width: 140px;
                         height: 40px;
@@ -142,18 +126,11 @@ body {
                     visibility: hidden;
                     @include desktop(){
                         visibility: visible;
-                        position: absolute;
-                        right: 120px;
-                        top: 25px;
                         font-size: 12px;
                     }
                 }
                 .icons {
-                    position: absolute;
-                    top: 20px;
-                    right: 20px;
                     @include desktop(){
-                        right: 30px;
                     }
                     .heart-icon {
                         cursor: pointer;

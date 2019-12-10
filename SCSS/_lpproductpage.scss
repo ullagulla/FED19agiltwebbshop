@@ -52,8 +52,11 @@ body {
                     position: absolute;
                     top: 1px;
                     @include desktop {
-                        left: 50%;
-                        transform: translate(-50%);
+                        font-weight: bold;
+                        color: white;
+                        left: 45%;
+                        top: 20%;
+                        transform: translate(-45%, -20%);
                         font-size: 20px;
                     }
                     .prod-name {
@@ -63,7 +66,8 @@ body {
                         text-transform: capitalize;
                         font-size: 12px;
                         @include desktop(){
-                            font-size: 16px;
+                            font-size: 14px;
+                            text-align: center;
                         }
                     }
                 }
