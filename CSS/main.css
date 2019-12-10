@@ -119,10 +119,23 @@ body {
     border-left: 1px solid rgba(128, 128, 128, 0.425); }
     body .cartnav #rubrik {
       margin-left: 6px;
-      border-bottom: 1px gray solid; }
+      border-bottom: 1px lightgray solid; }
     body .cartnav img {
       width: 30%;
       height: 30%; }
+    body .cartnav #price {
+      float: right;
+      margin: 10px; }
+    body .cartnav .totalDiv {
+      border-top: 1px solid lightgray;
+      border-bottom: 1px solid lightgray;
+      margin: 8px; }
+      body .cartnav .totalDiv #total {
+        font-size: 20px; }
+      body .cartnav .totalDiv #frakt {
+        font-size: 20px; }
+    body .cartnav #btnCO {
+      text-transform: uppercase; }
     body .cartnav .input-group .button-minus {
       width: fit-content; }
       body .cartnav .input-group .button-minus:focus {

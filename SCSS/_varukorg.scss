@@ -19,7 +19,7 @@ body {
                 .cartnav {
                     #rubrik{
                         margin-left: 6px;
-                        border-bottom: 1px gray solid;
+                        border-bottom: 1px lightgray solid;
                     }
                     width: 300px;
                     height: 100%;
@@ -36,6 +36,24 @@ body {
                     img{
                         width: 30%;
                         height: 30%;
+                    }
+                    #price{
+                        float: right;
+                        margin: 10px;
+                    }
+                    .totalDiv{
+                        border-top: 1px solid lightgray;
+                        border-bottom: 1px solid lightgray;
+                        margin: 8px;
+                        #total{
+                            font-size: 20px;
+                        }
+                        #frakt{
+                            font-size: 20px;
+                        }
+                    }
+                    #btnCO{
+                        text-transform: uppercase;
                     }
                     .input-group {
                         .button-minus {
