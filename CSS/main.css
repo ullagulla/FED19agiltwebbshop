@@ -10,8 +10,6 @@ body {
         height: 88px; }
         body .header-wrapper .row .header-container .openbtn {
           transition: .2s;
-          position: absolute;
-          top: 10px;
           cursor: pointer;
           font-size: 20px;
           text-align: center; }
@@ -57,7 +55,6 @@ body {
           font-size: 40px;
           margin-left: 50px; }
         body .header-wrapper .row .header-container .search-field {
-          top: 20px;
           display: none; }
           body .header-wrapper .row .header-container .search-field input {
             border: none;
@@ -67,13 +64,8 @@ body {
         body .header-wrapper .row .header-container .search-field.active {
           display: inline-block; }
         body .header-wrapper .row .header-container .search {
-          position: absolute;
-          top: 8px;
-          left: 90px;
-          width: 40px;
-          height: 40px; }
+          width: 60%; }
           body .header-wrapper .row .header-container .search .glass-wrapper {
-            position: relative;
             width: 40px;
             height: 40px; }
             body .header-wrapper .row .header-container .search .glass-wrapper:hover {
@@ -85,10 +77,6 @@ body {
             body .header-wrapper .row .header-container .search .glass-wrapper .search-glass {
               background-image: url(../images/magnifying-glass.png);
               background-size: cover;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
               width: 20px;
               height: 20px;
               display: none; }
@@ -96,43 +84,28 @@ body {
                 body .header-wrapper .row .header-container .search .glass-wrapper .search-glass {
                   display: inline-block;
                   cursor: pointer; } }
-        body .header-wrapper .row .header-container .logo-wrapper {
-          position: absolute;
-          top: 10px;
-          left: 50%;
-          transform: translate(-50%); }
-          body .header-wrapper .row .header-container .logo-wrapper img {
-            width: 140px;
-            height: 40px; }
+        body .header-wrapper .row .header-container .logo-wrapper img {
+          width: 140px;
+          height: 40px; }
         body .header-wrapper .row .header-container .shipping {
           visibility: hidden; }
           @media (min-width: 990px) {
             body .header-wrapper .row .header-container .shipping {
               visibility: visible;
-              position: absolute;
-              right: 120px;
-              top: 25px;
               font-size: 12px; } }
-        body .header-wrapper .row .header-container .icons {
+        body .header-wrapper .row .header-container .icons .heart-icon {
+          cursor: pointer;
+          width: 28px;
+          height: 23px; }
+        body .header-wrapper .row .header-container .icons .cart-icon {
+          cursor: pointer;
+          width: 28px;
+          height: 25px; }
+        body .header-wrapper .row .header-container .icons .badge-icon {
+          font-size: 12px;
+          border: none;
           position: absolute;
-          top: 20px;
-          right: 20px; }
-          @media (min-width: 990px) {
-            body .header-wrapper .row .header-container .icons {
-              right: 30px; } }
-          body .header-wrapper .row .header-container .icons .heart-icon {
-            cursor: pointer;
-            width: 28px;
-            height: 23px; }
-          body .header-wrapper .row .header-container .icons .cart-icon {
-            cursor: pointer;
-            width: 28px;
-            height: 25px; }
-          body .header-wrapper .row .header-container .icons .badge-icon {
-            font-size: 12px;
-            border: none;
-            position: absolute;
-            top: 12px; }
+          top: 12px; }
 
 body {
   font-family: 'Work Sans', sans-serif; }
@@ -367,8 +340,11 @@ body .container-fluid .row .prod-info {
   top: 1px; }
   @media (min-width: 990px) {
     body .container-fluid .row .prod-info {
-      left: 50%;
-      transform: translate(-50%);
+      font-weight: bold;
+      color: white;
+      left: 45%;
+      top: 20%;
+      transform: translate(-45%, -20%);
       font-size: 20px; } }
   body .container-fluid .row .prod-info .prod-name {
     text-transform: uppercase; }
@@ -377,7 +353,8 @@ body .container-fluid .row .prod-info {
     font-size: 12px; }
     @media (min-width: 990px) {
       body .container-fluid .row .prod-info .prod-price {
-        font-size: 16px; } }
+        font-size: 14px;
+        text-align: center; } }
 
 body .container-fluid .row .prod-icons {
   position: absolute;
