@@ -113,12 +113,12 @@ body {
 body {
   font-family: 'Work Sans', sans-serif; }
   body .cartnav {
-    width: 300px;
+    padding: 10px;
+    width: 400px;
     height: 100%;
     visibility: hidden;
     position: fixed;
     z-index: 100;
-    transition: .2s;
     top: 0;
     right: 0;
     background-color: white;
@@ -128,23 +128,27 @@ body {
     body .cartnav #rubrik {
       margin-left: 6px;
       border-bottom: 1px lightgray solid; }
-    body .cartnav img {
-      width: 30%;
-      height: 30%; }
-    body .cartnav #price {
-      float: right;
-      margin: 10px; }
+    body .cartnav .main {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+      body .cartnav .main img {
+        width: 30%;
+        height: 30%; }
+      body .cartnav .main #price {
+        margin-right: 5px; }
+    body .cartnav .shippingDiv {
+      margin: 8px;
+      padding-top: 5px;
+      border-top: 1px solid lightgray; }
     body .cartnav .totalDiv {
       border-top: 1px solid lightgray;
-      border-bottom: 1px solid lightgray;
-      margin: 8px; }
+      margin: 8px;
+      padding-top: 5px; }
       body .cartnav .totalDiv #total {
         font-size: 20px; }
       body .cartnav .totalDiv #frakt {
-        font-size: 16px; }
-      body .cartnav .totalDiv #shipping {
-        margin: 10px;
-        float: right; }
+        font-size: 18px;
+        margin-top: 10px; }
     body .cartnav #btnCO {
       text-transform: uppercase; }
     body .cartnav .input-group .button-minus {
@@ -160,13 +164,18 @@ body {
         -webkit-appearance: none; }
     body .cartnav .input-group .button-plus {
       width: fit-content; }
+    body .cartnav a.cartbtn {
+      font-size: 15px;
+      color: #818181; }
   body .cart-active {
+    padding: 10px;
     transition: .2s;
     visibility: visible;
     width: 100%; }
     @media (min-width: 600px) {
       body .cart-active {
-        width: 300px; } }
+        width: 400px;
+        padding: 10px; } }
   body .cartnav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -175,6 +184,7 @@ body {
     body .cartnav a:hover {
       color: #f1f1f1; }
   body .cartbtn {
+    font-size: 20px;
     cursor: pointer;
     position: absolute;
     top: 0;
