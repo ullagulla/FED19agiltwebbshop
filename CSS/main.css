@@ -540,7 +540,8 @@ body .container-fluid .row .icons-hover {
   bottom: 28px;
   right: 28px;
   width: 80px;
-  border-radius: 20px; }
+  border-radius: 20px;
+  z-index: 1; }
 
 .container .row .chat-popup {
   display: none;
