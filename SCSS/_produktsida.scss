@@ -7,6 +7,13 @@
 @mixin desktop {
     @media (min-width: 990px) {@content;}
 }
+@mixin center-v () {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
 .container{
     .row{
         #picDiv{
@@ -103,15 +110,17 @@
         .open-button{
             background-color:#343a40;
             color: white;
-            padding: 16px 20px;
+            padding: 16px;
             border: none;
             cursor: pointer;
             opacity: 0.9;
             position: fixed;
             bottom: 28px;
             right: 28px;
-            width: 80px;
+            width: 70px;
             border-radius: 20px;
+            z-index: 1;
+            text-transform: uppercase;
         }
         .chat-popup{
             display: none;
@@ -119,8 +128,8 @@
             bottom: 20px;
             right: 15px;
             border: 2px solid #f1f1f1;
-            z-index: 9px;
             border-radius: 20px;
+            z-index: 1;
             h1{
                 font-size: 18px;
                 font-weight: bold;
