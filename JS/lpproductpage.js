@@ -1,19 +1,5 @@
 $(document).ready(function(){
 
-    //Funktion för sidemenu
-
-    $(".openbtn").on("click", function(){
-
-        $(".sidenav").toggleClass("active");
-
-    });
-
-    $(".closebtn").on("click", function(){
-
-        $(".sidenav").toggleClass("active");
-
-    })
-
     //Klass med alla egenskaper för våra objekt som finns längre ned
 
     function Product(n, sp, lp, pic) {
@@ -74,6 +60,16 @@ $(document).ready(function(){
                 ]),
             ]),
         ]);
+
+        $(".hover-div").on("click", function(){
+
+            storage.push(products[i]);
+            putInStorage();
+            location.href = "html/produktsida.html";
+
+            console.log(storage);
+
+        });
 
     });
 });

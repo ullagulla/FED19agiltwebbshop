@@ -1,48 +1,5 @@
 $(document).ready(function(){
 
-    //Funktion för sticky top
-
-    $(window).scroll(function(){
-    let sticky = $('.sticky'),
-        scroll = $(window).scrollTop();
-        
-    if (scroll >= 70) sticky.addClass('fixed');
-    else sticky.removeClass('fixed');
-    });
-
-    //Funktion för sidemenu
-
-    $(".openbtn").on("click", function(){
-
-        $(".sidenav").toggleClass("active");
-
-    });
-
-    $(".closebtn").on("click", function(){
-
-        $(".sidenav").toggleClass("active");
-
-    })
-
-    //Search field
-
-    $(".search-glass").on("click", function(){
-        $(".search-field").toggleClass("active");
-    });
-
-    // Varukorgen
-    $(".cart-icon").on("click", function(){
-
-        $(".cartnav").toggleClass("cart-active");
-
-    });
-
-    $(".cartbtn").on("click", function(){
-
-        $(".cartnav").toggleClass("cart-active");
-
-    })
-
     //Klass med alla egenskaper för våra objekt som finns längre ned
 
     function Product(n, sp, lp, pic) {
