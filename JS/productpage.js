@@ -14,6 +14,19 @@ $(document).ready(function(){
 
     })
 
+        // Varukorgen
+        $(".cart-icon").on("click", function(){
+
+            $(".cartnav").toggleClass("cart-active");
+    
+        });
+    
+        $(".cartbtn").on("click", function(){
+    
+            $(".cartnav").toggleClass("cart-active");
+    
+        })
+
     //Nedan hämtar vår information från Local storage och skriver ut det på produktsidan
 
     let information = localStorage.getItem("product");

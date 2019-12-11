@@ -15,14 +15,19 @@
 }
 body {
     @include font-style;
- 
+        #myCart{
+            padding: 11px;
+        }
                 .cartnav {
+                    #myCart{
+                        padding: 1px;
+                    }
                     #rubrik{
                         margin-left: 6px;
                         border-bottom: 1px lightgray solid;
                     }
                     padding: 10px;
-                    width: 400px;
+                    width: 32vw;
                     height: 100%;
                     visibility: hidden;
                     position: fixed;
@@ -33,12 +38,18 @@ body {
                     overflow-x: hidden;
                     padding-top: 60px;
                     border-left: 1px solid rgba(128, 128, 128, 0.425);
-                    .main{
+                    #mainDiv{
                         margin-top: 10px;
                         margin-bottom: 10px;
+                        padding: 0;
+                        ul{
+                            padding: 0px;
+                        }
+                        #antalP{
+                            float: right;
+                        }
                     img{
-                        width: 30%;
-                        height: 30%;
+                        width: 100%;
                     }
                     #price{
                         margin-right: 5px;
@@ -97,7 +108,7 @@ body {
                     visibility: visible;
                     width: 100%;
                     @include tablet(){
-                        width: 400px;
+                        width: 32vw;
                         padding: 10px;
                     }
                 }

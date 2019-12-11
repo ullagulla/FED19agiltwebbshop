@@ -81,7 +81,7 @@ $(document).ready(function(){
         $(".prod-container").append([
             $("<div>", {"class": "prod-wrapper col-6 col-md-4 col-lg-4 pb-4"}).append([
                 $("<div>", {"class": "hover-div", "id": "hover" +i}).append([
-                    $("<div>", {"class": "prod-img pb-3 pb-lg-0"}).append([
+                    $("<div>", {"class": "prod-img pb-3 pb-md-0"}).append([
                         $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i})
                     ]),
                     $("<div>", {"class": "prod-info", "id": "info"+i}).append([
@@ -100,35 +100,45 @@ $(document).ready(function(){
             ]),
         ]);
 
-        //Nedan visar info PÅ produkt-bilderna vid hover
+        //Nedan visar info PÅ produkt-bilderna vid hover desktop
 
-        $("#hover"+i).on("mouseover", function(){
+        if ($(window).width() > 990) {
 
-            $("#info"+i).css({
-                opacity: "1",
-                transition: "all 0.5s"
-            })
+            $("#hover"+i).on("mouseover", function(){
 
-            $("#icons-hover" +i).css({
-                opacity: "1",
-                transition: "all 0.5s"
-            })
+                $("#info"+i).css({
+                    opacity: "1",
+                    transition: "all 0.5s"
+                })
 
-        });
+                $("#icons-hover" +i).css({
+                    opacity: "1",
+                    transition: "all 0.5s"
+                })
 
-        $("#hover"+i).on("mouseleave", function(){
+            });
 
-            $("#info"+i).css({
-                opacity: "0",
-                transition: "all 0.5s"
-            })
+            $("#hover"+i).on("mouseleave", function(){
 
-            $("#icons-hover" +i).css({
-                opacity: "0",
-                transition: "all 0.5s"
-            })
+                $("#info"+i).css({
+                    opacity: "0",
+                    transition: "all 0.5s"
+                })
 
-        });
+                $("#icons-hover" +i).css({
+                    opacity: "0",
+                    transition: "all 0.5s"
+                })
+
+            });
+
+        }
+
+        else {
+            $("#info"+i).css("opacity", "1");
+
+            $("#icons-hover" +i).css("visibility", "hidden");
+        }
 
         //meddelande när produkt läggs i varukorgen
 

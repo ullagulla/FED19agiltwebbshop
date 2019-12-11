@@ -49,58 +49,63 @@ $(document).ready(function(){
 
     //Nedan loopar igenom alla våra objekt och skapar upp dom i html
 
-    $(products).each(function(i){
+    // $.each(products, function(i){
 
-        $(".wrapper").append([
+    for (let i = 0; i < products.length; i++) {
+
+        console.log(products[i])
+
+        $(".prod-wrapper").append([
             $("<div>", {"class": "prod-container col-6 col-md-4 col-lg-4 pb-4"}).append([
-                $("<a>", {"href": "produktsida.html"}).append([
-                    $("<div>", {"class": "hover-div", "id": "hover" +i}).append([
-                        $("<div>", {"class": "prod-img pb-3 pb-lg-0"}).append([
-                            $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i})
-                        ]),
-                        $("<div>", {"class": "prod-info", "id": "info"+i}).append([
-                            $("<p>", {"class": "prod-name mb-0 pl-3 pt-3"}).append(products[i].name),
-                            $("<p>", {"class": "prod-price mb-0 pl-3"}).append("From " + products[i].smallprice + " :-")
-                        ]),
-                        $("<div>", {"class": "icons-hover d-flex", "id": "icons-hover" +i}).append([
-                            $("<img>", {"class": "prod-heart pr-1", "src": "../images/heart-white.PNG", "id": "hover-heart" +i}),
-                            $("<img>", {"class": "prod-cart pl-1", "src": "../images/cart-white.PNG", "id": "hover-cart" +i})
-                        ]),
-                        $("<div>", {"class": "prod-icons pr-1 pb-1"}).append([
-                            $("<img>", {"class": "heart-icon pr-1 pt-3", "src": "../images/heart.PNG", "alt": "heart-icon", "id": "heart" +i}),
-                            $("<img>", {"class": "cart-icon p1-1 pr-3 pt-3", "src": "../images/cart.PNG", "alt": "cart-icon", "id": "cart" +i})
-                        ])
+                $("<div>", {"class": "hover-div", "id": "hover" +i}).append([
+                    $("<div>", {"class": "prod-img pb-3 pb-lg-0"}).append([
+                        $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i})
                     ]),
+                    $("<div>", {"class": "prod-info", "id": "info"+i}).append([
+                        $("<p>", {"class": "prod-name mb-0 pl-3 pt-3"}).append(products[i].name),
+                        $("<p>", {"class": "prod-price mb-0 pl-3"}).append("From " + products[i].smallprice + " :-")
+                    ]),
+                    $("<div>", {"class": "icons-hover d-flex", "id": "icons-hover" +i}).append([
+                        $("<img>", {"class": "prod-heart pr-1", "src": "../images/heart-white.PNG", "id": "hover-heart" +i}),
+                        $("<img>", {"class": "prod-cart pl-1", "src": "../images/cart-white.PNG", "id": "hover-cart" +i})
+                    ]),
+                    $("<div>", {"class": "prod-icons pr-1 pb-1"}).append([
+                        $("<img>", {"class": "heart-icon pr-1 pt-3", "src": "../images/heart.PNG", "alt": "heart-icon", "id": "heart" +i}),
+                        $("<img>", {"class": "cart-icon p1-1 pr-3 pt-3", "src": "../images/cart.PNG", "alt": "cart-icon", "id": "cart" +i})
+                    ])
                 ]),
             ]),
         ]);
 
-        $("#hover"+i).on("mouseover", function(){
+        if ($(window).width() > 990) {
 
-            $("#info"+i).css({
-                opacity: "1",
-                transition: "all 0.5s"
-            })
+            $("#hover"+i).hover(function(){
 
-            $("#icons-hover" +i).css({
-                opacity: "1",
-                transition: "all 0.5s"
-            })
+                $("#info"+i).css({
+                    opacity: "1",
+                    transition: "all 0.5s"
+                })
 
-        });
+                $("#icons-hover" +i).css({
+                    opacity: "1",
+                    transition: "all 0.5s"
+                })
 
-        $("#hover"+i).on("mouseleave", function(){
+                return false
 
-            $("#info"+i).css({
-                opacity: "0",
-                transition: "all 0.5s"
-            })
+            });
 
-            $("#icons-hover" +i).css({
-                opacity: "0",
-                transition: "all 0.5s"
-            })
+        }
 
-        });
-    });
+        else {
+            $("#info"+i).css("opacity", "1");
+
+            $(".div-hover").css("visibility", "hidden");
+
+        }
+
+        return false
+
+    }
+    // });
 });
