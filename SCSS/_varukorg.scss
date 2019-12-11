@@ -21,40 +21,46 @@ body {
                         margin-left: 6px;
                         border-bottom: 1px lightgray solid;
                     }
-                    width: 300px;
+                    padding: 10px;
+                    width: 400px;
                     height: 100%;
                     visibility: hidden;
                     position: fixed;
                     z-index: 100;
-                    transition: .2s;
                     top: 0;
                     right: 0;
                     background-color: white;
                     overflow-x: hidden;
                     padding-top: 60px;
                     border-left: 1px solid rgba(128, 128, 128, 0.425);
+                    .main{
+                        margin-top: 10px;
+                        margin-bottom: 10px;
                     img{
                         width: 30%;
                         height: 30%;
                     }
                     #price{
-                        float: right;
-                        margin: 10px;
+                        margin-right: 5px;
+                        }
+                    }
+                    .shippingDiv{
+                        margin: 8px;
+                        padding-top:5px;
+                        border-top: 1px solid lightgray;
                     }
                     .totalDiv{
                         border-top: 1px solid lightgray;
-                        border-bottom: 1px solid lightgray;
                         margin: 8px;
+                        padding-top:5px;
                         #total{
                             font-size: 20px;
                         }
                         #frakt{
-                            font-size: 16px;
+                            font-size: 18px;
+                            margin-top: 10px;
                         }
-                        #shipping{
-                            margin: 10px;
-                            float: right;
-                        }
+                        
                     }
                     #btnCO{
                         text-transform: uppercase;
@@ -80,13 +86,19 @@ body {
                             width: fit-content;
                         }
                     }
+                    a.cartbtn{
+                        font-size: 15px;
+                        color: #818181;
+                    }
             }
                 .cart-active {
+                    padding: 10px;
                     transition: .2s;
                     visibility: visible;
                     width: 100%;
                     @include tablet(){
-                        width: 300px;
+                        width: 400px;
+                        padding: 10px;
                     }
                 }
             .cartnav a {
@@ -99,6 +111,7 @@ body {
             }
         }
         .cartbtn{
+            font-size: 20px;
         cursor: pointer;
         position: absolute;
         top: 0;

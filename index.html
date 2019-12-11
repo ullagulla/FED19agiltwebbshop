@@ -74,27 +74,32 @@
                         </div>
                     </div>
                     <!-- varukorg -->
-                <div id="myCart" class="cartnav">
-                    <span id="rubrik">YOUR CART</span>
-                        <a class="cartbtn">&times;</a>
+                <div id="myCart" class="cartnav container">
+                    <p id="rubrik">YOUR CART</p>
+                        <a class="cartbtn">CLOSE</a>
                         <div class="main">
-                            <img class="ml-2" src="images/serenity-baldafrique.jpg">
-                            <span id="name">Slow dance</span>
-                            <span id="price">1200.00 SEK</span>
+                            <div class="d-flex justify-content-between">
+                                <img class="ml-2" src="images/serenity-baldafrique.jpg">
+                                    <p id="name">Slow dance</p>
+                                    <p id="price">1200.00 SEK</p>
+                            </div>
+                            <div class="d-flex d-flex justify-content-between">
+                            <p id="size">50 ml</p>
                             <div>
                             <span class="input-group px-2">
                                     <input type="button" value="-" class="button-minus btn pl-0 pr-1" data-field="quantity">
                                     <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
                                     <input type="button" value="+" class="button-plus btn p-0 mr-2" data-field="quantity">
-                                    <button class="btn btn-outline-dark">Remove</button>
+                                    <button class="btn-outline-secondary">Remove</button>
                             </span>
                             </div>
                         </div>
-                        <div class="totalDiv">
-                                <span id="total">Total</span><span id="price">1200.00 SEK</span>
-                                <br>
-                                <span id="frakt">Shipping</span><span id="shipping">FREE!</span>
+                        <div class="d-flex justify-content-between shippingDiv">
+                             <p id="frakt">Shipping</p><p id="shipping">FREE!</p>
                         </div>
+                        <div class="d-flex justify-content-between totalDiv">
+                                <p id="total">Total</p><p id="price">1200.00 SEK</p>
+                            </div>
                         <div class="d-flex col-12">
                                 <button type="button" class="btn btn-outline-secondary w-100" id="btnCO">Go to checkout</button>
                     </div>

@@ -14,6 +14,8 @@ $(document).ready(function(){
 
     })
 
+    //Nedan hämtar vår information från Local storage och skriver ut det på produktsidan
+
     let information = localStorage.getItem("product");
     let productInfo = JSON.parse(information);
 
