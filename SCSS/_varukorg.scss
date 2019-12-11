@@ -27,7 +27,7 @@ body {
                         border-bottom: 1px lightgray solid;
                     }
                     padding: 10px;
-                    width: 400px;
+                    width: 32vw;
                     height: 100%;
                     visibility: hidden;
                     position: fixed;
@@ -108,7 +108,7 @@ body {
                     visibility: visible;
                     width: 100%;
                     @include tablet(){
-                        width: 400px;
+                        width: 32vw;
                         padding: 10px;
                     }
                 }
