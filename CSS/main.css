@@ -600,36 +600,6 @@ body .container-fluid .row .icons-hover {
   padding-left: 10px;
   padding-top: 15px; }
 
-.container .row .item {
-  width: 200px;
-  height: 200px;
-  margin: 50px auto;
-  padding-top: 75px;
-  background: #ccc;
-  text-align: center;
-  color: #FFF;
-  font-size: 3em; }
-
-.container .row span {
-  display: block;
-  font-size: 1rem; }
-
-.container .row--primary {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  right: 20px;
-  background: green; }
-
-.container .row--secondary {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  left: 20px;
-  background: red; }
-
 html {
   scroll-behavior: smooth; }
   html body {
