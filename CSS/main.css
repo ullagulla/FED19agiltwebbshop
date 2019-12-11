@@ -532,16 +532,17 @@ body .container-fluid .row .icons-hover {
 .container .row .open-button {
   background-color: #343a40;
   color: white;
-  padding: 16px 20px;
+  padding: 16px;
   border: none;
   cursor: pointer;
   opacity: 0.9;
   position: fixed;
   bottom: 28px;
   right: 28px;
-  width: 80px;
+  width: 70px;
   border-radius: 20px;
-  z-index: 1; }
+  z-index: 1;
+  text-transform: uppercase; }
 
 .container .row .chat-popup {
   display: none;
