@@ -740,6 +740,10 @@ html {
         background-color: black !important; }
       html body .container .row .col-12 .payment-container {
         display: none; }
+        html body .container .row .col-12 .payment-container .card-img {
+          width: 100px; }
+          html body .container .row .col-12 .payment-container .card-img img {
+            width: 100%; }
         html body .container .row .col-12 .payment-container .payment-wrapper {
           border: 1px solid #ced4da;
           border-radius: 0.25rem;
@@ -779,14 +783,29 @@ html {
             border-bottom-left-radius: 0; }
           html body .container .row .col-12 .payment-container .payment-wrapper label {
             font-size: 12px; }
-          html body .container .row .col-12 .payment-container .payment-wrapper .card-info {
+          html body .container .row .col-12 .payment-container .payment-wrapper .klarna-info {
             width: 100%;
             background-color: #EAEAEA; }
-          html body .container .row .col-12 .payment-container .payment-wrapper .show-klarna img {
-            width: 15px;
-            height: 15px; }
-      html body .container .row .col-12 .klarna-wrapper .card-info {
-        background-color: #EAEAEA; }
+          html body .container .row .col-12 .payment-container .payment-wrapper .show-klarna {
+            width: 100%;
+            cursor: pointer; }
+            html body .container .row .col-12 .payment-container .payment-wrapper .show-klarna img {
+              width: 15px;
+              height: 15px; }
+      html body .container .row .col-12 .klarna-container {
+        display: none; }
+        html body .container .row .col-12 .klarna-container .btn {
+          border-radius: 0;
+          border: 1px solid black;
+          font-size: 14px; }
+        html body .container .row .col-12 .klarna-container .btn-dark {
+          background-color: black !important; }
+        html body .container .row .col-12 .klarna-container .klarna-wrapper .card-info {
+          background-color: #EAEAEA; }
+        html body .container .row .col-12 .klarna-container .klarna-wrapper .pay-method .klarna-img-container {
+          width: 35px; }
+          html body .container .row .col-12 .klarna-container .klarna-wrapper .pay-method .klarna-img-container img {
+            width: 100%; }
       html body .container .row .col-12 .modal-title {
         text-transform: uppercase;
         text-align: center;
