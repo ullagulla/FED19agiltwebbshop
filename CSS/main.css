@@ -485,6 +485,12 @@ body .container-fluid .row .icons-hover {
 
 .container .row .carousel {
   padding-top: 50px; }
+  .container .row .carousel .carousel-control-prev {
+    font-size: 30px;
+    color: black; }
+  .container .row .carousel .carousel-control-next {
+    font-size: 30px;
+    color: black; }
 
 .container .row .nav {
   justify-content: space-around;

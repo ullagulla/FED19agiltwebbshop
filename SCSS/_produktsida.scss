@@ -55,6 +55,14 @@
         }
         .carousel{
             padding-top: 50px;
+            .carousel-control-prev {
+                font-size: 30px;
+                color: black;
+            }
+            .carousel-control-next {
+                font-size: 30px;
+                color: black;
+            }
         }
         .nav{
             justify-content: space-around;
