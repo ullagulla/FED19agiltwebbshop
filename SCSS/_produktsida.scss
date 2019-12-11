@@ -100,16 +100,17 @@
             }
         }
         .open-button{
-            background-color: #555;
+            background-color:#343a40;
             color: white;
             padding: 16px 20px;
             border: none;
             cursor: pointer;
-            opacity: 0.8;
+            opacity: 0.9;
             position: fixed;
             bottom: 28px;
             right: 28px;
-            width: 280px;
+            width: 100px;
+            border-radius: 20px;
         }
         .chat-popup{
             display: none;
@@ -118,6 +119,10 @@
             right: 15px;
             border: 3px solid #f1f1f1;
             z-index: 9px;
+            h1{
+                font-size: 18px;
+                font-weight: bold;
+            }
         }
         .form-container{
             max-width: 300px;
@@ -138,20 +143,25 @@
             outline: none;
         }
         .form-container .btn{
-            background: #4CAF50;
+            background: black;
             color: white;
-            padding: 16px 20px;
+            // padding: 16px 20px;
             border: none;
             cursor: pointer;
-            width: 100%;
+            width: 48%;
             margin-bottom: 10px;
             opacity: 0.8;
         }
         .form-container .cancel{
-            background-color: red;
+            background-color: #EADCCF;
+            color: black;
         }
         .form-container .btn:hover, .open-button:hover{
-            opacity:1;
+            opacity:1; 
+        }
+        #message{
+            width: 275px;
+            height: 150px;
         }
      }
 }
