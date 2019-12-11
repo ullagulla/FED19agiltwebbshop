@@ -75,32 +75,48 @@ $(document).ready(function(){
             ]),
         ]);
 
-        $("#hover"+i).on("mouseover", function(){
+        if ($(window).width() > 990) {
 
-            $("#info"+i).css({
-                opacity: "1",
-                transition: "all 0.5s"
-            })
+            $("#hover"+i).hover(function(){
 
-            $("#icons-hover" +i).css({
-                opacity: "1",
-                transition: "all 0.5s"
-            })
+                $("#info"+i).css({
+                    opacity: "1",
+                    transition: "all 0.5s"
+                })
 
-        });
+                $("#icons-hover" +i).css({
+                    opacity: "1",
+                    transition: "all 0.5s"
+                })
 
-        $("#hover"+i).on("mouseleave", function(){
+                return false
 
-            $("#info"+i).css({
-                opacity: "0",
-                transition: "all 0.5s"
-            })
+            });
 
-            $("#icons-hover" +i).css({
-                opacity: "0",
-                transition: "all 0.5s"
-            })
+            // $("#hover"+i).on("mouseleave", function(){
 
-        });
+            //     $("#info"+i).css({
+            //         opacity: "0",
+            //         transition: "all 0.5s"
+            //     })
+
+            //     $("#icons-hover" +i).css({
+            //         opacity: "0",
+            //         transition: "all 0.5s"
+            //     })
+
+            // });
+
+        }
+
+        else {
+            $("#info"+i).css("opacity", "1");
+
+            $(".div-hover").css("visibility", "hidden");
+
+        }
+
+        return false
+
     });
 });

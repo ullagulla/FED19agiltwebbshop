@@ -13,12 +13,10 @@ $(document).ready(function(){
         $(window).scrollTop(0);
     });
 
-    // $(window).scroll(function(){
-    //     let sticky = $('.sticky'),
-    //         scroll = $(window).scrollTop();
-            
-    //     if (scroll >= 70) sticky.addClass('fixed');
-    //     else sticky.removeClass('fixed');
-    // });
+    $(".continue").on("click", function(){
+
+        $(".payment-container").addClass("d-flex").slideDown("slow");
+
+    });
 
   });
