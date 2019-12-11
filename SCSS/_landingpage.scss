@@ -17,7 +17,7 @@
 body {
     @include font-style;   
     .section-wrapper {
-        padding-top: 70px;
+        padding-top: 68px;
         .row {
             .img-section{
                 background-image: url(../images/image-lp-mob.jpg);
@@ -95,8 +95,10 @@ body {
                         font-size: 20px;
                     }
                     .prod-name {
-                        text-align: center;
                         text-transform: uppercase;
+                        @include desktop(){
+                            text-align: center;
+                        }
                     }
                     .prod-price {
                         text-transform: capitalize;
@@ -108,17 +110,16 @@ body {
                     }
                 }
                 .prod-icons {
+                    z-index: 999;
                     position: absolute;
                     bottom: 40px;
                     right: 10px;
                     .heart-icon {
-                        z-index: 200;
                         width: 27px;
                         height: 37px;
                         cursor: pointer;
                     }
                     .cart-icon {
-                        z-index: 200;
                         width: 38px;
                         height: 40px;
                         cursor: pointer;
