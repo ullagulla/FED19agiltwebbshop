@@ -43,4 +43,8 @@ $(document).ready(function(){
         $("#myForm").css("display", "none");
     }) 
 
+    AOS.init({
+        duration: 1200
+       });
+
 });
