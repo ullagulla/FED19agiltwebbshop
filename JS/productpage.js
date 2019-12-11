@@ -1,5 +1,15 @@
 $(document).ready(function(){
 
+    // Chat modal
+
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+
     //Funktion för sidemenu
 
     $(".openbtn").on("click", function(){
@@ -30,15 +40,5 @@ $(document).ready(function(){
         $(".cart-notification").toggleClass("message-active");
 
     });
-
-    // Chat modal
-
-    function openForm() {
-        document.getElementById("myForm").style.display = "block";
-      }
-      
-      function closeForm() {
-        document.getElementById("myForm").style.display = "none";
-      }
 
 });
