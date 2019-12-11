@@ -9,6 +9,14 @@
 }
 .container{
     .row{
+        #picDiv{
+            display: none;
+        }
+        @include tablet{
+                #picDiv{
+                    display: none;
+                }
+        }
         @include desktop {
             #main{
                 width: 60%;
@@ -26,27 +34,20 @@
                 position: sticky;
                 top:20%;
                 }
-                .carousel-slide{
-                    display: none;
-                }
-                .carousel-inner{
+                #picDiv{
+                    display: block;
+                    padding-top: 135px;
                     img{
-                        margin-top: 10px;
+                        height: 90%;
+                        width: 90%;
                     }
                 }
-                span.carousel-control-prev-icon{
+                .carousel{
                     display: none;
                 }
-                span.carousel-control-next-icon{
-                    display: none;
-                }
-                .carousel-item{
-                    clear: both;
-                    display: block;
-                    height: fit-content;
-                    margin-top:10px;
-                    
-                }
+        }
+        .carousel{
+            padding-top: 100px;
         }
         .nav{
             justify-content: space-around;
