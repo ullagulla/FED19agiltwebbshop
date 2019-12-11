@@ -80,27 +80,27 @@ $(document).ready(function(){
 
         $(".prod-container").append([
             $("<div>", {"class": "prod-wrapper col-6 col-md-4 col-lg-4 pb-4"}).append([
-                $("<a>", {"href": "html/produktsida.html"}).append([
-                    $("<div>", {"class": "hover-div", "id": "hover" +i}).append([
-                        $("<div>", {"class": "prod-img pb-3 pb-lg-0"}).append([
-                            $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i})
-                        ]),
-                        $("<div>", {"class": "prod-info", "id": "info"+i}).append([
-                            $("<p>", {"class": "prod-name mb-0 pl-3 pt-3"}).append(products[i].name),
-                            $("<p>", {"class": "prod-price mb-0 pl-3"}).append("From " + products[i].smallprice + " :-")
-                        ]),
-                        $("<div>", {"class": "icons-hover d-flex", "id": "icons-hover" +i}).append([
-                            $("<img>", {"class": "prod-heart pr-1", "src": "images/heart-white.PNG", "id": "hover-heart" +i}),
-                            $("<img>", {"class": "prod-cart pl-1", "src": "images/cart-white.PNG", "id": "hover-cart" +i})
-                        ]),
-                        $("<div>", {"class": "prod-icons pr-1 pb-1"}).append([
-                            $("<img>", {"class": "heart-icon pr-1 pt-3", "src": "images/heart.PNG", "alt": "heart-icon", "id": "heart" +i}),
-                            $("<img>", {"class": "cart-icon p1-1 pr-3 pt-3", "src": "images/cart.PNG", "alt": "cart-icon", "id": "cart" +i})
-                        ])
+                $("<div>", {"class": "hover-div", "id": "hover" +i}).append([
+                    $("<div>", {"class": "prod-img pb-3 pb-lg-0"}).append([
+                        $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i})
                     ]),
+                    $("<div>", {"class": "prod-info", "id": "info"+i}).append([
+                        $("<p>", {"class": "prod-name mb-0 pl-3 pt-3"}).append(products[i].name),
+                        $("<p>", {"class": "prod-price mb-0 pl-3"}).append("From " + products[i].smallprice + " :-")
+                    ]),
+                    $("<div>", {"class": "icons-hover d-flex", "id": "icons-hover" +i}).append([
+                        $("<img>", {"class": "prod-heart pr-1", "src": "images/heart-white.PNG", "id": "hover-heart" +i}),
+                        $("<img>", {"class": "prod-cart pl-1", "src": "images/cart-white.PNG", "id": "hover-cart" +i})
+                    ]),
+                    $("<div>", {"class": "prod-icons pr-1 pb-1"}).append([
+                        $("<img>", {"class": "heart-icon pr-1 pt-3", "src": "images/heart.PNG", "alt": "heart-icon", "id": "heart" +i}),
+                        $("<img>", {"class": "cart-icon p1-1 pr-3 pt-3", "src": "images/cart.PNG", "alt": "cart-icon", "id": "cart" +i})
+                    ])
                 ]),
             ]),
         ]);
+
+        //Nedan visar info PÅ produkt-bilderna vid hover
 
         $("#hover"+i).on("mouseover", function(){
 
@@ -138,7 +138,7 @@ $(document).ready(function(){
     
         });
 
-        $("#pic"+i).on("click", function(){
+        $(".hover-div").on("click", function(){
 
             storage.push(products[i]);
             putInStorage();
@@ -148,7 +148,7 @@ $(document).ready(function(){
 
         });
 
-        //Nedan funktion höjer värdet på badge (varukorg) med 1
+        //Nedan funktion höjer värdet på badge (varukorg) med 1 samt sparar objekt vi klickar på I LOCAL STORAGE
 
         $("#cart"+i).on("click", function(){
 
