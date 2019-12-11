@@ -548,8 +548,8 @@ body .container-fluid .row .icons-hover {
   bottom: 20px;
   right: 15px;
   border: 2px solid #f1f1f1;
-  z-index: 9px;
-  border-radius: 20px; }
+  border-radius: 20px;
+  z-index: 1; }
   .container .row .chat-popup h1 {
     font-size: 18px;
     font-weight: bold; }
