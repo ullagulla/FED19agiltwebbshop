@@ -112,6 +112,8 @@ body {
 
 body {
   font-family: 'Work Sans', sans-serif; }
+  body #myCart {
+    padding: 11px; }
   body .cartnav {
     padding: 10px;
     width: 400px;
@@ -125,16 +127,22 @@ body {
     overflow-x: hidden;
     padding-top: 60px;
     border-left: 1px solid rgba(128, 128, 128, 0.425); }
+    body .cartnav #myCart {
+      padding: 1px; }
     body .cartnav #rubrik {
       margin-left: 6px;
       border-bottom: 1px lightgray solid; }
-    body .cartnav .main {
+    body .cartnav #mainDiv {
       margin-top: 10px;
-      margin-bottom: 10px; }
-      body .cartnav .main img {
-        width: 30%;
-        height: 30%; }
-      body .cartnav .main #price {
+      margin-bottom: 10px;
+      padding: 0; }
+      body .cartnav #mainDiv ul {
+        padding: 0px; }
+      body .cartnav #mainDiv #antalP {
+        float: right; }
+      body .cartnav #mainDiv img {
+        width: 100%; }
+      body .cartnav #mainDiv #price {
         margin-right: 5px; }
     body .cartnav .shippingDiv {
       margin: 8px;
