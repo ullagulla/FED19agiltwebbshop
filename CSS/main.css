@@ -348,7 +348,6 @@ body {
           height: 40px;
           cursor: pointer; }
       body .container-fluid .prod-container .prod-wrapper .icons-hover {
-        opacity: 1;
         position: absolute;
         top: 50%;
         left: 50%;
