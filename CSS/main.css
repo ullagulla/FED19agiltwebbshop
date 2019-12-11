@@ -607,25 +607,6 @@ body .container-fluid .row .icons-hover {
   padding-left: 10px;
   padding-top: 15px; }
 
-.container .row .scroll-animations {
-  display: flex; }
-
-.container .row .scroll-animations div {
-  flex-grow: 1;
-  padding: 30px;
-  text-align: center;
-  opacity: 0;
-  color: #333; }
-
-.container .row .scroll-animations div span {
-  font-size: 4em;
-  color: #5AA9E0; }
-
-.container .row .scroll-animations div h3 {
-  font-size: 1.9em;
-  font-weight: 400;
-  margin-bottom: 10px; }
-
 html {
   scroll-behavior: smooth; }
   html body {
