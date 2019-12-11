@@ -61,7 +61,7 @@ body {
     body .header-wrapper .row .header-container .search-field.active {
       display: inline-block; }
     body .header-wrapper .row .header-container .search {
-      width: 60%; }
+      width: 80%; }
       body .header-wrapper .row .header-container .search .glass-wrapper {
         position: relative;
         width: 40px;
