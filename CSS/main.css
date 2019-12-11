@@ -442,6 +442,13 @@ body .container-fluid .row .icons-hover {
     width: 40px;
     height: 38px; }
 
+.container .row #picDiv {
+  display: none; }
+
+@media (min-width: 616px) {
+  .container .row #picDiv {
+    display: none; } }
+
 @media (min-width: 990px) {
   .container .row #main {
     width: 60%;
@@ -457,19 +464,17 @@ body .container-fluid .row .icons-hover {
     position: -webkit-sticky;
     position: sticky;
     top: 20%; }
-  .container .row .carousel-slide {
-    display: none; }
-  .container .row .carousel-inner img {
-    margin-top: 10px; }
-  .container .row span.carousel-control-prev-icon {
-    display: none; }
-  .container .row span.carousel-control-next-icon {
-    display: none; }
-  .container .row .carousel-item {
-    clear: both;
+  .container .row #picDiv {
     display: block;
-    height: fit-content;
-    margin-top: 10px; } }
+    padding-top: 135px; }
+    .container .row #picDiv img {
+      height: 90%;
+      width: 90%; }
+  .container .row .carousel {
+    display: none; } }
+
+.container .row .carousel {
+  padding-top: 100px; }
 
 .container .row .nav {
   justify-content: space-around;
