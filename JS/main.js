@@ -45,7 +45,7 @@ $(document).ready(function(){
                         $("<p>", {"class": "prod-name mb-0 pl-3 pt-3"}).append(products[i].name),
                         $("<p>", {"class": "prod-price mb-0 pl-3"}).append("From " + products[i].smallprice + " :-")
                     ]),
-                    $("<div>", {"class": "icons-hover d-flex", "id": "icons-hover" +i}).append([
+                    $("<div>", {"class": "icons-hover d-sm-none d-flex", "id": "icons-hover" +i}).append([
                         $("<img>", {"class": "prod-heart pr-1", "src": "images/heart-white.PNG", "id": "hover-heart" +i}),
                         $("<img>", {"class": "prod-cart pl-1", "src": "images/cart-white.PNG", "id": "hover-cart" +i})
                     ]),
@@ -117,7 +117,7 @@ $(document).ready(function(){
 
         //Nedan funktion höjer värdet på badge (varukorg) med 1 samt sparar objekt vi klickar på I LOCAL STORAGE
 
-        $("#cart"+i).on("click", function(){
+        $("#cart"+i).on("click", function(event){
 
             amount[products[i].name] += 1;
             cart.push(products[i]);
@@ -125,6 +125,8 @@ $(document).ready(function(){
             let babo = localStorage.getItem("stringCart");
             let boba = JSON.parse(babo);
             $(".badge-icon").text(boba.length);
+
+            event.stopPropagation();
 
             console.log(amount);
 
