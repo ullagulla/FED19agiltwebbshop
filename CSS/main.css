@@ -813,7 +813,7 @@ html {
             width: 100%;
             cursor: pointer; }
             html body .container .row .col-12 .payment-container .payment-wrapper .show-klarna img {
-              width: 15px;
+              width: 20px;
               height: 15px; }
       html body .container .row .col-12 .klarna-container {
         display: none; }
