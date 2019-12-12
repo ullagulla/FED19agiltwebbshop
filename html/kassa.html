@@ -144,7 +144,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6 pt-4">
+                    <div class="col-6 pt-4 price-information">
                         <p class="prod-info mb-1">Subtotal</p>
                         <p class="prod-info mb-1">Shipping</p>
                         <p class="prod-info font-weight-bold mb-4">Total</p>
@@ -153,6 +153,9 @@
                         <p class="prod-info text-right mb-1">549 kr</p>
                         <p class="prod-info text-right mb-1">Free!</p>
                         <p class="prod-info text-right mb-1">549 kr</p>
+                    </div>
+                    <div class="col-12 continue-shopping font-weight-bold">
+                        <a href="produktsida.html">Vill du lägga till fler produkter? Klicka här</a>
                     </div>
                 </div>
                 <h5 class="information pt-4 pl-2 mb-1">Your information</h5>
@@ -199,7 +202,7 @@
                             <p class="font-weight-bold mb-3 pt-2">Payment method</p>
                             <div class="account-info d-flex justify-content-between">
                                 <div id="card-info">
-                                    <input type="radio" name="gender" value="male"><span class="pay-offer pl-2">Credit Card or Bank account</span>
+                                    <input type="radio" name="gender" value="male"><span class="pay-offer font-weight-bold pl-2">Credit Card or Bank account</span>
                                 </div>
                                 <div class="card-img">
                                     <img src="../images/betalningsmetoder-nummer2.png">
@@ -209,14 +212,14 @@
                         <form class="d-flex justify-content-center">
                             <div class="col-12">
                                 <div class="form-row card-details">
-                                    <div class="form-group col-md-6 m-0 p-0">
-                                        <input type="email" class="form-control" id="inputCreditcard" placeholder="Card">
-                                    </div>
-                                    <div class="form-group col-md-6 m-0 p-0">
-                                        <input type="password" class="form-control" id="inputAccount" placeholder="Charge from bankaccount">
+                                    <div class="form-group col-12 m-0 p-0">
+                                        <button type="button" alt="CreditCard" class="btn w-100 text-left" id="inputCreditcard">Credit Card</button>
                                     </div>
                                     <div class="form-group col-12 m-0 p-0">
-                                        <input type="text" class="form-control" id="inputBankTransfer" placeholder="Bank transfer">
+                                        <button type="button" alt="Bank account" class="btn w-100 d-flex justify-content-between" id="inputAccount"><span>Bank Account</span><span><small>Nordea ****710</small></span></button>
+                                    </div>
+                                    <div class="form-group col-12 m-0 p-0">
+                                        <button type="button" alt="Bank transfer" class="btn w-100 text-left" id="inputBankTransfer">Bank Transfer</button>                                    
                                     </div>
                                     <div class="form-group col-12 m-0 py-2">
                                     </div>
@@ -232,7 +235,7 @@
                                     <form>
                                         <div class="custom-control custom-checkbox py-3">
                                             <input type="checkbox" class="custom-control-input" id="customCheck" name="card-details">
-                                            <label class="custom-control-label pt-1" for="customCheck">Check this custom checkbox</label>
+                                            <label class="custom-control-label pt-1" for="customCheck">Kom ihåg mitt kortnummer</label>
                                         </div>
                                     </form>
                                     <div class="klarna-info py-3">
@@ -289,8 +292,9 @@
                                     <div class="modal-body">
                                         <p id="order">Order Number: <span id="result"></span></p>
                                         <p id="order">Delivery time: 1-2 days with Airmee</p>
-                                        <p>It makes us so happy that you love perfume as much as we do. Our goal is to guide you to the perfect perfume for you and your life. Because we love you so much we give you a discount code next time you come to visit. Get 10% off your whole next purchase. With love, Serenity</p>
-                                        <p>Discount code: LOVESERENITY2019</p>
+                                        <p>It makes us so happy that you love perfume as much as we do. Our goal is to guide you to the perfect perfume for you and your life. Because we love you so much we give you a discount code next time you come to visit. Get 10% off your whole next purchase.</p> 
+                                        <span class="font-italic">With love, Serenity</span>
+                                        <p class="font-weight-bold pt-2">Discount code: LOVESERENITY2019</p>
                                     </div>
                                     <div class="modal-footer">
                                         <a href="../index.html">

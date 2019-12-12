@@ -23,7 +23,9 @@ body {
                         padding: 1px;
                     }
                     #rubrik{
+                        padding: 6px;
                         margin-left: 6px;
+                        margin-top: 10px;
                         margin-bottom: 10px;
                         border-bottom: 1px lightgray solid;
                     }
@@ -64,6 +66,7 @@ body {
                                         background-color: white;
                                         color: black;
                                         font-size: 12px;
+                                        text-align: right;
                                         :hover{
                                             color: pink;
                                         }
@@ -75,10 +78,11 @@ body {
                     }
                     #price{
                         margin-right: 5px;
+                        text-align: right;
                         }
                     }
                     .shippingDiv{
-                        margin: 14px;
+                        margin: 10px;
                         padding-top:5px;
                         border-top: 1px solid rgb(241, 241, 241);
                         opacity: 0,7;
@@ -86,7 +90,7 @@ body {
                     .totalDiv{
                         border-top: 1px solid rgb(233, 233, 233);
                         border-bottom: 1px solid rgb(233, 233, 233);
-                        margin-top: 250px;
+                        margin-top: 220px;
                         margin-left: 14px;
                         margin-right: 14px;
                         padding-top:5px;
@@ -133,7 +137,8 @@ body {
                         }
                     }
                     a.cartbtn{
-                        font-size: 15px;
+                        margin: -3px;
+                        font-size: 40px;
                         color: #818181;
                     }
             }

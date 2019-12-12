@@ -130,7 +130,9 @@ body {
     body .cartnav #myCart {
       padding: 1px; }
     body .cartnav #rubrik {
+      padding: 6px;
       margin-left: 6px;
+      margin-top: 10px;
       margin-bottom: 10px;
       border-bottom: 1px lightgray solid; }
     body .cartnav #mainDiv {
@@ -154,22 +156,24 @@ body {
             border-radius: 0;
             background-color: white;
             color: black;
-            font-size: 12px; }
+            font-size: 12px;
+            text-align: right; }
             body .cartnav #mainDiv #antalP span .btn.btn-dark :hover {
               color: pink; }
       body .cartnav #mainDiv img {
         width: 100%; }
       body .cartnav #mainDiv #price {
-        margin-right: 5px; }
+        margin-right: 5px;
+        text-align: right; }
     body .cartnav .shippingDiv {
-      margin: 14px;
+      margin: 10px;
       padding-top: 5px;
       border-top: 1px solid #f1f1f1;
       opacity: 0,7; }
     body .cartnav .totalDiv {
       border-top: 1px solid #e9e9e9;
       border-bottom: 1px solid #e9e9e9;
-      margin-top: 250px;
+      margin-top: 220px;
       margin-left: 14px;
       margin-right: 14px;
       padding-top: 5px; }
@@ -201,7 +205,8 @@ body {
     body .cartnav .input-group .button-plus {
       width: fit-content; }
     body .cartnav a.cartbtn {
-      font-size: 15px;
+      margin: -3px;
+      font-size: 40px;
       color: #818181; }
   body .cart-active {
     padding: 10px;
@@ -717,6 +722,9 @@ html {
           font-size: 14px; }
       html body .container .row .col-12 .prod-info {
         font-size: 14px; }
+      html body .container .row .col-12 .continue-shopping a:hover {
+        text-decoration: none;
+        color: #EADCCF; }
       html body .container .row .col-12 .address-info {
         font-size: 10px;
         font-weight: bold; }
@@ -806,17 +814,23 @@ html {
             font-family: FontAwesome;
             font-weight: 900; }
           html body .container .row .col-12 .payment-container .payment-wrapper #inputCreditcard {
-            border-bottom: none;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0; }
           html body .container .row .col-12 .payment-container .payment-wrapper #inputAccount {
+            background-color: transparent;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            border-top: none;
             border-bottom: none;
             border-top-right-radius: 0;
             border-top-left-radius: 0;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0; }
           html body .container .row .col-12 .payment-container .payment-wrapper #inputBankTransfer {
-            border-bottom: 1px solid #ced4da;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
             border-top-right-radius: 0;
             border-top-left-radius: 0; }
           html body .container .row .col-12 .payment-container .payment-wrapper #inputCardnumber {
@@ -841,7 +855,7 @@ html {
             width: 100%;
             cursor: pointer; }
             html body .container .row .col-12 .payment-container .payment-wrapper .show-klarna img {
-              width: 15px;
+              width: 25px;
               height: 15px; }
       html body .container .row .col-12 .klarna-container {
         display: none; }
