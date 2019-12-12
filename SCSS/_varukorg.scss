@@ -23,7 +23,10 @@ body {
                         padding: 1px;
                     }
                     #rubrik{
+                        padding: 6px;
                         margin-left: 6px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
                         border-bottom: 1px lightgray solid;
                     }
                     padding: 10px;
@@ -39,14 +42,35 @@ body {
                     padding-top: 60px;
                     border-left: 1px solid rgba(128, 128, 128, 0.425);
                     #mainDiv{
-                        margin-top: 10px;
+                        margin-top: 20px;
                         margin-bottom: 10px;
                         padding: 0;
                         ul{
                             padding: 0px;
+                            #name{
+                                margin-bottom: 0px;
+                                font-weight: bold;
+                            }
+                            #size{
+                                font-size: 12px;
+                            }
                         }
                         #antalP{
                             float: right;
+                            span{
+                                padding: 10px;
+                                justify-content: flex-end;
+                                    .btn.btn-dark{
+                                        border: none;
+                                        border-radius: 0;
+                                        background-color: white;
+                                        color: black;
+                                        font-size: 12px;
+                                        :hover{
+                                            color: pink;
+                                        }
+                                    }
+                            }
                         }
                     img{
                         width: 100%;
@@ -56,16 +80,25 @@ body {
                         }
                     }
                     .shippingDiv{
-                        margin: 8px;
+                        margin: 14px;
                         padding-top:5px;
-                        border-top: 1px solid lightgray;
+                        border-top: 1px solid rgb(241, 241, 241);
+                        opacity: 0,7;
                     }
                     .totalDiv{
-                        border-top: 1px solid lightgray;
-                        margin: 8px;
+                        border-top: 1px solid rgb(233, 233, 233);
+                        border-bottom: 1px solid rgb(233, 233, 233);
+                        margin-top: 250px;
+                        margin-left: 14px;
+                        margin-right: 14px;
                         padding-top:5px;
                         #total{
+                            font-size: 18px;
+                            font-weight: lighter;
+                        }
+                        #totPrice{
                             font-size: 20px;
+                            font-weight: bolder;
                         }
                         #frakt{
                             font-size: 18px;
@@ -73,8 +106,12 @@ body {
                         }
                         
                     }
-                    #btnCO{
-                        text-transform: uppercase;
+                    #totalBtn{
+                        margin-top: 20px;
+                        #btnCO{
+                            text-transform: uppercase;
+                            border-radius: 0;
+                        }
                     }
                     .input-group {
                         .button-minus {
@@ -98,7 +135,8 @@ body {
                         }
                     }
                     a.cartbtn{
-                        font-size: 15px;
+                        margin: -3px;
+                        font-size: 40px;
                         color: #818181;
                     }
             }
