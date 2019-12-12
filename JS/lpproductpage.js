@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+    //Nedan hämtar vår information från Local storage och skriver ut det på produktsidan
+
+    let information = localStorage.getItem("product");
+    let productInfo = JSON.parse(information);
+
     //Klass med alla egenskaper för våra objekt som finns längre ned
 
     function Product(n, sp, lp, pic) {
@@ -37,9 +42,12 @@ $(document).ready(function(){
 
     // $.each(products, function(i){
 
+    let cart = [];
+    let storage = [];
+
     $.each(products, function(i){
 
-        $(".prod-wrapper").append([
+        $(".lp-prod-wrapper").append([
             $("<div>", {"class": "prod-container col-6 col-md-4 col-lg-4 pb-4"}).append([
                 $("<div>", {"class": "hover-div", "id": "hover" +i}).append([
                     $("<div>", {"class": "prod-img pb-3 pb-lg-0"}).append([
@@ -61,15 +69,63 @@ $(document).ready(function(){
             ]),
         ]);
 
+        //Nedan visar info PÅ produkt-bilderna vid hover desktop
+
+        if ($(window).width() > 990) {
+
+            $("#hover"+i).hover(
+                function(){
+                    $("#info"+i).css({
+                        opacity: "1",
+                        transition: "all 0.5s"
+                    });
+                }, function(){
+                    $("#info"+i).css({
+                        opacity: "0",
+                        transition: "all 0.5s"
+                    })
+                }
+            );
+
+            $("#hover"+i).hover(
+                function(){
+                    $("#icons-hover"+i).css({
+                        opacity: "1",
+                        transition: "all 0.5s"
+                    });
+                }, function(){
+                    $("#icons-hover"+i).css({
+                        opacity: "0",
+                        transition: "all 0.5s"
+                    })
+                }
+            );
+
+        }
+
+        else {
+            $("#info"+i).css("opacity", "1");
+
+            $("#icons-hover" +i).css("visibility", "hidden");
+        }
+
         $(".hover-div").on("click", function(){
 
-            storage.push(products[i]);
+            productInfo.push(products[i]);
             putInStorage();
-            location.href = "html/produktsida.html";
+            location.href = "produktsida.html";
 
             console.log(storage);
 
         });
 
     });
+
+    function putInStorage() {
+        let stringStorage = JSON.stringify(storage);
+        let cartStringify = JSON.stringify(cart);
+        localStorage.clear("product");
+        localStorage.setItem("product", stringStorage);
+        localStorage.setItem("stringCart", cartStringify);
+}
 });

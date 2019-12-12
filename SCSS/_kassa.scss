@@ -182,6 +182,12 @@ html {
                         }
                     }
                     .payment-container {
+                        .card-img {
+                            width: 100px;
+                            img {
+                                width: 100%;
+                            }
+                        }
                         display: none;
                         .payment-wrapper {
                             border: 1px solid #ced4da;
@@ -231,11 +237,13 @@ html {
                             label {
                                 font-size: 12px;
                             }
-                            .card-info {
+                            .klarna-info {
                                 width: 100%;
                                 background-color: #EAEAEA;
                             }
                             .show-klarna {
+                                width: 100%;
+                                cursor: pointer;
                                 img {
                                     width: 15px;
                                     height: 15px;
@@ -243,9 +251,28 @@ html {
                             }
                         }
                     }
-                    .klarna-wrapper {
-                        .card-info {
-                            background-color: #EAEAEA;
+                    .klarna-container {
+                        display: none;
+                        .btn {
+                            border-radius: 0;
+                            border: 1px solid black;
+                            font-size: 14px;
+                        }
+                        .btn-dark {
+                            background-color: black!important;
+                        }
+                        .klarna-wrapper {
+                            .card-info {
+                                background-color: #EAEAEA;
+                            }
+                            .pay-method {
+                                .klarna-img-container {
+                                    width: 35px;
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                            }
                         }
                     }
                     .modal-title{

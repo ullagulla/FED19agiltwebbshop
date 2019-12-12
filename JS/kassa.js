@@ -19,4 +19,9 @@ $(document).ready(function(){
 
     });
 
+    $(".show-klarna").on("click", function(){
+
+        $(".klarna-container").addClass("d-flex").slideDown("slow");
+    })
+
   });

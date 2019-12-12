@@ -266,7 +266,7 @@ body {
 body {
   font-family: 'Work Sans', sans-serif; }
   body .section-wrapper {
-    padding-top: 70px; }
+    padding-top: 68px; }
     body .section-wrapper .row .img-section {
       background-image: url(../images/image-lp-mob.jpg);
       width: 100%;
@@ -324,8 +324,10 @@ body {
             transform: translate(-45%, -20%);
             font-size: 20px; } }
         body .container-fluid .prod-container .prod-wrapper .prod-info .prod-name {
-          text-align: center;
           text-transform: uppercase; }
+          @media (min-width: 990px) {
+            body .container-fluid .prod-container .prod-wrapper .prod-info .prod-name {
+              text-align: center; } }
         body .container-fluid .prod-container .prod-wrapper .prod-info .prod-price {
           text-transform: capitalize;
           font-size: 12px; }
@@ -334,16 +336,15 @@ body {
               font-size: 14px;
               text-align: center; } }
       body .container-fluid .prod-container .prod-wrapper .prod-icons {
+        z-index: 999;
         position: absolute;
         bottom: 40px;
         right: 10px; }
         body .container-fluid .prod-container .prod-wrapper .prod-icons .heart-icon {
-          z-index: 200;
           width: 27px;
           height: 37px;
           cursor: pointer; }
         body .container-fluid .prod-container .prod-wrapper .prod-icons .cart-icon {
-          z-index: 200;
           width: 38px;
           height: 40px;
           cursor: pointer; }
@@ -419,7 +420,6 @@ body .container-fluid .row .prod-info {
       transform: translate(-45%, -20%);
       font-size: 20px; } }
   body .container-fluid .row .prod-info .prod-name {
-    text-align: center;
     text-transform: uppercase; }
   body .container-fluid .row .prod-info .prod-price {
     text-transform: capitalize;
@@ -484,7 +484,13 @@ body .container-fluid .row .icons-hover {
     display: none; } }
 
 .container .row .carousel {
-  padding-top: 100px; }
+  padding-top: 50px; }
+  .container .row .carousel .carousel-control-prev {
+    font-size: 30px;
+    color: black; }
+  .container .row .carousel .carousel-control-next {
+    font-size: 30px;
+    color: black; }
 
 .container .row .nav {
   justify-content: space-around;
@@ -734,6 +740,10 @@ html {
         background-color: black !important; }
       html body .container .row .col-12 .payment-container {
         display: none; }
+        html body .container .row .col-12 .payment-container .card-img {
+          width: 100px; }
+          html body .container .row .col-12 .payment-container .card-img img {
+            width: 100%; }
         html body .container .row .col-12 .payment-container .payment-wrapper {
           border: 1px solid #ced4da;
           border-radius: 0.25rem;
@@ -773,14 +783,29 @@ html {
             border-bottom-left-radius: 0; }
           html body .container .row .col-12 .payment-container .payment-wrapper label {
             font-size: 12px; }
-          html body .container .row .col-12 .payment-container .payment-wrapper .card-info {
+          html body .container .row .col-12 .payment-container .payment-wrapper .klarna-info {
             width: 100%;
             background-color: #EAEAEA; }
-          html body .container .row .col-12 .payment-container .payment-wrapper .show-klarna img {
-            width: 15px;
-            height: 15px; }
-      html body .container .row .col-12 .klarna-wrapper .card-info {
-        background-color: #EAEAEA; }
+          html body .container .row .col-12 .payment-container .payment-wrapper .show-klarna {
+            width: 100%;
+            cursor: pointer; }
+            html body .container .row .col-12 .payment-container .payment-wrapper .show-klarna img {
+              width: 15px;
+              height: 15px; }
+      html body .container .row .col-12 .klarna-container {
+        display: none; }
+        html body .container .row .col-12 .klarna-container .btn {
+          border-radius: 0;
+          border: 1px solid black;
+          font-size: 14px; }
+        html body .container .row .col-12 .klarna-container .btn-dark {
+          background-color: black !important; }
+        html body .container .row .col-12 .klarna-container .klarna-wrapper .card-info {
+          background-color: #EAEAEA; }
+        html body .container .row .col-12 .klarna-container .klarna-wrapper .pay-method .klarna-img-container {
+          width: 35px; }
+          html body .container .row .col-12 .klarna-container .klarna-wrapper .pay-method .klarna-img-container img {
+            width: 100%; }
       html body .container .row .col-12 .modal-title {
         text-transform: uppercase;
         text-align: center;
