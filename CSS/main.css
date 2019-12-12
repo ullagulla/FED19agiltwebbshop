@@ -131,34 +131,62 @@ body {
       padding: 1px; }
     body .cartnav #rubrik {
       margin-left: 6px;
+      margin-bottom: 10px;
       border-bottom: 1px lightgray solid; }
     body .cartnav #mainDiv {
-      margin-top: 10px;
+      margin-top: 20px;
       margin-bottom: 10px;
       padding: 0; }
       body .cartnav #mainDiv ul {
         padding: 0px; }
+        body .cartnav #mainDiv ul #name {
+          margin-bottom: 0px;
+          font-weight: bold; }
+        body .cartnav #mainDiv ul #size {
+          font-size: 12px; }
       body .cartnav #mainDiv #antalP {
         float: right; }
+        body .cartnav #mainDiv #antalP span {
+          padding: 10px;
+          justify-content: flex-end; }
+          body .cartnav #mainDiv #antalP span .btn.btn-dark {
+            border: none;
+            border-radius: 0;
+            background-color: white;
+            color: black;
+            font-size: 12px; }
+            body .cartnav #mainDiv #antalP span .btn.btn-dark :hover {
+              color: pink; }
       body .cartnav #mainDiv img {
         width: 100%; }
       body .cartnav #mainDiv #price {
         margin-right: 5px; }
     body .cartnav .shippingDiv {
-      margin: 8px;
+      margin: 14px;
       padding-top: 5px;
-      border-top: 1px solid lightgray; }
+      border-top: 1px solid #f1f1f1;
+      opacity: 0,7; }
     body .cartnav .totalDiv {
-      border-top: 1px solid lightgray;
-      margin: 8px;
+      border-top: 1px solid #e9e9e9;
+      border-bottom: 1px solid #e9e9e9;
+      margin-top: 250px;
+      margin-left: 14px;
+      margin-right: 14px;
       padding-top: 5px; }
       body .cartnav .totalDiv #total {
-        font-size: 20px; }
+        font-size: 18px;
+        font-weight: lighter; }
+      body .cartnav .totalDiv #totPrice {
+        font-size: 20px;
+        font-weight: bolder; }
       body .cartnav .totalDiv #frakt {
         font-size: 18px;
         margin-top: 10px; }
-    body .cartnav #btnCO {
-      text-transform: uppercase; }
+    body .cartnav #totalBtn {
+      margin-top: 20px; }
+      body .cartnav #totalBtn #btnCO {
+        text-transform: uppercase;
+        border-radius: 0; }
     body .cartnav .input-group .button-minus {
       width: fit-content; }
       body .cartnav .input-group .button-minus:focus {
@@ -376,6 +404,29 @@ body {
     visibility: visible;
     animation: fadeout 20s ease;
     opacity: 0; }
+  body .image-animation .row .image-wrapper-1 {
+    width: 50%; }
+    @media (min-width: 600px) {
+      body .image-animation .row .image-wrapper-1 {
+        width: 20%; } }
+    body .image-animation .row .image-wrapper-1 #inspo-image-1 {
+      width: 100%; }
+      @media (min-width: 600px) {
+        body .image-animation .row .image-wrapper-1 #inspo-image-1 {
+          width: 90%; } }
+  body .image-animation .row .image-wrapper-2 {
+    width: 50%; }
+    @media (min-width: 600px) {
+      body .image-animation .row .image-wrapper-2 .inspo-text {
+        text-align: start;
+        margin-bottom: 80px;
+        font-size: 16px; } }
+    @media (min-width: 990px) {
+      body .image-animation .row .image-wrapper-2 .inspo-text {
+        width: 70%;
+        flex-wrap: wrap; } }
+    body .image-animation .row .image-wrapper-2 #inspo-image-2 {
+      width: 100%; }
 
 @keyframes fadeout {
   5% {

@@ -160,6 +160,39 @@ body {
         animation: fadeout 20s ease;
         opacity: 0;
     }
+    .image-animation {
+        .row {
+            .image-wrapper-1 {
+                width: 50%;
+                @include tablet(){
+                    width: 20%;
+                }
+                #inspo-image-1 {
+                    width: 100%;
+                    @include tablet(){
+                        width: 90%;
+                    }
+                }
+            }
+            .image-wrapper-2 {
+                width: 50%;
+                .inspo-text {
+                    @include tablet {
+                        text-align: start;
+                        margin-bottom: 80px;
+                        font-size: 16px;
+                    }
+                    @include desktop(){
+                        width: 70%;
+                        flex-wrap: wrap;
+                    }
+                }
+                #inspo-image-2 {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
   
   @keyframes fadeout {
