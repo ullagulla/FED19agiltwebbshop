@@ -111,7 +111,7 @@ $(document).ready(function(){
 
         $(".hover-div").on("click", function(){
 
-            productInfo.push(products[i]);
+            storage.push(products[i]);
             putInStorage();
             location.href = "produktsida.html";
 

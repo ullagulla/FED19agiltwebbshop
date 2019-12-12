@@ -5,7 +5,12 @@ $(document).ready(function(){
     let information = localStorage.getItem("product");
     let productInfo = JSON.parse(information);
 
-    $("#product-img").append($("<img>").attr({"src": "../" + productInfo[0].picture, "class": "d-block w-100", "alt": productInfo[0].name + " perfume"}));
+    console.log(productInfo[0].picture)
+
+    $("#product-img").append($("<img>").attr({"src": "Agil%20Webbshop/" + "../" + productInfo[0].picture, "class": "d-block w-100", "alt": productInfo[0].name + " perfume"}));
+
+    $("#product-img-desktop").append($("<img>").attr({"src": "Agil%20Webbshop/" + "../" + productInfo[0].picture, "class": "d-block w-100", "alt": productInfo[0].name + " perfume"}));
+
 
     $("#product-name").append(productInfo[0].name);
 
