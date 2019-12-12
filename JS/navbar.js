@@ -59,4 +59,27 @@ $(document).ready(function(){
 
     $("#price").text(productInfo[0].smallprice + ".00 kr");
 
+    //Nedan gör det möjligt att ta bort en produkt i varukorgen
+
+    // let removeCartItemButtons = $(".removebtn");
+
+    // for (let i = 0; i < removeCartItemButtons.length; i++) {
+    //     var button = removeCartItemButtons[i];
+
+    //     button.addEventListener("click", function(event){
+    //         let buttonClicked = event.target
+    //         buttonClicked.parentElement.parentElement.remove();
+    //     })
+        
+    // }
+
+    // $.forEach(removeCartItemButtons, function() {
+    //     let button = removeCartItemButtons[i];
+    //     button.on("click", function(){
+
+    //         var buttonClicked = event.target
+    //         buttonClicked.parentElement.parentElement.remove();
+    //     })
+    // });
+
 });
