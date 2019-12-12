@@ -1,39 +1,49 @@
 @mixin tablet {
-    @media (min-width: 600px) { @content; }
+    @media (min-width: 600px) {
+        @content;
+    }
 }
 
 @mixin large-tablet {
-    @media (min-width: 768px) { @content; }
+    @media (min-width: 768px) {
+        @content;
+    }
 }
 
 @mixin desktop {
-    @media (min-width: 990px) { @content; }
+    @media (min-width: 990px) {
+        @content;
+    }
 }
 
 @mixin font-style {
     font-family: 'Work Sans', sans-serif;
 }
-  
+
 body {
     @include font-style;
+
     .header-wrapper {
         .row {
             .sticky {
                 position: fixed;
-                top:0; 
-                left:0;
+                top: 0;
+                left: 0;
                 width: 100%;
                 z-index: 100;
             }
+
             .header-container {
                 background-color: white;
                 border-bottom: 1px solid rgba(128, 128, 128, 0.425);
                 height: 70px;
+
                 .openbtn {
                     transition: .2s;
                     cursor: pointer;
                     font-size: 20px;
                     text-align: center;
+
                     div {
                         width: 30px;
                         height: 3px;
@@ -41,6 +51,7 @@ body {
                         margin: 6px 0;
                     }
                 }
+
                 .sidenav {
                     height: 100%;
                     visibility: hidden;
@@ -53,57 +64,71 @@ body {
                     padding-top: 60px;
                     border-right: 1px solid rgba(128, 128, 128, 0.425);
                 }
+
                 .active {
                     visibility: visible;
                     width: 100%;
-                    @include tablet(){
+
+                    @include tablet() {
                         width: 300px;
                     }
                 }
+
                 .sidenav a {
-                padding: 8px 8px 8px 32px;
-                text-decoration: none;
-                color: #818181;
-                display: block;
+                    padding: 8px 8px 8px 32px;
+                    text-decoration: none;
+                    color: #818181;
+                    display: block;
+
                     &:hover {
                         color: #f1f1f1;
                     }
                 }
+
                 .closebtn {
-                cursor: pointer;
-                position: absolute;
-                top: 0;
-                right: 25px;
-                font-size: 40px;
-                margin-left: 50px;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 0;
+                    right: 25px;
+                    font-size: 40px;
+                    margin-left: 50px;
                 }
+
                 .search-field {
                     display: none;
+
                     input {
                         border: none;
                         border-bottom: 1px solid black;
+
                         &:focus {
                             outline: none;
                         }
                     }
                 }
+
                 .search-field.active {
                     display: inline-block;
                 }
+
                 .search {
                     width: 80%;
+
                     .glass-wrapper {
                         position: relative;
                         width: 40px;
                         height: 40px;
+
                         &:hover {
                             background-color: black;
                             transition: 0.5s;
                             border-radius: 50%;
                         }
+
                         &:hover .search-glass {
                             background-image: url(../images/magnifying-glass-white.png);
                         }
+
                         .search-glass {
                             position: absolute;
                             top: 50%;
@@ -114,6 +139,7 @@ body {
                             width: 20px;
                             height: 20px;
                             display: none;
+
                             @include large-tablet {
                                 display: inline-block;
                                 cursor: pointer;
@@ -121,33 +147,39 @@ body {
                         }
                     }
                 }
+
                 .logo-wrapper {
                     img {
                         width: 140px;
                         height: 40px;
                     }
                 }
+
                 .shipping {
                     padding-top: 28px;
                     display: none;
-                    @include desktop(){
+
+                    @include desktop() {
                         display: inline-block;
                         font-size: 12px;
                     }
                 }
+
                 .icons {
-                    @include desktop(){
-                    }
+                    @include desktop() {}
+
                     .heart-icon {
                         cursor: pointer;
                         width: 28px;
                         height: 23px;
                     }
+
                     .cart-icon {
                         cursor: pointer;
                         width: 28px;
                         height: 25px;
                     }
+
                     .badge-icon {
                         font-size: 12px;
                         border: none;
