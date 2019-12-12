@@ -130,7 +130,9 @@ body {
     body .cartnav #myCart {
       padding: 1px; }
     body .cartnav #rubrik {
+      padding: 6px;
       margin-left: 6px;
+      margin-top: 10px;
       margin-bottom: 10px;
       border-bottom: 1px lightgray solid; }
     body .cartnav #mainDiv {
@@ -201,7 +203,8 @@ body {
     body .cartnav .input-group .button-plus {
       width: fit-content; }
     body .cartnav a.cartbtn {
-      font-size: 15px;
+      margin: -3px;
+      font-size: 40px;
       color: #818181; }
   body .cart-active {
     padding: 10px;

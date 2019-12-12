@@ -23,7 +23,9 @@ body {
                         padding: 1px;
                     }
                     #rubrik{
+                        padding: 6px;
                         margin-left: 6px;
+                        margin-top: 10px;
                         margin-bottom: 10px;
                         border-bottom: 1px lightgray solid;
                     }
@@ -133,7 +135,8 @@ body {
                         }
                     }
                     a.cartbtn{
-                        font-size: 15px;
+                        margin: -3px;
+                        font-size: 40px;
                         color: #818181;
                     }
             }
