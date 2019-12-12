@@ -83,7 +83,7 @@ $(document).ready(function(){
     //     })
     // });
 
-});
+
 
  // test för varukorg
  let shoppingCart = (function() {
@@ -108,7 +108,7 @@ $(document).ready(function(){
  let obj = {};
  obj.addItemToCart = function (name,price,total)
  {
-     for(let item in cart){
+     for(let item in productInfo){
          if(cart[item].name === name){
              cart[item].total ++;
              savveCart();
@@ -259,3 +259,5 @@ displayCart();
 });
 
 displayCart();
+
+});
