@@ -376,6 +376,29 @@ body {
     visibility: visible;
     animation: fadeout 20s ease;
     opacity: 0; }
+  body .image-animation .row .image-wrapper-1 {
+    width: 50%; }
+    @media (min-width: 600px) {
+      body .image-animation .row .image-wrapper-1 {
+        width: 20%; } }
+    body .image-animation .row .image-wrapper-1 #inspo-image-1 {
+      width: 100%; }
+      @media (min-width: 600px) {
+        body .image-animation .row .image-wrapper-1 #inspo-image-1 {
+          width: 90%; } }
+  body .image-animation .row .image-wrapper-2 {
+    width: 50%; }
+    @media (min-width: 600px) {
+      body .image-animation .row .image-wrapper-2 .inspo-text {
+        text-align: start;
+        margin-bottom: 80px;
+        font-size: 16px; } }
+    @media (min-width: 990px) {
+      body .image-animation .row .image-wrapper-2 .inspo-text {
+        width: 70%;
+        flex-wrap: wrap; } }
+    body .image-animation .row .image-wrapper-2 #inspo-image-2 {
+      width: 100%; }
 
 @keyframes fadeout {
   5% {

@@ -24,4 +24,9 @@ $(document).ready(function(){
         $(".klarna-container").addClass("d-flex").slideDown("slow");
     })
 
+    $("#examplebtnModal").on("click", function(){
+        let max = Math.floor(Math.random()* 10000000000)
+        $("#result").html(max);
+    })
+
   });
