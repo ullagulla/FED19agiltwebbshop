@@ -720,6 +720,9 @@ html {
           font-size: 14px; }
       html body .container .row .col-12 .prod-info {
         font-size: 14px; }
+      html body .container .row .col-12 .continue-shopping a:hover {
+        text-decoration: none;
+        color: #EADCCF; }
       html body .container .row .col-12 .address-info {
         font-size: 10px;
         font-weight: bold; }
@@ -809,17 +812,23 @@ html {
             font-family: FontAwesome;
             font-weight: 900; }
           html body .container .row .col-12 .payment-container .payment-wrapper #inputCreditcard {
-            border-bottom: none;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0; }
           html body .container .row .col-12 .payment-container .payment-wrapper #inputAccount {
+            background-color: transparent;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            border-top: none;
             border-bottom: none;
             border-top-right-radius: 0;
             border-top-left-radius: 0;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0; }
           html body .container .row .col-12 .payment-container .payment-wrapper #inputBankTransfer {
-            border-bottom: 1px solid #ced4da;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
             border-top-right-radius: 0;
             border-top-left-radius: 0; }
           html body .container .row .col-12 .payment-container .payment-wrapper #inputCardnumber {
@@ -844,7 +853,7 @@ html {
             width: 100%;
             cursor: pointer; }
             html body .container .row .col-12 .payment-container .payment-wrapper .show-klarna img {
-              width: 20px;
+              width: 25px;
               height: 15px; }
       html body .container .row .col-12 .klarna-container {
         display: none; }
