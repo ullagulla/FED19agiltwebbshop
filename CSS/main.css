@@ -158,7 +158,7 @@ body {
             color: black;
             font-size: 12px;
             text-align: right; }
-            body .cartnav #mainDiv #antalP span .btn.btn-dark :hover {
+            body .cartnav #mainDiv #antalP span .btn.btn-dark:hover {
               color: pink; }
       body .cartnav #mainDiv img {
         width: 100%; }
@@ -791,11 +791,11 @@ html {
         @media (min-width: 768px) {
           html body .container .row .col-12 form .col-12 .form-row #inputPhone {
             border-bottom-left-radius: 0; } }
-      html body .container .row .col-12 .btn-wrapper .btn {
+      html body .container .row .col-12 form .btn-wrapper .btn {
         border-radius: 0;
         border: 1px solid black;
         font-size: 14px; }
-      html body .container .row .col-12 .btn-wrapper .btn-dark {
+      html body .container .row .col-12 form .btn-wrapper .btn-dark {
         background-color: black !important; }
       html body .container .row .col-12 .payment-container {
         display: none; }
