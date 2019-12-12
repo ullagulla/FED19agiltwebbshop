@@ -1,13 +1,19 @@
 @mixin tablet {
-    @media (min-width: 600px) { @content; }
+    @media (min-width: 600px) {
+        @content;
+    }
 }
 
 @mixin large-tablet {
-    @media (min-width: 768px) { @content; }
+    @media (min-width: 768px) {
+        @content;
+    }
 }
 
 @mixin desktop {
-    @media (min-width: 990px) { @content; }
+    @media (min-width: 990px) {
+        @content;
+    }
 }
 
 @mixin font-style {
@@ -15,29 +21,35 @@
 }
 
 body {
-    @include font-style;   
+    @include font-style;
+
     .section-wrapper {
         padding-top: 68px;
+
         .row {
-            .img-section{
+            .img-section {
                 background-image: url(../images/image-lp-mob.jpg);
                 width: 100%;
                 height: 500px;
                 background-position: center;
                 background-size: cover;
-                @include tablet(){
+
+                @include tablet() {
                     background-image: url(../images/Serenity-image.jpg);
                     height: 580px;
                 }
             }
+
             .txt-container {
                 h5 {
                     text-transform: uppercase;
                 }
+
                 hr {
                     border-color: rgba(128, 128, 128, 0.425);
                     width: 105px;
                 }
+
                 h2 {
                     text-transform: uppercase;
                     font-weight: bold;
@@ -45,8 +57,10 @@ body {
             }
         }
     }
+
     .container-fluid {
         border-top: 1px solid rgba(128, 128, 128, 0.425);
+
         .prod-container {
             .col-12 {
                 h4 {
@@ -57,34 +71,41 @@ body {
                     }
                 }
             }
+
             .prod-wrapper {
                 position: relative;
                 flex-wrap: wrap;
                 width: 80%;
+
                 .hover-div {
                     cursor: pointer;
                     z-index: 100;
                     background: rgba(0, 0, 0, 0);
+
                     &:hover .prod-img {
-                    @include desktop(){
-                        background:rgba(0, 0, 0, 0.719);
-                        filter: brightness(40%);
-                        transition: all 0.5s;
+                        @include desktop() {
+                            background: rgba(0, 0, 0, 0.719);
+                            filter: brightness(40%);
+                            transition: all 0.5s;
                         }
                     }
+
                     .prod-img {
-                        box-shadow: 0px 0px 14px -3px rgba(140,137,140,1);
+                        box-shadow: 0px 0px 14px -3px rgba(140, 137, 140, 1);
                         transition: all 0.5s ease-out;
                     }
+
                     img {
                         width: 100%;
                         vertical-align: top;
                     }
                 }
+
                 .prod-info {
                     text-transform: uppercase;
                     position: absolute;
                     top: 1px;
+
                     @include desktop {
                         opacity: 0;
                         font-weight: bold;
@@ -94,42 +115,51 @@ body {
                         transform: translate(-45%, -20%);
                         font-size: 20px;
                     }
+
                     .prod-name {
                         text-transform: uppercase;
-                        @include desktop(){
+
+                        @include desktop() {
                             text-align: center;
                         }
                     }
+
                     .prod-price {
                         text-transform: capitalize;
                         font-size: 12px;
-                        @include desktop(){
+
+                        @include desktop() {
                             font-size: 14px;
                             text-align: center;
                         }
                     }
                 }
+
                 .prod-icons {
                     z-index: 999;
                     position: absolute;
                     bottom: 40px;
                     right: 10px;
+
                     .heart-icon {
                         width: 27px;
                         height: 37px;
                         cursor: pointer;
                     }
+
                     .cart-icon {
                         width: 38px;
                         height: 40px;
                         cursor: pointer;
                     }
                 }
+
                 .icons-hover {
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+
                     img {
                         width: 40px;
                         height: 38px;
@@ -138,6 +168,7 @@ body {
             }
         }
     }
+
     .cart-notification {
         position: absolute;
         background-color: white;
@@ -155,38 +186,47 @@ body {
         width: 200px;
         height: 80px;
     }
+
     .message-active {
         visibility: visible;
         animation: fadeout 20s ease;
         opacity: 0;
     }
+
     .image-animation {
         .row {
             .image-wrapper-1 {
                 width: 50%;
-                @include tablet(){
+
+                @include tablet() {
                     width: 20%;
                 }
+
                 #inspo-image-1 {
                     width: 100%;
-                    @include tablet(){
+
+                    @include tablet() {
                         width: 90%;
                     }
                 }
             }
+
             .image-wrapper-2 {
                 width: 50%;
+
                 .inspo-text {
                     @include tablet {
                         text-align: start;
                         margin-bottom: 80px;
                         font-size: 16px;
                     }
-                    @include desktop(){
+
+                    @include desktop() {
                         width: 70%;
                         flex-wrap: wrap;
                     }
                 }
+
                 #inspo-image-2 {
                     width: 100%;
                 }
@@ -194,7 +234,9 @@ body {
         }
     }
 }
-  
-  @keyframes fadeout {
-    5% { opacity: 1; }
-  }
+
+@keyframes fadeout {
+    5% {
+        opacity: 1;
+    }
+}

@@ -1,100 +1,125 @@
 @mixin font-style {
     font-family: 'Work Sans', sans-serif;
 }
+
 @mixin desktop {
-    @media (min-width: 1000px) {@content;}
+    @media (min-width: 1000px) {
+        @content;
+    }
 }
 
 body {
     @include font-style();
     font-size: 13px;
+
     #sticky-footer {
         padding: 0px;
         margin-top: 10px;
-        .container-fluid{
+
+        .container-fluid {
             background-color: #EAEAEA;
+
             h4 {
                 text-transform: uppercase;
             }
+
             #footer-container {
                 flex: none;
                 padding-top: 10px;
                 padding-bottom: 20px;
+
                 .footer-info {
                     padding-left: 0;
                     list-style-type: none;
+
                     li {
                         a {
                             color: black;
+
                             &:hover {
                                 text-decoration: none;
                             }
                         }
                     }
                 }
+
                 #f-menu2 {
                     h4 {
                         text-transform: uppercase;
                     }
+
                     .faq {
                         text-transform: uppercase;
                     }
                 }
+
                 #f-menu3 {
                     h4 {
                         text-transform: uppercase;
                     }
+
                     span {
                         width: 80%;
                     }
+
                     input {
                         border: none;
                         width: 90%;
+
                         &:focus {
                             outline: none;
                         }
+
                         &::placeholder {
                             padding-left: 10px;
                         }
                     }
+
                     button {
                         width: 90%;
                         border-radius: 0;
-                    }   
+                    }
                 }
             }
+
             #img-box {
                 img {
                     width: 300px;
                 }
             }
         }
+
         #icon-box {
-            background-color:#EADCCF;
+            background-color: #EADCCF;
             justify-content: center;
             color: white;
             padding-top: 10px;
+
             ul {
                 padding-left: 0;
-                li  {
+
+                li {
                     color: white;
                     size: 20px;
                     padding: 4px;
-                    &:hover{
+
+                    &:hover {
                         text-decoration: none;
                     }
                 }
             }
+
             #icon-link {
                 text-align: end;
                 margin: auto;
                 padding: 0;
             }
+
             #brand {
-            text-transform: uppercase;
-            margin: auto;
-            font-weight: bold;
+                text-transform: uppercase;
+                margin: auto;
+                font-weight: bold;
             }
-        }   
+        }
     }
 }

@@ -1,122 +1,150 @@
 @mixin font-style {
     font-family: 'Work Sans', sans-serif;
 }
+
 @mixin tablet {
-    @media (min-width: 616px) {@content;}
+    @media (min-width: 616px) {
+        @content;
+    }
 }
+
 @mixin desktop {
-    @media (min-width: 990px) {@content;}
+    @media (min-width: 990px) {
+        @content;
+    }
 }
+
 @mixin center-v () {
     position: fixed;
     top: 0;
     bottom: 0;
     margin: auto;
-  }
+}
 
-.container{
-    .row{
-        #picDiv{
+.container {
+    .row {
+        #picDiv {
             display: none;
         }
-        @include tablet{
-                #picDiv{
-                    display: none;
-                }
+
+        @include tablet {
+            #picDiv {
+                display: none;
+            }
         }
+
         @include desktop {
-            #main{
+            #main {
                 width: 60%;
                 height: 90%;
                 min-height: 1000px;
                 display: flex;
                 flex-direction: column;
             }
-            #sidebar{
+
+            #sidebar {
                 width: 25%;
                 height: 80vh;
                 min-height: 200px;
                 overflow: auto;
                 position: -webkit-sticky;
                 position: sticky;
-                top:20%;
+                top: 20%;
+            }
+
+            #picDiv {
+                display: block;
+                padding-top: 50px;
+
+                img {
+                    height: 90%;
+                    width: 90%;
                 }
-                #picDiv{
-                    display: block;
-                    padding-top: 50px;
-                    img{
-                        height: 90%;
-                        width: 90%;
-                    }
-                }
-                .carousel{
-                    display: none;
-                }
+            }
+
+            .carousel {
+                display: none;
+            }
         }
-        .carousel{
+
+        .carousel {
             padding-top: 50px;
+
             .carousel-control-prev {
                 font-size: 30px;
                 color: black;
             }
+
             .carousel-control-next {
                 font-size: 30px;
                 color: black;
             }
         }
-        .nav{
+
+        .nav {
             justify-content: space-around;
             text-transform: uppercase;
             margin-top: 15px;
         }
-        a{
+
+        a {
             color: rgb(114, 114, 114);
             font-size: 15px;
         }
-        .tab-content{
+
+        .tab-content {
             margin-top: 20px;
             font-size: 15px;
         }
-        h3{
+
+        h3 {
             font-size: 20px;
             text-transform: uppercase;
             margin-top: 20px;
         }
-        p{
+
+        p {
             font-size: 15px;
         }
-        h1{
+
+        h1 {
             text-transform: uppercase;
             font-size: 30px;
             @include font-style;
             font-weight: lighter;
         }
-        h4{
+
+        h4 {
             font-size: 16px;
             @include font-style;
             font-weight: lighter;
         }
-        .price{
+
+        .price {
             @include font-style;
             font-weight: bold;
-            }
-            label{
-                font-size: 14px;
-                text-transform: uppercase;
-                @include font-style;
-            }
-            #theBtn{
-                padding: 0px;
-        .btn {
-            @include font-style;
-            border-radius: 1px;
+        }
+
+        label {
+            font-size: 14px;
             text-transform: uppercase;
-            padding: 2px;
-            margin: 2px;
+            @include font-style;
+        }
+
+        #theBtn {
+            padding: 0px;
+
+            .btn {
+                @include font-style;
+                border-radius: 1px;
+                text-transform: uppercase;
+                padding: 2px;
+                margin: 2px;
             }
         }
-        .open-button{
-            background-color:#343a40;
+
+        .open-button {
+            background-color: #343a40;
             color: white;
             padding: 16px;
             border: none;
@@ -130,7 +158,8 @@
             z-index: 1;
             text-transform: uppercase;
         }
-        .chat-popup{
+
+        .chat-popup {
             display: none;
             position: fixed;
             bottom: 20px;
@@ -138,18 +167,21 @@
             border: 2px solid #f1f1f1;
             border-radius: 20px;
             z-index: 1;
-            h1{
+
+            h1 {
                 font-size: 18px;
                 font-weight: bold;
             }
         }
-        .form-container{
+
+        .form-container {
             max-width: 300px;
             padding: 10px;
             background-color: white;
             border-radius: 20px;
         }
-        .form-container-textarea{
+
+        .form-container-textarea {
             width: 100%;
             padding: 15px;
             margin: 5px 0 22px 0;
@@ -159,11 +191,13 @@
             min-height: 200px;
             border-radius: 20px;
         }
-        .form-container-textarea:focus{
+
+        .form-container-textarea:focus {
             background-color: #ddd;
             outline: none;
         }
-        .form-container .btn{
+
+        .form-container .btn {
             background: black;
             color: white;
             border: none;
@@ -172,14 +206,18 @@
             margin-bottom: 10px;
             opacity: 0.8;
         }
-        .form-container .cancel{
+
+        .form-container .cancel {
             background-color: #EADCCF;
             color: black;
         }
-        .form-container .btn:hover, .open-button:hover{
-            opacity:1; 
+
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
         }
-        #message{
+
+        #message {
             width: 275px;
             height: 150px;
             border-radius: 20px;
@@ -187,5 +225,5 @@
             padding-left: 10px;
             padding-top: 15px;
         }
-     }
+    }
 }
