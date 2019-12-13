@@ -76,48 +76,51 @@
                     </div>
                     <!-- varukorg -->
                     <div id="myCart" class="cartnav container">
-                        <p id="rubrik">YOUR CART</p>
-                        <a class="cartbtn">CLOSE</a>
-                        <div class="container" id="mainDiv">
-                            <div class="row">
-                                <div class="col-4 img-cart">
-
-                                </div>
-                                <div class="col-4">
-                                    <ul>
-                                        <p id="name"></p>
-                                        <p id="size">50 ml</p>
-                                    </ul>
-                                </div>
-                                <div class="col-4">
-                                    <p id="price"></p>
-                                </div>
-                                <div class="col-12" id="antalP">
-                                    <span class="input-group px-2">
-                                        <input type="button" value="-" class="button-minus btn pl-0 pr-1"
-                                            data-field="quantity">
-                                        <input type="number" step="1" max="" value="1" name="quantity"
-                                            class="quantity-field">
-                                        <input type="button" value="+" class="button-plus btn p-0 mr-2"
-                                            data-field="quantity">
-                                        <button class="btn btn-outline-secondary">Remove</button>
-                                    </span>
+                            <p id="rubrik">YOUR CART</p>
+                            <a class="cartbtn">&times;</a>
+                            <div class="container cart-row" id="mainDiv">
+                                <div class="row">
+                                    <div class="col-4 img-cart">
+    
+                                    </div>
+                                    <div class="col-4">
+                                        <ul>
+                                            <p id="name"></p>
+                                            <p id="size">50 ml</p>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <p id="price"></p>
+                                    </div>
+                                    <div class="col-12" id="antalP">
+                                        <span class="input-group px-2">
+                                            <input type="button" value="-" class="button-minus btn pl-0 pr-1"
+                                                data-field="quantity">
+                                            <input type="number" step="1" max="" value="1" name="quantity"
+                                                class="quantity-field">
+                                            <input type="button" value="+" class="button-plus btn p-0 mr-2"
+                                                data-field="quantity">
+                                            <button class="btn btn-dark removebtn pr-0">Remove</button>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="d-flex justify-content-between shippingDiv">
-                            <p id="frakt">Shipping</p>
-                            <p id="shipping">FREE!</p>
-                        </div>
-                        <div class="d-flex justify-content-between totalDiv">
-                            <p id="total">Total</p>
-                            <p id="price">1200.00 SEK</p>
-                        </div>
-                        <div class="d-flex col-12">
-                            <a href="kassa.html"><button type="button" class="btn btn-outline-secondary w-100"
-                                    id="btnCO">Go to checkout</button></a>
+                            <div class="d-flex justify-content-between shippingDiv">
+                                <p id="frakt">Shipping</p>
+                                <p id="shipping">Free!</p>
+                            </div>
+                            <div class="d-flex justify-content-between totalDiv">
+                                <p id="total">Total</p>
+                                <p id="totPrice">1200.00 kr</p>
+                            </div>
+                            <div class="d-flex col-12" id="totalBtn">
+                                <a href="kassa.html">
+                                    <button type="button" class="btn btn-dark w-100" id="btnCO">Go to checkout</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
+                    <!-- varukorg slut-->
             </header>
         </div>
 

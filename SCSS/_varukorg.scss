@@ -137,11 +137,14 @@ body {
 
         #totalBtn {
             margin-top: 20px;
+                a{
+                    width: inherit;
+                }
 
-            #btnCO {
-                text-transform: uppercase;
-                border-radius: 0;
-            }
+                #btnCO {
+                    text-transform: uppercase;
+                    border-radius: 0;
+                 }
         }
 
         .input-group {

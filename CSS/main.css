@@ -188,6 +188,8 @@ body {
         margin-top: 10px; }
     body .cartnav #totalBtn {
       margin-top: 20px; }
+      body .cartnav #totalBtn a {
+        width: inherit; }
       body .cartnav #totalBtn #btnCO {
         text-transform: uppercase;
         border-radius: 0; }
