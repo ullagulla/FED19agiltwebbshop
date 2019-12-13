@@ -31,13 +31,13 @@ $(document).ready(function(){
         });
     
         // Varukorgen
-        $(".cart-icon").on("click", function(){
+        // $(".cart-icon").on("click", function(){
     
-            $(".cartnav").toggleClass("cart-active");
+        //     $(".cartnav").toggleClass("cart-active");
     
-        });
+        // });
     
-        $(".cartbtn").on("click", function(){
+        $(".toggle-cart").on("click", function(){
     
             $(".cartnav").toggleClass("cart-active");
     
@@ -50,9 +50,11 @@ $(document).ready(function(){
     let productInfo = JSON.parse(information);
 
     let prefix = "";
-    if(window.location.href.indexOf("index.html") < 0) {
+    if(window.location.href.indexOf("index.html") >= 0) {
         prefix = "../";
     }
+
+    console.log(productInfo[0].picture);
 
     $(".img-cart").append($("<img>").attr({"src":prefix + productInfo[0].picture, "class": "ml-2", "alt": productInfo[0].name + " perfume"}));
 

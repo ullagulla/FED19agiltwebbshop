@@ -70,29 +70,29 @@
 
                         <div class="icons pt-4 pr-2">
                             <img class="heart-icon pr-1" src="../images/heart.PNG" alt="heart-like">
-                            <img class="cart-icon pl-1" src="../images/cart.PNG" alt="shopping cart" id="cartBtn">
+                            <img class="cart-icon toggle-cart pl-1" src="../images/cart.PNG" alt="shopping cart"
+                                id="cartBtn">
                             <span class="badge-icon">0</span>
                         </div>
                     </div>
                     <!-- varukorg -->
                     <div id="myCart" class="cartnav container">
-                            <p id="rubrik">YOUR CART</p>
-                            <a class="cartbtn">&times;</a>
-                            <div class="container cart-row" id="mainDiv">
-                                <div class="row">
+                        <p id="rubrik">YOUR CART</p>
+                        <a class="cartbtn toggle-cart">&times;</a>
+                        <div class="container cart-row" id="mainDiv">
+                            <!-- <div class="row cart-prod-container">
                                     <div class="col-4 img-cart">
     
                                     </div>
                                     <div class="col-4">
-                                        <ul>
-                                            <p id="name"></p>
+                                        <ul class="cart-prod-name">
                                             <p id="size">50 ml</p>
                                         </ul>
                                     </div>
                                     <div class="col-4">
                                         <p id="price"></p>
-                                    </div>
-                                    <div class="col-12" id="antalP">
+                                    </div> -->
+                            <!-- <div class="col-12" id="antalP">
                                         <span class="input-group px-2">
                                             <input type="button" value="-" class="button-minus btn pl-0 pr-1"
                                                 data-field="quantity">
@@ -102,9 +102,7 @@
                                                 data-field="quantity">
                                             <button class="btn btn-dark removebtn pr-0">Remove</button>
                                         </span>
-                                    </div>
-                                </div>
-                            </div>
+                                    </div> -->
                             <div class="d-flex justify-content-between shippingDiv">
                                 <p id="frakt">Shipping</p>
                                 <p id="shipping">Free!</p>
@@ -114,15 +112,17 @@
                                 <p id="totPrice">1200.00 kr</p>
                             </div>
                             <div class="d-flex col-12" id="totalBtn">
-                                <a href="kassa.html">
+                                <a href="./html/kassa.html">
                                     <button type="button" class="btn btn-dark w-100" id="btnCO">Go to checkout</button>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- varukorg slut-->
-            </header>
+                </div>
         </div>
+        </header>
+    </div>
 
     </div>
 

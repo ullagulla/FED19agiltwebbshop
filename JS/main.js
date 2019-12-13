@@ -127,6 +127,7 @@ $(document).ready(function(){
             $(".badge-icon").text(boba.length);
 
             event.stopPropagation();
+            putInCart();
 
             console.log(amount);
 
@@ -136,6 +137,21 @@ $(document).ready(function(){
             $(".cart-notification").toggleClass("message-active");
 
         });
+
+        function putInCart() {
+
+            let prefix = "";
+            if(window.location.href.indexOf("index.html") < 0) {
+                prefix = "../";
+            }
+    
+            $(".img-cart").append($("<img>").attr({"src":prefix + products[i].picture, "class": "ml-2", "alt": products[i].name + " perfume"}));
+    
+            $("#name").text(products[i].name);
+        
+            $("#price").text(products[i].smallprice + ".00 kr");
+    
+        }
 
     });
 

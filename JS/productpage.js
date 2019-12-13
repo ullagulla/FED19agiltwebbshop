@@ -19,7 +19,7 @@ $(document).ready(function(){
 
     $("#product-name").append(productInfo[0].name);
 
-    //Nedan funktion höjer värdet på badge (varukorg) med 1
+    //Meddelande när produkt läggs till i varukorgen
 
     $("#cart0").on("click", function(){
 
