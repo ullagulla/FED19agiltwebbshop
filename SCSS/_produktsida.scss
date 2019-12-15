@@ -50,6 +50,9 @@
                 position: -webkit-sticky;
                 position: sticky;
                 top: 20%;
+                #sel1 {
+                    border-radius: 0!important;
+                }
             }
 
             #picDiv {
@@ -90,6 +93,11 @@
         a {
             color: rgb(114, 114, 114);
             font-size: 15px;
+            &:hover {
+                color: black;
+                text-decoration: none;
+                font-weight: bold;
+            }
         }
 
         .tab-content {
@@ -136,37 +144,51 @@
 
             .btn {
                 @include font-style;
-                border-radius: 1px;
                 text-transform: uppercase;
-                padding: 2px;
                 margin: 2px;
+                border-radius: 0;
+                border: 1px solid black;
+                font-size: 14px;
+                &:hover {
+                    background-color: black!important;
+                    color: white;
+                }
             }
         }
 
         .open-button {
-            background-color: #343a40;
-            color: white;
-            padding: 16px;
+            background-color: white;
+            color: black;
+            padding: 10px;
             border: none;
             cursor: pointer;
             opacity: 0.9;
             position: fixed;
-            bottom: 28px;
+            bottom: 0px;
             right: 28px;
-            width: 70px;
-            border-radius: 20px;
+            width: 150px;
+            border-radius: 0;
+            border: 1px solid black;
             z-index: 1;
             text-transform: uppercase;
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+            img {
+                height: 20px;
+                width: 20px;
+            }
         }
 
         .chat-popup {
             display: none;
             position: fixed;
-            bottom: 20px;
+            bottom: 0px;
             right: 15px;
-            border: 2px solid #f1f1f1;
-            border-radius: 20px;
-            z-index: 1;
+            border: 1px solid #f1f1f1;
+            border-radius: 0;
+            z-index: 10;
 
             h1 {
                 font-size: 18px;
@@ -198,18 +220,27 @@
         }
 
         .form-container .btn {
-            background: black;
+            background-color: black;
             color: white;
             border: none;
             cursor: pointer;
             width: 48%;
             margin-bottom: 10px;
-            opacity: 0.8;
+            border-radius: 0;
+            border: 1px solid black;
+            &:hover {
+                background-color: white;
+                color: black;
+            }
         }
 
         .form-container .cancel {
             background-color: #EADCCF;
             color: black;
+            border: none;
+            &:hover {
+                border: 1px solid black;
+            }
         }
 
         .form-container .btn:hover,

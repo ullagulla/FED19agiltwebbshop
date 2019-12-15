@@ -35,59 +35,77 @@ $(document).ready(function(){
 
     $.each(products, function(i){
 
-        $(".prod-container").append([
-            $("<div>", {"class": "prod-wrapper col-6 col-md-4 col-lg-4 pb-4"}).append([
-                $("<div>", {"class": "hover-div", "id": "hover" +i}).append([
-                    $("<div>", {"class": "prod-img pb-3 pb-md-0"}).append([
-                        $("<img>", {"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i})
-                    ]),
-                    $("<div>", {"class": "prod-info", "id": "info"+i}).append([
-                        $("<p>", {"class": "prod-name mb-0 pl-3 pt-3"}).append(products[i].name),
-                        $("<p>", {"class": "prod-price mb-0 pl-3"}).append("From " + products[i].smallprice + " :-")
-                    ]),
-                    $("<div>", {"class": "icons-hover d-sm-none d-flex", "id": "icons-hover" +i}).append([
-                        $("<img>", {"class": "prod-heart pr-1", "src": "images/heart-white.PNG", "id": "hover-heart" +i}),
-                        $("<img>", {"class": "prod-cart pl-1", "src": "images/cart-white.PNG", "id": "hover-cart" +i})
-                    ]),
-                    $("<div>", {"class": "prod-icons pr-1 pb-1"}).append([
-                        $("<img>", {"class": "heart-icon pr-1 pt-3", "src": "images/heart.PNG", "alt": "heart-icon", "id": "heart" +i}),
-                        $("<img>", {"class": "cart-icon p1-1 pr-3 pt-3", "src": "images/cart.PNG", "alt": "cart-icon", "id": "cart" +i})
-                    ])
-                ]),
-            ]),
-        ]);
+        let prodWrapper = $("<div>").addClass("prod-wrapper col-6 col-md-4 col-lg-4 pb-4");
+        let hoverProduct = $("<div>").addClass("hover-div").attr("id", "hover" +i).on("click", function() {
+            storage.push(products[i]);
+            putInStorage();
+            location.href = "html/produktsida.html";
+        });
+        let imgContainer = $("<div>").addClass("prod-img pb-3 pb-md-0");
+        let img = $("<img>").attr({"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i});
+        let prodInfo = $("<div>").addClass("prod-info").attr("id", "info"+i);
+        let title = $("<p>").addClass("prod-name mb-0 pl-3 pt-3").html(products[i].name);
+        let price = $("<p>").addClass("prod-price mb-0 pl-3").html(products[i].smallprice + " :-");
+        let iconsHover = $("<div>").addClass("icons-hover d-none d-lg-flex").attr("id", "icons-hover"+i);
+        let hoverHeart = $("<img>").addClass("prod-heart pr-1").attr({"src": "images/heart-white.PNG", "id": "hover-heart" +i});
+        let hoverCart = $("<img>").addClass("prod-cart pl-1").attr({"src": "images/cart-white.PNG", "id": "hover-cart" +i});
+        let icons = $("<div>").addClass("prod-icons pr-1 pb-1");
+        let heartIcon = $("<img>").addClass("heart-icon pr-1 pt-3").attr({"src": "images/heart.PNG", "id": "heart" +i});
+        let cartIcon = $("<img>").addClass("cart-icon pr-1 pr-3 pt-3").attr({"src": "images/cart.PNG", "id": "cart" +i});
+
+        $(".prod-container").append(prodWrapper);
+        prodWrapper.append(hoverProduct);
+        hoverProduct.append(imgContainer, prodInfo, iconsHover, icons);
+        imgContainer.append(img);
+        prodInfo.append(title, price);
+        iconsHover.append(hoverHeart, hoverCart);
+        icons.append(heartIcon, cartIcon);
 
         //Nedan visar info PÅ produkt-bilderna vid hover desktop
 
         if ($(window).width() > 990) {
 
-            $("#hover"+i).on("mouseover", function(){
+            $("#hover"+i).hover(
+                function(){
+                    $("#info"+i).css({
+                        opacity: "1",
+                        transition: "all 0.5s"
+                    });
+                }, function(){
+                    $("#info"+i).css({
+                        opacity: "0",
+                        transition: "all 0.5s"
+                    })
+                }
+            );
 
-                $("#info"+i).css({
-                    opacity: "1",
-                    transition: "all 0.5s"
-                })
+            $("#hover"+i).hover(
+                function(){
+                    $("#icons-hover"+i).css({
+                        opacity: "1",
+                        transition: "all 0.5s"
+                    });
+                }, function(){
+                    $("#icons-hover"+i).css({
+                        opacity: "0",
+                        transition: "all 0.5s"
+                    })
+                }
+            );
 
-                $("#icons-hover" +i).css({
-                    opacity: "1",
-                    transition: "all 0.5s"
-                })
-
+            $("#hover-div"+i).hover(function() {
+                $(this).find('img').attr("src", "../images/cart.png");
+                  }, function() {
+                $(this).find('img').attr("src", "../images/cart-white.png");
             });
 
-            $("#hover"+i).on("mouseleave", function(){
-
-                $("#info"+i).css({
-                    opacity: "0",
-                    transition: "all 0.5s"
-                })
-
-                $("#icons-hover" +i).css({
-                    opacity: "0",
-                    transition: "all 0.5s"
-                })
-
-            });
+            // $("#hover-cart"+i).hover(function(){
+            //     $(this).find("img").attr("src", function(){
+            //         return src.replace("src","cart-white.png");
+            //     }, function(){
+            //     $(this).find('img').attr("src", "images/ui-ux-1.png");
+            //     })  
+            // })
 
         }
 
@@ -105,15 +123,15 @@ $(document).ready(function(){
     
         });
 
-        $(".hover-div").on("click", function(){
+        // $(".hover-div").on("click", function(){
 
-            storage.push(products[i]);
-            putInStorage();
-            location.href = "html/produktsida.html";
+        //     storage.push(products[i]);
+        //     putInStorage();
+        //     location.href = "html/produktsida.html";
 
-            console.log(storage);
+        //     console.log(storage);
 
-        });
+        // });
 
         $("#heart"+i).on("click", function(event){
             $(".heart1").css("background-color", "pink");
@@ -121,6 +139,25 @@ $(document).ready(function(){
         })
 
         //Nedan funktion höjer värdet på badge (varukorg) med 1 samt sparar objekt vi klickar på I LOCAL STORAGE
+
+        $("#hover-cart"+i).on("click", function(event){
+
+            storage[products[i].name] += 1;
+            cart.push(products[i]);
+            putInStorage();
+            let babo = localStorage.getItem("stringCart");
+            let boba = JSON.parse(babo);
+            $(".badge-icon").text(boba.length);
+
+            event.stopPropagation();
+            putInCart();
+
+            // cart.push(products[i]);
+            // $(".badge-icon").html(cart.length);
+
+            $(".cart-notification").toggleClass("message-active");
+
+        });
 
         $("#cart"+i).on("click", function(event){
 

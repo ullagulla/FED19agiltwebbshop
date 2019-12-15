@@ -26,6 +26,7 @@
 
 <body>
 
+    <!-- navbar -->
     <div class="container-fluid header-wrapper">
 
         <div class="row">
@@ -40,11 +41,15 @@
                             <div></div>
                         </div>
                         <div id="mySidenav" class="sidenav">
-                            <a class="closebtn">&times;</a>
+                            <!-- <a class="closebtn">&times;</a> -->
                             <a href="../index.html">Home</a>
-                            <a href="lp_produktsida.html">Products</a>
+                            <a href="#">Bestsellers</a>
+                            <a href="lp_produktsida.html">Perfume</a>
+                            <a href="#">Body & hand care</a>
+                            <div class="menu-divider"></div>
                             <a href="#">Work with us</a>
                             <a href="#">Contact</a>
+                            <a href="#">About</a>
                         </div>
 
                         <div class="search d-flex pt-3">
@@ -69,8 +74,9 @@
                         </div>
 
                         <div class="icons pt-4 pr-2">
-                            <img class="heart-icon pr-1" src="../images/heart.PNG" alt="heart-like">
-                            <img class="cart-icon toggle-cart pl-1" src="../images/cart.PNG" alt="shopping cart" id="cartBtn">
+                            <img class="heart-icon heart1 pr-1" src="../images/heart.PNG" alt="heart-like">
+                            <img class="cart-icon toggle-cart pl-1" src="../images/cart.PNG" alt="shopping cart"
+                                id="cartBtn">
                             <span class="badge-icon">0</span>
                         </div>
                     </div>
@@ -80,8 +86,8 @@
                             <p id="rubrik">YOUR CART</p>
                             <a class="cartbtn toggle-cart pr-0">&times;</a>
                         </div>
-                            <div class="container cart-row" id="mainDiv">
-                                <div class="row cart-prod-container">
+                        <div class="container cart-row" id="mainDiv">
+                            <div class="row cart-prod-container">
                                 <!--    <div class="col-4 img-cart">
     
                                     </div>
@@ -93,7 +99,7 @@
                                     <div class="col-4">
                                         <p id="price"></p>
                                     </div> -->
-                                    <!-- <div class="col-12" id="antalP">
+                                <!-- <div class="col-12" id="antalP">
                                         <span class="input-group px-2">
                                             <input type="button" value="-" class="button-minus btn pl-0 pr-1"
                                                 data-field="quantity">
@@ -103,32 +109,46 @@
                                                 data-field="quantity">
                                             <button class="btn btn-dark removebtn pr-0">Remove</button>
                                         </span> -->
-                                    </div>
-                                    <div class="d-flex justify-content-between shippingDiv">
-                                        <p id="frakt">Shipping</p>
-                                        <p id="shipping">Free!</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between totalDiv">
-                                        <p id="total">Total</p>
-                                        <p id="totPrice">1200.00 kr</p>
-                                    </div>
-                                    <div class="d-flex col-12" id="totalBtn">
-                                        <a href="kassa.html">
-                                            <button type="button" class="btn btn-dark w-100" id="btnCO">Go to checkout</button>
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
-                        <!-- varukorg slut-->
+                            <div class="d-flex justify-content-between shippingDiv">
+                                <p id="frakt">Shipping</p>
+                                <p id="shipping">Free!</p>
+                            </div>
+                            <div class="d-flex justify-content-between totalDiv">
+                                <p id="total">Total</p>
+                                <p id="totPrice">1200.00 kr</p>
+                            </div>
+                            <div class="d-flex col-12" id="totalBtn">
+                                <a href="kassa.html">
+                                    <button type="button" class="btn btn-dark w-100" id="btnCO">Go to checkout</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-            </header>
+                    <!-- varukorg slut-->
+                </div>
         </div>
+        </header>
+        <!--Pop-up när produkt läggs till i varukorg-->
+
+        <div class="cart-notification">
+            <div class="message">
+                <p class="pl-2 pt-2">Vad kul att du gillar parfymen!
+                    Produkten är nu tillagd i din varukorg.
+                    Du kan alltid <a href="html/kassa.html">gå till kassan</a> för att se dina varor.</p>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-12 col-lg-7">
-                <h6 class="items mb-3 discount-code">+ discount code / gift card</h6>
+            <div class="col-12 col-lg-7 flex-column">
+                <h6 class="items mb-1 discount-code">+ discount code / gift card</h6>
+                <div class="discount-wrapper">
+                    <input type="text" class="discount-input mb-2">
+                    <button type="button" class="btn discount-btn mb-2">Add</button>
+                    <p class="invalid-code"></p>
+                </div>
                 <div class="d-flex divider justify-content-between pb-1">
                     <div class="pl-2">Product</div>
                     <div class="pl-4">Quantity</div>
@@ -297,14 +317,19 @@
                                 <li>Klarnas köparskydd ingår</li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+                <div class="row place-order-container justify-content-center">
+                    <div class="col-11">
                         <div class="total-amount mt-5">
                             <p class="text-center mb-0"><small>Total amount including taxes</small></p>
                             <h5 class="text-center font-weight-bold">1200 :-</h5>
                         </div>
+                        <div class="order-btn-wrapper d-flex justify-content-center">
+                            <button type="button" class="btn btn-dark w-50 py-2" data-toggle="modal"
+                                data-target="#exampleModal" id="examplebtnModal">Complete order</button>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-dark w-50 py-2" data-toggle="modal" data-target="#exampleModal"
-                        id="examplebtnModal">Complete order</button>
-
                 </div>
 
                 <!-- Modal -->
@@ -429,10 +454,8 @@
         <img src="../images/arrow-up.png">
     </div>
 
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>

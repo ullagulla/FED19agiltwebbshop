@@ -6,11 +6,8 @@ $(document).ready(function(){
     let productInfo = JSON.parse(information);
 
     let prefix = "";
-    if(window.location.href.indexOf("index.html") < 0) {
+    if(window.location.href.indexOf("index.html") <= 0) {
         prefix = "../";
-    }
-    else {
-        prefix = "";
     }
 
     $("#product-img").append($("<img>").attr({"src": prefix + productInfo[0].picture, "class": "d-block w-100", "alt": productInfo[0].name + " perfume"}));

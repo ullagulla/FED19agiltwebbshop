@@ -54,6 +54,13 @@ $(document).ready(function(){
         prefix = "../";
     }
 
+    $(".prod-link").on("click", function(){
+
+        storage.push(productInfo[i]);
+        location.href = "produktsida.html";
+
+    });
+
 
     // $(".img-cart").append($("<img>").attr({"src":prefix + productInfo[0].picture, "class": "ml-2", "alt": productInfo[0].name + " perfume"}));
 

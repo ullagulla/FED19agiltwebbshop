@@ -39,6 +39,32 @@ html {
                             opacity: 0.8;
                         }
                     }
+                    .discount-wrapper {
+                        display: none;
+                        .discount-input {
+                            border-bottom: 1px solid black;
+                            border-top: none;
+                            border-right: none;
+                            border-left: none;
+                        }
+                        .discount-btn {
+                            font-weight: bold;
+                            font-size: 13px;
+                            margin-top: 7px;
+                            &:hover {
+                                opacity: 0.8;
+                            }
+                            &:focus {
+                                outline-style: none!important;
+                            }
+                        }
+                        .invalid-code {
+                            font-weight: bold;
+                            i {
+                                color: red;
+                            }
+                        }
+                    }
 
                     .divider {
                         border-bottom: 1px solid rgba(128, 128, 128, 0.425);
@@ -326,16 +352,6 @@ html {
                     .klarna-container {
                         display: none;
 
-                        .btn {
-                            border-radius: 0;
-                            border: 1px solid black;
-                            font-size: 14px;
-                        }
-
-                        .btn-dark {
-                            background-color: black !important;
-                        }
-
                         .klarna-wrapper {
                             .card-info {
                                 background-color: #EAEAEA;
@@ -377,10 +393,37 @@ html {
                         font-weight: bold;
                         text-align: center;
                     }
+                    .modal-footer {
+                        .btn {
+                            border-radius: 0;
+                            border: 1px solid black;
+                            font-size: 14px;
+                        }
+
+                        .btn-dark {
+                            background-color: black !important;
+                            &:hover {
+                                background-color: white!important;
+                                color: black;
+                            }
+                        }
+                    }
 
                     #order {
                         font-size: 15px;
                         font-weight: bold;
+                    }
+                    .place-order-container {
+                        display: none;
+                        .btn {
+                            border-radius: 0;
+                            border: 1px solid black;
+                            font-size: 14px;
+                        }
+
+                        .btn-dark {
+                            background-color: black !important;
+                        }
                     }
                 }
             }

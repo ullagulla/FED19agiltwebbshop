@@ -49,18 +49,18 @@ $(document).ready(function(){
     
     $.each(products, function(i){
 
-        let prodContainer = $("<div>").addClass("prod-container col-6 col-md-4 col-lg-4 pb-4");
+        let prodContainer = $("<div>").addClass("prod-container col-6 col-md-4 col-lg-3 pb-4");
         let hoverProduct = $("<div>").addClass("hover-div").attr("id", "hover" +i).on("click", function() {
             putInCart();
         });
         let imgContainer = $("<div>").addClass("prod-img pb-3 pb-lg-0");
         let img = $("<img>").attr({"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i});
         let prodInfo = $("<div>").addClass("prod-info").attr("id", "info"+i);
-        let title = $("<p>").addClass("prod-name mb0 pl-3 pt-3").html(products[i].name);
+        let title = $("<p>").addClass("prod-name mb-0 pl-3 pt-3").html(products[i].name);
         let price = $("<p>").addClass("prod-price mb-0 pl-3").html(products[i].smallprice + " :-");
         let iconsHover = $("<div>").addClass("icons-hover d-flex").attr("id", "icons-hover"+i);
         let hoverHeart = $("<img>").addClass("prod-heart pr-1").attr({"src": "../images/heart-white.PNG", "id": "hover-heart" +i});
-        let hoverCart = $("<img>").addClass("prod-cart pr-1").attr({"src": "../images/cart-white.PNG", "id": "hover-cart" +i});
+        let hoverCart = $("<img>").addClass("prod-cart pl-1").attr({"src": "../images/cart-white.PNG", "id": "hover-cart" +i});
         let icons = $("<div>").addClass("prod-icons pr-1 pb-1");
         let heartIcon = $("<img>").addClass("heart-icon pr-1 pt-3").attr({"src": "../images/heart.PNG", "id": "heart" +i});
         let cartIcon = $("<img>").addClass("cart-icon pr-1 pr-3 pt-3").attr({"src": "../images/cart.PNG", "id": "cart" +i});
@@ -105,6 +105,20 @@ $(document).ready(function(){
                 }
             );
 
+            $("#hover-div"+i).hover(function() {
+                $(this).find('img').attr("src", "../images/cart.png");
+                  }, function() {
+                $(this).find('img').attr("src", "../images/cart-white.png");
+            });
+
+            // $("#hover-cart"+i).hover(function(){
+            //     $(this).find("img").attr("src", function(){
+            //         return src.replace("src","cart-white.png");
+            //     }, function(){
+            //     $(this).find('img').attr("src", "images/ui-ux-1.png");
+            //     })  
+            // })
+
         }
 
         else {
@@ -118,6 +132,25 @@ $(document).ready(function(){
             storage.push(products[i]);
             putInStorage();
             location.href = "produktsida.html";
+
+        });
+
+        $("#hover-cart"+i).on("click", function(event){
+
+            storage[products[i].name] += 1;
+            cart.push(products[i]);
+            putInStorage();
+            let babo = localStorage.getItem("stringCart");
+            let boba = JSON.parse(babo);
+            $(".badge-icon").text(boba.length);
+
+            event.stopPropagation();
+            putInCart();
+
+            // cart.push(products[i]);
+            // $(".badge-icon").html(cart.length);
+
+            $(".cart-notification").toggleClass("message-active");
 
         });
 
@@ -148,6 +181,7 @@ $(document).ready(function(){
             }
 
             let imgCartContainer = $("<div>").addClass("col-4 img-cart");
+            let imgLink = $("<a>").attr({"href": "produktsida.html", "class": "prod-link"});
             let imgCart = $("<img>").attr({"src":prefix + products[i].picture, "class": "ml-2", "alt": products[i].name + " perfume"});
             let cartInfo = $("<div>").addClass("col-4 cart-prod-info");
             let cartUl = $("<ul>").addClass("cart-name-size pt-4");
@@ -157,7 +191,8 @@ $(document).ready(function(){
             let cartPrice = $("<p>").attr({"class": "pr-2", "id": "price" +i}).html(products[i].smallprice + " kr");
 
             $(".cart-prod-container").append(imgCartContainer, cartInfo, cartPriceContainer);
-            imgCartContainer.append(imgCart);
+            imgCartContainer.append(imgLink);
+            imgLink.append(imgCart);
             cartInfo.append(cartUl);
             cartUl.append(cartName, cartSize);
             cartPriceContainer.append(cartPrice);

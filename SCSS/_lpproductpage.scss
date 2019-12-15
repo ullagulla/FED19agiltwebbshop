@@ -30,11 +30,25 @@ body {
                     text-transform: capitalize;
                     font-size: 45px;
                 }
+                .txt-info {
+                    font-size: 16px;
+                }
+            }
+            .lp-img-container {
+                animation-name: animationlp;
+                animation-duration: 1.7s;
+                animation-fill-mode: forwards;
+                opacity:0;
+                margin-top: 155px;
+                img {
+                    width: 100%;
+                }
             }
         }
     }
 
-    .container-fluid {
+    .products-container {
+        border: none;
         .row {
             .prod-container {
                 position: relative;
@@ -42,6 +56,7 @@ body {
                 width: 80%;
 
                 .hover-div {
+                    cursor: pointer;
                     z-index: 100;
                     background: rgba(0, 0, 0, 0);
 
@@ -114,6 +129,7 @@ body {
             }
 
             .icons-hover {
+                cursor: pointer;
                 opacity: 0;
                 position: absolute;
                 top: 50%;
@@ -127,4 +143,11 @@ body {
             }
         }
     }
+}
+
+$animationstart: 500px;
+$animationend: 0px;
+@keyframes animationlp{
+  0%{transform: translateX($animationstart); opacity:0;}
+  100%{transform: translateX($animationend); opacity: 1;}
 }
