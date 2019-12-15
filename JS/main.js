@@ -115,11 +115,16 @@ $(document).ready(function(){
 
         });
 
+        $("#heart"+i).on("click", function(event){
+            $(".heart1").css("background-color", "pink");
+            event.stopPropagation();
+        })
+
         //Nedan funktion höjer värdet på badge (varukorg) med 1 samt sparar objekt vi klickar på I LOCAL STORAGE
 
         $("#cart"+i).on("click", function(event){
 
-            amount[products[i].name] += 1;
+            storage[products[i].name] += 1;
             cart.push(products[i]);
             putInStorage();
             let babo = localStorage.getItem("stringCart");
@@ -128,8 +133,6 @@ $(document).ready(function(){
 
             event.stopPropagation();
             putInCart();
-
-            console.log(amount);
 
             // cart.push(products[i]);
             // $(".badge-icon").html(cart.length);
@@ -141,15 +144,24 @@ $(document).ready(function(){
         function putInCart() {
 
             let prefix = "";
-            if(window.location.href.indexOf("index.html") < 0) {
+            if(window.location.href.indexOf("index.html") <= 0) {
                 prefix = "../";
             }
     
-            $(".img-cart").append($("<img>").attr({"src":prefix + products[i].picture, "class": "ml-2", "alt": products[i].name + " perfume"}));
-    
-            $("#name").text(products[i].name);
-        
-            $("#price").text(products[i].smallprice + ".00 kr");
+            let imgCartContainer = $("<div>").addClass("col-4 img-cart");
+            let imgCart = $("<img>").attr({"src":prefix + products[i].picture, "class": "ml-2", "alt": products[i].name + " perfume"});
+            let cartInfo = $("<div>").addClass("col-4 cart-prod-info");
+            let cartUl = $("<ul>").addClass("cart-name-size pt-4");
+            let cartName = $("<p>").attr("id", "name" +i).html(products[i].name);
+            let cartSize = $("<p>").append($("<p>")).attr({"id": "size"}).html("50 ml");
+            let cartPriceContainer = $("<div>").addClass("col-4 cart-prod-price pt-4 d-flex justify-content-end");
+            let cartPrice = $("<p>").attr({"class": "pr-2", "id": "price" +i}).html(products[i].smallprice + " kr");
+
+            $(".cart-prod-container").append(imgCartContainer, cartInfo, cartPriceContainer);
+            imgCartContainer.append(imgCart);
+            cartInfo.append(cartUl);
+            cartUl.append(cartName, cartSize);
+            cartPriceContainer.append(cartPrice);
     
         }
 
@@ -158,8 +170,8 @@ $(document).ready(function(){
     function putInStorage() {
             let stringStorage = JSON.stringify(storage);
             let cartStringify = JSON.stringify(cart);
-            localStorage.clear("product");
-            localStorage.setItem("product", stringStorage);
+            localStorage.clear("products");
+            localStorage.setItem("products", stringStorage);
             localStorage.setItem("stringCart", cartStringify);
     }
 

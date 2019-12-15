@@ -54,13 +54,12 @@ $(document).ready(function(){
         prefix = "../";
     }
 
-    console.log(productInfo[0].picture);
 
-    $(".img-cart").append($("<img>").attr({"src":prefix + productInfo[0].picture, "class": "ml-2", "alt": productInfo[0].name + " perfume"}));
+    // $(".img-cart").append($("<img>").attr({"src":prefix + productInfo[0].picture, "class": "ml-2", "alt": productInfo[0].name + " perfume"}));
 
-    $("#name").text(productInfo[0].name);
+    // $("#name").text(productInfo[0].name);
 
-    $("#price").text(productInfo[0].smallprice + ".00 kr");
+    // $("#price").text(productInfo[0].smallprice + ".00 kr");
 
     //Nedan gör det möjligt att ta bort en produkt i varukorgen
 

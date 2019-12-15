@@ -2,14 +2,15 @@ $(document).ready(function(){
 
     //Nedan hämtar vår information från Local storage och skriver ut det på produktsidan
 
-    let information = localStorage.getItem("product");
+    let information = localStorage.getItem("products");
     let productInfo = JSON.parse(information);
 
-    console.log(productInfo[0].picture)
-
     let prefix = "";
-    if(window.location.href.indexOf("index.html") >= 0) {
+    if(window.location.href.indexOf("index.html") < 0) {
         prefix = "../";
+    }
+    else {
+        prefix = "";
     }
 
     $("#product-img").append($("<img>").attr({"src": prefix + productInfo[0].picture, "class": "d-block w-100", "alt": productInfo[0].name + " perfume"}));

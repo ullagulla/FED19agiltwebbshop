@@ -1,13 +1,5 @@
 $(document).ready(function(){
 
-    //Varukorg
-
-    $(".toggle-cart").on("click", function(){
-    
-        $(".cartnav").toggleClass("cart-active");
-
-    })
-
 
     //Nedan hämtar vår information från Local storage och skriver ut det på produktsidan
 
@@ -81,15 +73,6 @@ $(document).ready(function(){
         iconsHover.append(hoverHeart, hoverCart);
         icons.append(heartIcon, cartIcon);
 
-        // hoverProduct.append(prodContainer);
-        // imgContainer.append(hoverProduct);
-
-        // imgContainer.append(prodInfo, iconsHover, icons);
-        // imgContainer.append(img);
-        // prodInfo.append(title, price);
-        // iconsHover.append(hoverHeart, hoverCart);
-        // icons.append(heartIcon, cartIcon);
-
         //Nedan visar info PÅ produkt-bilderna vid hover desktop
 
         if ($(window).width() > 990) {
@@ -130,15 +113,13 @@ $(document).ready(function(){
             $("#icons-hover" +i).css("visibility", "hidden");
         }
 
-        // $(".hover-div").on("click", function(){
+        $(".hover-div").on("click", function(){
 
-        //     storage.push(products[i]);
-        //     putInStorage();
-        //     location.href = "produktsida.html";
+            storage.push(products[i]);
+            putInStorage();
+            location.href = "produktsida.html";
 
-        //     console.log(storage);
-
-        // });
+        });
 
         $("#cart"+i).on("click", function(event){
 
@@ -169,11 +150,11 @@ $(document).ready(function(){
             let imgCartContainer = $("<div>").addClass("col-4 img-cart");
             let imgCart = $("<img>").attr({"src":prefix + products[i].picture, "class": "ml-2", "alt": products[i].name + " perfume"});
             let cartInfo = $("<div>").addClass("col-4 cart-prod-info");
-            let cartUl = $("<ul>").addClass("cart-name-size");
+            let cartUl = $("<ul>").addClass("cart-name-size pt-4");
             let cartName = $("<p>").attr("id", "name" +i).html(products[i].name);
             let cartSize = $("<p>").append($("<p>")).attr({"id": "size"}).html("50 ml");
-            let cartPriceContainer = $("<div>").addClass("col-4 cart-prod-price");
-            let cartPrice = $("<p>").attr({"id": "price" +i}).html(products[i].smallprice + " kr");
+            let cartPriceContainer = $("<div>").addClass("col-4 cart-prod-price pt-4 d-flex justify-content-end");
+            let cartPrice = $("<p>").attr({"class": "pr-2", "id": "price" +i}).html(products[i].smallprice + " kr");
 
             $(".cart-prod-container").append(imgCartContainer, cartInfo, cartPriceContainer);
             imgCartContainer.append(imgCart);
@@ -211,8 +192,8 @@ $(document).ready(function(){
     function putInStorage() {
         let stringStorage = JSON.stringify(storage);
         let cartStringify = JSON.stringify(cart);
-        localStorage.clear("product");
-        localStorage.setItem("product", stringStorage);
+        localStorage.clear("products");
+        localStorage.setItem("products", stringStorage);
         localStorage.setItem("stringCart", cartStringify);
 }
 });

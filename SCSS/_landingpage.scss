@@ -169,30 +169,6 @@ body {
         }
     }
 
-    .cart-notification {
-        position: absolute;
-        background-color: white;
-        border: 1px solid rgba(128, 128, 128, 0.425);
-        right: 50px;
-        top: 70px;
-        font-size: 0.65rem;
-        word-spacing: normal;
-        opacity: 0;
-        text-align: left;
-        z-index: 9999999;
-        visibility: hidden;
-        border-radius: 16px;
-        border-top-right-radius: 0px;
-        width: 200px;
-        height: 80px;
-    }
-
-    .message-active {
-        visibility: visible;
-        animation: fadeout 20s ease;
-        opacity: 0;
-    }
-
     .image-animation {
         .row {
             .image-wrapper-1 {
@@ -227,16 +203,23 @@ body {
                     }
                 }
 
-                #inspo-image-2 {
-                    width: 100%;
+                .image-inspo-wrapper {
+                    animation-name: animationone;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    opacity:0;
+                    #inspo-image-2 {
+                        width: 100%;
+                    }
                 }
             }
         }
     }
 }
 
-@keyframes fadeout {
-    5% {
-        opacity: 1;
-    }
+$animationstart: 500px;
+$animationend: 0px;
+@keyframes animationone{
+  0%{transform: translateX($animationstart); opacity:0;}
+  100%{transform: translateX($animationend); opacity: 1;}
 }

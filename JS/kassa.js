@@ -15,13 +15,13 @@ $(document).ready(function(){
 
     $(".continue").on("click", function(){
 
-        $(".payment-container").addClass("d-flex").slideDown("slow");
+        $(".payment-container").addClass("d-flex").hide().slideDown("slow");
 
     });
 
     $(".show-klarna").on("click", function(){
 
-        $(".klarna-container").addClass("d-flex").slideDown("slow");
+        $(".klarna-container").addClass("d-flex").hide().slideDown("slow");
     })
 
     $("#examplebtnModal").on("click", function(){

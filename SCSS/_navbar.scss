@@ -30,7 +30,7 @@ body {
                 top: 0;
                 left: 0;
                 width: 100%;
-                z-index: 100;
+                z-index: 1000;
             }
 
             .header-container {
@@ -68,9 +68,12 @@ body {
                 .active {
                     visibility: visible;
                     width: 100%;
+                    animation-name: animation1;
+                    animation-duration: 0.3s;
+                    animation-fill-mode: backwards;
 
                     @include tablet() {
-                        width: 300px;
+                        width: 400px;
                     }
                 }
 
@@ -92,6 +95,12 @@ body {
                     right: 25px;
                     font-size: 40px;
                     margin-left: 50px;
+                }
+
+                .inactive {
+                    animation-name: animation2;
+                    animation-duration: 0.3s;
+                    animation-fill-mode: forwards;
                 }
 
                 .search-field {
@@ -120,9 +129,11 @@ body {
                         height: 40px;
 
                         &:hover {
-                            background-color: black;
-                            transition: 0.5s;
-                            border-radius: 50%;
+                            @include desktop(){
+                                background-color: black;
+                                transition: 0.5s;
+                                border-radius: 50%;
+                            }
                         }
 
                         &:hover .search-glass {
@@ -189,5 +200,56 @@ body {
                 }
             }
         }
+        .cart-notification {
+            position: fixed;
+            background-color: white;
+            border: 1px solid rgba(128, 128, 128, 0.425);
+            right: 43px;
+            top: 46px;
+            font-size: 0.65rem;
+            word-spacing: normal;
+            opacity: 0;
+            text-align: left;
+            z-index: 1000;
+            visibility: hidden;
+            border-radius: 16px;
+            border-top-right-radius: 0px;
+            width: 200px;
+            height: 80px;
+            .message p a {
+                font-weight: bold;
+                color: black;
+                &:hover {
+                    text-decoration: none;
+                    opacity: 0.7;
+                }
+            }
+        }
+    
+        .message-active {
+            visibility: visible;
+            animation: fadeout 15s ease;
+            opacity: 0;
+        }
     }
+}
+
+@keyframes fadeout {
+    5% {
+        opacity: 1;
+    }
+}
+
+$animationstart: -150px;
+$animationend: 0px;
+@keyframes animation1{
+  0%{transform: translateX($animationstart); opacity:0;}
+  100%{transform: translateX($animationend); opacity: 1;}
+}
+
+$animationstart: 0px;
+$animationend: -150px;
+@keyframes animation2{
+  0%{transform: translateX($animationstart); opacity:1;}
+  100%{transform: translateX($animationend); opacity: 0;}
 }

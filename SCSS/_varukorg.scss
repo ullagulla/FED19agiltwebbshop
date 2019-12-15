@@ -32,12 +32,14 @@ body {
             padding: 1px;
         }
 
-        #rubrik {
-            padding: 6px;
-            margin-left: 6px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+        .cart-header {
             border-bottom: 1px lightgray solid;
+            #rubrik {
+                padding: 6px;
+                margin-left: 6px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
         }
 
         padding: 10px;
@@ -45,7 +47,7 @@ body {
         height: 100%;
         visibility: hidden;
         position: fixed;
-        z-index: 100;
+        z-index: 1500;
         top: 0;
         right: 0;
         background-color: white;
@@ -142,8 +144,11 @@ body {
                 }
 
                 #btnCO {
-                    text-transform: uppercase;
                     border-radius: 0;
+                    border: 1px solid black;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    background-color: black!important;
                  }
         }
 
@@ -181,10 +186,14 @@ body {
     }
 
     .cart-active {
+        z-index: 99999;
         padding: 10px;
         transition: .2s;
         visibility: visible;
         width: 100%;
+        animation-name: cart-animation;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
 
         @include tablet() {
             width: 32vw;
@@ -213,4 +222,11 @@ body {
         margin-left: 50px;
     }
 
+}
+
+$animationstart: 500px;
+$animationend: 0px;
+@keyframes cart-animation{
+  0%{transform: translateX($animationstart); opacity:0;}
+  100%{transform: translateX($animationend); opacity: 1;}
 }
