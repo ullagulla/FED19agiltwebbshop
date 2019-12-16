@@ -146,7 +146,7 @@ body {
         opacity: 0.7; }
   body .header-wrapper .message-active {
     visibility: visible;
-    animation: fadeout 15s ease;
+    animation: fadeout 5s ease;
     opacity: 0; }
 
 @keyframes fadeout {
@@ -266,6 +266,9 @@ body {
       width: 10px;
       height: 30px; }
       body .cartnav .input-group .quantity-field[type=number]::-webkit-inner-spin-button, body .cartnav .input-group .quantity-field[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none; }
+      body .cartnav .input-group .quantity-field input[type=number] {
+        -moz-appearance: textfield;
         -webkit-appearance: none; }
     body .cartnav .input-group .button-plus {
       width: fit-content; }

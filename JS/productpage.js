@@ -6,7 +6,7 @@ $(document).ready(function(){
     let productInfo = JSON.parse(information);
 
     let prefix = "";
-    if(window.location.href.indexOf("index.html") <= 0) {
+    if(window.location.href.indexOf("index.html") < 0) {
         prefix = "../";
     }
 

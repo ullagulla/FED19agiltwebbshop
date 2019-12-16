@@ -35,7 +35,9 @@ $(document).ready(function(){
 
     //När man går vidare från att fylla i sina uppgifter så syns nästa div med betalningsuppgifter
 
-    $(".continue").on("click", function(){
+    $(".form-wrapper").on("submit", function(e){
+
+        e.preventDefault();
 
         $(".payment-container").addClass("d-flex").hide().slideDown("slow");
         $(".place-order-container").addClass("d-flex").hide().slideDown("slow");

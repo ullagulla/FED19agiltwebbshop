@@ -2,6 +2,8 @@ $(document).ready(function(){
 
     //Funktion för sticky top
 
+    let storage = [];
+
     $(window).scroll(function(){
         let sticky = $('.sticky'),
             scroll = $(window).scrollTop();
@@ -30,12 +32,6 @@ $(document).ready(function(){
             $(".search-field").toggleClass("active");
         });
     
-        // Varukorgen
-        // $(".cart-icon").on("click", function(){
-    
-        //     $(".cartnav").toggleClass("cart-active");
-    
-        // });
     
         $(".toggle-cart").on("click", function(){
     
@@ -46,7 +42,7 @@ $(document).ready(function(){
 
         //funktion för att skicka vidare produkter till varukorg
 
-    let information = localStorage.getItem("product");
+    let information = localStorage.getItem("stringCart");
     let productInfo = JSON.parse(information);
 
     let prefix = "";
@@ -54,13 +50,15 @@ $(document).ready(function(){
         prefix = "../";
     }
 
-    $(".prod-link").on("click", function(){
-
+    $(".img-cart").on("click", function(){
+        console.log("HualIgNNNN");
         storage.push(productInfo[i]);
-        location.href = "produktsida.html";
+        localStorage.clear("productFromCart");
+        localStorage.setItem("productFromCart", storage);
+        // location.href = "produktsida.html";
+
 
     });
-
 
     // $(".img-cart").append($("<img>").attr({"src":prefix + productInfo[0].picture, "class": "ml-2", "alt": productInfo[0].name + " perfume"}));
 
@@ -92,3 +90,4 @@ $(document).ready(function(){
     // });
 
 });
+

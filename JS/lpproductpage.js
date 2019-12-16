@@ -20,23 +20,23 @@ $(document).ready(function(){
 
     //Våra objekt
 
-    let prod1 = new Product("Super Cedar", 1200, 1850, "../images/serenity-supercedar.jpg", 1);
+    let prod1 = new Product("Super Cedar", 1200, 1850, "images/serenity-supercedar.jpg", 1);
 
-    let prod2 = new Product("Sunday Cologne", 1200, 1850, "../images/serenity-sundaycologne.jpg", 1);
+    let prod2 = new Product("Sunday Cologne", 1200, 1850, "images/serenity-sundaycologne.jpg", 1);
 
-    let prod3 = new Product("Bibliothèque", 1200, 1850, "../images/serenity-bibliotheque.jpg", 1);
+    let prod3 = new Product("Bibliothèque", 1200, 1850, "images/serenity-bibliotheque.jpg", 1);
 
-    let prod4 = new Product("Bal d'Afrique", 1200, 1850, "../images/serenity-baldafrique.jpg", 1);  
+    let prod4 = new Product("Bal d'Afrique", 1200, 1850, "images/serenity-baldafrique.jpg", 1);  
 
-    let prod5 = new Product("Blanche", 1200, 1850, "../images/serenity-blanche.jpg", 1);  
+    let prod5 = new Product("Blanche", 1200, 1850, "images/serenity-blanche.jpg", 1);  
     
-    let prod6 = new Product("La Tulipe", 1200, 1850, "../images/serenity-latulipe.jpg", 1);
+    let prod6 = new Product("La Tulipe", 1200, 1850, "images/serenity-latulipe.jpg", 1);
     
-    let prod7 = new Product("Sundazed", 1200, 1850, "../images/serenity-sundazed.jpg", 1);
+    let prod7 = new Product("Sundazed", 1200, 1850, "images/serenity-sundazed.jpg", 1);
 
-    let prod8 = new Product("Rose of No Man's Land", 1200, 1850, "../images/serenity-roseofnomansland.jpg", 1);
+    let prod8 = new Product("Rose of No Man's Land", 1200, 1850, "images/serenity-roseofnomansland.jpg", 1);
 
-    let prod9 = new Product("Pulp", 1200, 1850, "../images/serenity-pulp.jpg", 1);
+    let prod9 = new Product("Pulp", 1200, 1850, "images/serenity-pulp.jpg", 1);
 
     let products = [prod1, prod2, prod3, prod4, prod5, prod6, prod7, prod8, prod9];
 
@@ -46,6 +46,11 @@ $(document).ready(function(){
 
     let cart = [];
     let storage = [];
+
+    let prefix = "";
+    if(window.location.href.indexOf("index.html") < 0) {
+        prefix = "../";
+    }
     
     $.each(products, function(i){
 
@@ -54,16 +59,16 @@ $(document).ready(function(){
             putInCart();
         });
         let imgContainer = $("<div>").addClass("prod-img pb-3 pb-lg-0");
-        let img = $("<img>").attr({"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i});
+        let img = $("<img>").attr({"src": prefix + products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i});
         let prodInfo = $("<div>").addClass("prod-info").attr("id", "info"+i);
         let title = $("<p>").addClass("prod-name mb-0 pl-3 pt-3").html(products[i].name);
         let price = $("<p>").addClass("prod-price mb-0 pl-3").html(products[i].smallprice + " :-");
         let iconsHover = $("<div>").addClass("icons-hover d-flex").attr("id", "icons-hover"+i);
-        let hoverHeart = $("<img>").addClass("prod-heart pr-1").attr({"src": "../images/heart-white.PNG", "id": "hover-heart" +i});
-        let hoverCart = $("<img>").addClass("prod-cart pl-1").attr({"src": "../images/cart-white.PNG", "id": "hover-cart" +i});
+        let hoverHeart = $("<img>").addClass("prod-heart pr-1").attr({"src": prefix + "images/heart-white.PNG", "id": "hover-heart" +i});
+        let hoverCart = $("<img>").addClass("prod-cart pl-1").attr({"src": prefix + "images/cart-white.PNG", "id": "hover-cart" +i});
         let icons = $("<div>").addClass("prod-icons pr-1 pb-1");
-        let heartIcon = $("<img>").addClass("heart-icon pr-1 pt-3").attr({"src": "../images/heart.PNG", "id": "heart" +i});
-        let cartIcon = $("<img>").addClass("cart-icon pr-1 pr-3 pt-3").attr({"src": "../images/cart.PNG", "id": "cart" +i});
+        let heartIcon = $("<img>").addClass("heart-icon pr-1 pt-3").attr({"src": prefix + "images/heart.PNG", "id": "heart" +i});
+        let cartIcon = $("<img>").addClass("cart-icon pr-1 pr-3 pt-3").attr({"src": prefix + "images/cart.PNG", "id": "cart" +i});
 
         $(".lp-prod-wrapper").append(prodContainer);
         prodContainer.append(hoverProduct);
@@ -176,26 +181,43 @@ $(document).ready(function(){
 
         function putInCart() {
             let prefix = "";
-            if(window.location.href.indexOf("index.html") >= 0) {
+            if(window.location.href.indexOf("index.html") < 0) {
                 prefix = "../";
             }
 
             let imgCartContainer = $("<div>").addClass("col-4 img-cart");
-            let imgLink = $("<a>").attr({"href": "produktsida.html", "class": "prod-link"});
+            // let imgLink = $("<a>").attr({"href": "produktsida.html", "class": "prod-link"});
             let imgCart = $("<img>").attr({"src":prefix + products[i].picture, "class": "ml-2", "alt": products[i].name + " perfume"});
             let cartInfo = $("<div>").addClass("col-4 cart-prod-info");
             let cartUl = $("<ul>").addClass("cart-name-size pt-4");
             let cartName = $("<p>").attr("id", "name" +i).html(products[i].name);
             let cartSize = $("<p>").append($("<p>")).attr({"id": "size"}).html("50 ml");
-            let cartPriceContainer = $("<div>").addClass("col-4 cart-prod-price pt-4 d-flex justify-content-end");
+            let cartPriceContainer = $("<div>").addClass("col-4 cart-prod-price pt-4 text-right");
             let cartPrice = $("<p>").attr({"class": "pr-2", "id": "price" +i}).html(products[i].smallprice + " kr");
+            let quantityWrapper = $("<span>").addClass("input-group px-2 d-flex justify-content-end");
+            let inputMinus = $("<input>").attr({"type": "button", "id": "button-minus"+i, "value": "-", "class": "button-minus btn pl-0 pr-1", "data-field": "quantity"});
+            let inputValue = $("<input>").attr({"type": "number", "id": "number", "step": 1, "max": "", "value": "1", "class": "quantity-field", "name": "quantity"});
+            let inputPlus = $("<input>").attr({"type": "button", "id": "button-plus"+i, "value": "+", "class": "button-plus btn p-0 mr-2", "data-field": "quantity"});
+
+
 
             $(".cart-prod-container").append(imgCartContainer, cartInfo, cartPriceContainer);
-            imgCartContainer.append(imgLink);
-            imgLink.append(imgCart);
+            imgCartContainer.append(imgCart);
             cartInfo.append(cartUl);
             cartUl.append(cartName, cartSize);
-            cartPriceContainer.append(cartPrice);
+            cartPriceContainer.append(cartPrice, quantityWrapper);
+            quantityWrapper.append(inputMinus, inputValue, inputPlus);
+
+            // <!-- <div class="col-12" id="antalP">
+            // <span class="input-group px-2">
+                // <input type="button" value="-" class="button-minus btn pl-0 pr-1"
+                //     data-field="quantity">
+                // <input type="number" step="1" max="" value="1" name="quantity"
+                //     class="quantity-field">
+            //     <input type="button" value="+" class="button-plus btn p-0 mr-2"
+            //         data-field="quantity">
+            //     <button class="btn btn-dark removebtn pr-0">Remove</button>
+            // </span> -->
 
 
 
