@@ -60,9 +60,9 @@ $(document).ready(function(){
         });
         let imgContainer = $("<div>").addClass("prod-img pb-3 pb-lg-0");
         let img = $("<img>").attr({"src": prefix + products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i});
-        let prodInfo = $("<div>").addClass("prod-info").attr("id", "info"+i);
+        let prodInfo = $("<div>").addClass("prod-info text-center").attr("id", "info"+i);
         let title = $("<p>").addClass("prod-name mb-0 pl-3 pt-3").html(products[i].name);
-        let price = $("<p>").addClass("prod-price mb-0 pl-3").html(products[i].smallprice + " :-");
+        let price = $("<p>").addClass("prod-price mb-0 pl-3").html(products[i].smallprice + " SEK");
         let iconsHover = $("<div>").addClass("icons-hover d-flex").attr("id", "icons-hover"+i);
         let hoverHeart = $("<img>").addClass("prod-heart pr-1").attr({"src": prefix + "images/heart-white.PNG", "id": "hover-heart" +i});
         let hoverCart = $("<img>").addClass("prod-cart pl-1").attr({"src": prefix + "images/cart-white.PNG", "id": "hover-cart" +i});

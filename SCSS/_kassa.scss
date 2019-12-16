@@ -59,6 +59,7 @@ html {
                             }
                         }
                         .invalid-code {
+                            display: none;
                             font-weight: bold;
                             i {
                                 color: red;
@@ -112,7 +113,7 @@ html {
                                 .button-minus {
                                     width: fit-content;
 
-                                    &:focus {
+                                    &:active {
                                         outline: none;
                                     }
                                 }
@@ -284,7 +285,8 @@ html {
                             }
 
                             #inputCreditcard {
-                                border: 1px solid #ced4da;
+                                background-color: #EAEAEA;
+                                border: 2px solid #ced4da;
                                 border-radius: 0.25rem;
                                 border-bottom-right-radius: 0;
                                 border-bottom-left-radius: 0;

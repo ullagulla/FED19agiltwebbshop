@@ -21,7 +21,7 @@ body {
         border-bottom: 1px solid black;
         margin: 6px 0; }
     body .header-wrapper .row .header-container .sidenav {
-      height: 90.4%;
+      height: 90.5%;
       visibility: hidden;
       position: fixed;
       z-index: 2000;
@@ -39,7 +39,7 @@ body {
       animation-fill-mode: backwards; }
       @media (min-width: 600px) {
         body .header-wrapper .row .header-container .active {
-          width: 400px; } }
+          width: 32vw; } }
     body .header-wrapper .row .header-container .sidenav a {
       font-size: 18px;
       padding: 8px 8px 8px 32px;
@@ -174,13 +174,13 @@ body {
   body #myCart {
     padding: 11px; }
   body .cartnav {
+    height: 90.5%;
     padding: 10px;
     width: 32vw;
-    height: 100%;
     visibility: hidden;
     position: fixed;
     z-index: 1500;
-    top: 0;
+    bottom: 0;
     right: 0;
     background-color: white;
     overflow-x: hidden;
@@ -471,7 +471,7 @@ body {
       body .container-fluid .prod-container .prod-wrapper .icons-hover {
         opacity: 0;
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%); }
         body .container-fluid .prod-container .prod-wrapper .icons-hover img {
@@ -819,6 +819,7 @@ html {
           html body .container .row .col-12 .discount-wrapper .discount-btn:focus {
             outline-style: none !important; }
         html body .container .row .col-12 .discount-wrapper .invalid-code {
+          display: none;
           font-weight: bold; }
           html body .container .row .col-12 .discount-wrapper .invalid-code i {
             color: red; }
@@ -852,7 +853,7 @@ html {
             display: inline !important; }
             html body .container .row .col-12 .order-container .prod-wrapper .inputs .button-minus {
               width: fit-content; }
-              html body .container .row .col-12 .order-container .prod-wrapper .inputs .button-minus:focus {
+              html body .container .row .col-12 .order-container .prod-wrapper .inputs .button-minus:active {
                 outline: none; }
             html body .container .row .col-12 .order-container .prod-wrapper .inputs .quantity-field {
               border: none;
@@ -957,7 +958,8 @@ html {
           html body .container .row .col-12 .payment-container .payment-wrapper .form-control::placeholder {
             font-size: 10px; }
           html body .container .row .col-12 .payment-container .payment-wrapper #inputCreditcard {
-            border: 1px solid #ced4da;
+            background-color: #EAEAEA;
+            border: 2px solid #ced4da;
             border-radius: 0.25rem;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0; }
