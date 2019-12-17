@@ -207,7 +207,7 @@ body {
         animation-duration: 0.3s;
         animation-fill-mode: forwards;
 
-        @include tablet() {
+        @include desktop() {
             width: 32vw;
             padding: 10px;
         }

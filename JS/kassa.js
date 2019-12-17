@@ -11,19 +11,19 @@ $(document).ready(function(){
 
         $.each(checkoutProducts, function(i){
 
-            let checkoutContainer = $("<div>").attr({"class": "checkoutProd px-0 pb-4", "id": "checkoutProd"+i});
+            let checkoutContainer = $("<div>").attr({"class": "row checkoutProd px-0 pb-4", "id": "checkoutProd"+i});
             let checkoutImgWrapper = $("<div>").attr({"class": "col-3 pic-wrapper pr-0 pl-2 pt-2", "id": "checkout-prod-div"+i});
             let checkoutRemove = $("<span>").attr({"class": "remove", "id": "remove"+i}).html("x");
             let checkoutImgContainer = $("<div>").addClass("pic-container");
             let checkoutImg = $("<img>").attr({"src": prefix + checkoutProducts[i].product.picture, "class": "d-block ml-1", "alt": checkoutProducts[0].product.name + " perfume"});
             let checkoutInfo = $("<div>").addClass("col-3 flex-column prod-wrapper d-inline-block pt-2 pl-0 pr-0");
             let checkoutNameWrapper = $("<div>").addClass("prod-name-wrapper");
-            let checkoutName = $("<span>").attr({"class": "name mb-0", "id": "name" +i}).html(checkoutProducts[i].product.name);
+            let checkoutName = $("<span>").attr({"class": "name mb-0 font-weight-bold", "id": "name" +i}).html(checkoutProducts[i].product.name);
             let checkoutTxt = $("<div>").addClass("perfume-txt-container");
-            let perfumeTxt = $("<p>").addClass("perfume-txt");
+            let perfumeTxt = $("<p>").addClass("perfume-txt mb-0").html("eu de perfume");
             let checkoutSizeContainer = $("<div>").addClass("perfume-size-container");
             let checkoutSize = $("<p>").append($("<p>")).attr({"id": "size"}).html("50 ml");
-            let checkoutPriceContainer = $("<div>").addClass("col-3 pt-3 pr-0 checkout-prod-price d-inline-block");
+            let checkoutPriceContainer = $("<div>").addClass("col-3 pt-2 pr-0 checkout-prod-price d-inline-block");
             let cartPrice = $("<p>").attr({"class": "text-right prod-price", "id": "price" +i}).html((checkoutProducts[i].product.smallprice)*(checkoutProducts[i].amount) + "  SEK");
             let checkoutQuantity = $("<div>").addClass("col-3 prod-wrapper px-0 d-inline-block");
             let quantityWrapper = $("<span>").addClass("inputs px-1 d-flex justify-content-center");
@@ -43,6 +43,18 @@ $(document).ready(function(){
             checkoutPriceContainer.append(cartPrice);
             checkoutQuantity.append(quantityWrapper);
             quantityWrapper.append(inputMinus, inputValue, inputPlus);
+
+            let total = 0;
+
+            for (let i = 0; i < checkoutProducts.length; i++) {
+
+                total += checkoutProducts[i].product.smallprice*checkoutProducts[i].amount;
+                
+            }
+
+            $(".subtotal").html(total + " SEK");
+            $(".total").html(total + " SEK");
+
 
         });
 
