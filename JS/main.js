@@ -247,6 +247,15 @@ $(document).ready(function(){
         $(".badge-icon").html(total);
     }
 
+    $(inputPlus).click(function(){
+        let inputPlus = $("#button-plus");
+        cartStringify[i].amount++;
+        localStorage.setItem("Cart", JSON.stringify(cartStringify));
+
+        $(inputValue).html(cartStringify[i].amount);
+
+    });
+
     function saveCart(){
         let items;
 
