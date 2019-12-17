@@ -22,20 +22,19 @@ $(document).ready(function(){
 
         $(".discount-wrapper").slideToggle("fast");
 
-        if ($(".discount-wrapper").is(":hidden")){
-            $(".invalid-code").hide();
-        }
     })
 
     //Vid klick på add-discount knappen så syns texten nedan 
 
     $(".discount-btn").on("click", function (){
-        $(".invalid-code").html("<small>The code is not valid, please try again <i class='fas fa-heart'></i></small>");
+        $(".invalid-code").slideToggle("fast");
     });
 
     //När man går vidare från att fylla i sina uppgifter så syns nästa div med betalningsuppgifter
 
-    $(".continue").on("click", function(){
+    $(".form-wrapper").on("submit", function(e){
+
+        e.preventDefault();
 
         $(".payment-container").addClass("d-flex").hide().slideDown("slow");
         $(".place-order-container").addClass("d-flex").hide().slideDown("slow");

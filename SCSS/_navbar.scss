@@ -53,7 +53,7 @@ body {
                 }
 
                 .sidenav {
-                    height: 90.4%;
+                    height: 90.5%;
                     visibility: hidden;
                     position: fixed;
                     z-index: 2000;
@@ -74,7 +74,7 @@ body {
                     animation-fill-mode: backwards;
 
                     @include tablet() {
-                        width: 400px;
+                        width: 32vw;
                     }
                 }
 
@@ -236,7 +236,7 @@ body {
     
         .message-active {
             visibility: visible;
-            animation: fadeout 15s ease;
+            animation: fadeout 5s ease;
             opacity: 0;
         }
     }

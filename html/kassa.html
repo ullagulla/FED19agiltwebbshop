@@ -147,7 +147,7 @@
                 <div class="discount-wrapper">
                     <input type="text" class="discount-input mb-2">
                     <button type="button" class="btn discount-btn mb-2">Add</button>
-                    <p class="invalid-code"></p>
+                    <p class="invalid-code"><small>The code is not valid, please try again <i class='fas fa-heart'></i></small></p>
                 </div>
                 <div class="d-flex divider justify-content-between pb-1">
                     <div class="pl-2">Product</div>
@@ -173,7 +173,7 @@
                         </span>
                     </div>
                     <div class="col-3 pt-3 pr-0">
-                        <p class="text-right">1200 kr</p>
+                        <p class="text-right">1200 SEK</p>
                     </div>
                 </div>
                 <div class="row">
@@ -183,17 +183,17 @@
                         <p class="prod-info font-weight-bold mb-4">Total</p>
                     </div>
                     <div class="col-6 pt-4">
-                        <p class="prod-info text-right mb-1">549 kr</p>
+                        <p class="prod-info text-right mb-1">549 SEK</p>
                         <p class="prod-info text-right mb-1">Free!</p>
-                        <p class="prod-info text-right mb-1">549 kr</p>
+                        <p class="prod-info text-right mb-1">549 SEK</p>
                     </div>
                     <div class="col-12 continue-shopping font-weight-bold">
-                        <a href="produktsida.html">Vill du lägga till fler produkter? Klicka här</a>
+                        <a href="lp_produktsida.html">Would you like to add more products? Click here</a>
                     </div>
                 </div>
                 <h5 class="information pt-4 pl-2 mb-1">Your information</h5>
                 <p class="address-info pl-2">The address must be within the EU</p>
-                <form class="form-wrapper" method="post">
+                <form class="form-wrapper" action="">
                     <div class="col-12">
                         <div class="form-row">
                             <div class="form-group col-md-6 m-0 p-0">
@@ -201,11 +201,11 @@
                                     required>
                             </div>
                             <div class="form-group col-md-6 m-0 p-0">
-                                <input type="password" class="form-control" id="inputZip" placeholder="Zip code">
+                                <input type="text" class="form-control" id="inputZip" placeholder="Zip code">
                             </div>
                             <div class="form-group col-12 m-0 p-0">
                                 <input type="text" class="form-control" id="inputPersonal"
-                                    placeholder="Personal number">
+                                    placeholder="Personal number (optional)">
                             </div>
                             <div class="form-group col-md-6 m-0 p-0">
                                 <input type="text" class="form-control" id="inputFirstname" placeholder="Firstname">
@@ -226,8 +226,8 @@
                     </div>
                     <div class="btn-wrapper pt-3 d-flex justify-content-end">
                         <div class="col-6 d-flex justify-content-between pl-0">
-                            <button type="button" class="btn mr-1 w-50">Avbryt</button>
-                            <button type="submit" class="btn continue btn-dark w-50 ml-1">Forsätt</button>
+                            <button type="button" class="btn mr-1 w-50">Cancel</button>
+                            <button type="submit" class="btn continue btn-dark w-50 ml-1">Continue</button>
                         </div>
                     </div>
                 </form>
@@ -266,7 +266,7 @@
                                     </div>
                                     <div class="form-group col-12 m-0 p-0">
                                         <input type="text" class="form-control" id="inputCardnumber"
-                                            placeholder="&#xf09d; Cardnumber">
+                                            placeholder="Cardnumber">
                                     </div>
                                     <div class="form-group col-6 m-0 p-0">
                                         <input type="text" class="form-control" id="inputMonth" placeholder="MM / YY">
@@ -278,20 +278,19 @@
                                         <div class="custom-control custom-checkbox py-3">
                                             <input type="checkbox" class="custom-control-input" id="customCheck"
                                                 name="card-details">
-                                            <label class="custom-control-label pt-1" for="customCheck">Kom ihåg mitt
-                                                kortnummer</label>
+                                            <label class="custom-control-label pt-1" for="customCheck">Save my card details</label>
                                         </div>
                                     </form>
                                     <div class="klarna-info py-3">
                                         <ul class="mb-0">
-                                            <li>Välj att spara ditt kort för framtida köp</li>
-                                            <li>Klarnas köparskydd ingår</li>
+                                            <li>Choose to save your card details for future purchases</li>
+                                            <li>Klarnas purchase protection is included</li>
                                         </ul>
                                     </div>
                                     <hr class="w-100">
                                     <div class="show-klarna pb-3">
                                         <img class="arrow-down" src="../images/arrow-down-pink.png"
-                                            alt="arrow down"><span class="pl-3">Visa fler betalningssätt</span>
+                                            alt="arrow down"><span class="pl-3">View more payment methods</span>
                                     </div>
                                 </div>
                             </div>
@@ -303,18 +302,18 @@
                     <div class="col-11 klarna-wrapper mt-5">
                         <div class="pay-method py-3 d-flex justify-content-between">
                             <div class="paymentplan-info">
-                                <input type="radio" name="gender" value="male">
+                                <input type="radio" name="gender" value="male" checked="checked">
                                 <span class="pay-offer pl-2 pr-2 font-weight-bold">Payment plan</span>
-                                <span><small>Betala lite varje månad</small></span>
+                                <span><small>Pay monthly</small></span>
                             </div>
                             <div class="klarna-img-container"><img src="../images/klarna-logo.png" alt="klarna logo">
                             </div>
                         </div>
                         <div class="card-info mx-5 py-3">
                             <ul class="mb-0">
-                                <li>Samla dina köp på en kontofaktura</li>
-                                <li>Delbetala eller betala hela beloppet i slutet av nästa månad</li>
-                                <li>Klarnas köparskydd ingår</li>
+                                <li>Gather your purchases on an account invoice</li>
+                                <li>Pay monthly or pay the full amount at the end of next month</li>
+                                <li>Klarnas purchase protection is included</li>
                             </ul>
                         </div>
                     </div>
