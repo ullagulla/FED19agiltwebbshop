@@ -171,11 +171,11 @@ $(document).ready(function(){
                 let cartUl = $("<ul>").addClass("cart-name-size pt-4");
                 let cartName = $("<p>").attr("id", "name" +i).html(cartItems[i].product.name);
                 let cartSize = $("<p>").append($("<p>")).attr({"id": "size"}).html("50 ml");
-                let cartPriceContainer = $("<div>").addClass("col-4 cart-prod-price pt-4");
-                let cartPrice = $("<p>").attr({"class": "pr-2 text-right", "id": "price" +i}).html((cartItems[i].product.smallprice)*(cartItems[i].amount) + "  SEK");
+                let cartPriceContainer = $("<div>").addClass("col-4 cart-prod-price pt-4").attr("id", "cart-prod-price"+i);
+                let cartPrice = $("<p>").attr({"class": "pr-2 text-right price", "id": "price" +i}).html((cartItems[i].product.smallprice)*(cartItems[i].amount) + "  SEK");
                 let quantityWrapper = $("<span>").addClass("input-group pl-2 d-flex justify-content-end");
                 let inputMinus = $("<input>").attr({"type": "button", "id": "button-minus"+i, "value": "-", "class": "button-minus btn pl-0 pr-1", "data-field": "quantity"});
-                let inputValue = $("<input>").attr({"type": "number", "id": "number", "step": 1, "max": "", "value": cartItems[i].amount, "class": "quantity-field", "name": "quantity"});
+                let inputValue = $("<input>").attr({"type": "number", "id": "number"+i, "step": 1, "max": "", "value": cartItems[i].amount, "class": "quantity-field", "name": "quantity"});
                 let inputPlus = $("<input>").attr({"type": "button", "id": "button-plus"+i, "value": "+", "class": "button-plus btn p-0 mr-2", "data-field": "quantity"});
     
     
@@ -186,13 +186,19 @@ $(document).ready(function(){
                 cartPriceContainer.append(cartPrice, quantityWrapper);
                 quantityWrapper.append(inputMinus, inputValue, inputPlus);
 
-                $("#totPrice").html((cartItems[i].product.smallprice)*(cartItems[i].amount) + " SEK");
-
-                // $("#button-plus"+i).on("click", function(){
-                //     addToCart();
-                // })
+                
 
             })
+
+            //Räknar ut totalen av alla produkter i varukorgen och skriver ut
+            let total = 0;
+
+            for (let i = 0; i < cartItems.length; i++) {
+
+                total += cartItems[i].product.smallprice*cartItems[i].amount;
+                
+            }
+            $("#totPrice").html(total + " SEK");
     
         }
 
