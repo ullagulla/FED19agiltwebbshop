@@ -279,8 +279,8 @@ body {
     body .cartnav .input-group .button-plus {
       width: fit-content; }
     body .cartnav a.cartbtn {
-      margin: -3px;
-      font-size: 40px;
+      margin: 9px;
+      font-size: 20px;
       color: #818181; }
   body .cart-active {
     z-index: 99999;
