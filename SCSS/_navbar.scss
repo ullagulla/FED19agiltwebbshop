@@ -35,7 +35,6 @@ body {
 
             .header-container {
                 background-color: white;
-                border-bottom: 1px solid rgba(128, 128, 128, 0.425);
                 height: 70px;
 
                 .openbtn {
@@ -53,7 +52,7 @@ body {
                 }
 
                 .sidenav {
-                    height: 90.5%;
+                    height: 100%;
                     visibility: hidden;
                     position: fixed;
                     z-index: 2000;
@@ -62,7 +61,7 @@ body {
                     background-color: white;
                     overflow-x: hidden;
                     padding-top: 40px;
-                    border-right: 1px solid rgba(128, 128, 128, 0.425);
+                    border-right: 1px solid rgba(211, 211, 211, 0.432);
 
                 }
 
@@ -101,7 +100,10 @@ body {
                     position: absolute;
                     top: 0;
                     left: 0px;
-                    font-size: 40px!important;
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
                 }
 
                 .inactive {

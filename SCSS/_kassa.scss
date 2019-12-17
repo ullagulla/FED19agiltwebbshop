@@ -80,6 +80,7 @@ html {
                         border-bottom: 1px solid rgba(128, 128, 128, 0.425);
 
                         .pic-wrapper {
+                            display: inline-block;
                             position: relative;
 
                             .remove {
@@ -89,9 +90,11 @@ html {
                                 font-weight: bold;
                             }
 
-                            img {
-                                width: 90%;
-                                box-shadow: 0px 0px 14px -6px rgba(140, 137, 140, 1);
+                            .pic-container {
+                                img {
+                                    width: 90%;
+                                    box-shadow: 0px 0px 14px -6px rgba(140, 137, 140, 1);
+                                }
                             }
                         }
 
