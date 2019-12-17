@@ -114,7 +114,7 @@ body {
 
                 .search-field {
                     display: none;
-                    width: 40%;
+                    width: 50%;
 
                     input {
                         border: none;
@@ -161,7 +161,7 @@ body {
                             height: 20px;
                             display: none;
 
-                            @include large-tablet {
+                            @include desktop() {
                                 display: inline-block;
                                 cursor: pointer;
                             }
