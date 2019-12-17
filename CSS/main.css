@@ -199,6 +199,11 @@ body {
       margin-top: 20px;
       margin-bottom: 10px;
       padding: 0; }
+      body .cartnav #mainDiv #empty {
+        padding: 6px;
+        margin-left: 21px;
+        margin-top: 10px;
+        margin-bottom: 10px; }
       body .cartnav #mainDiv ul {
         padding: 0px; }
         body .cartnav #mainDiv ul #name {
