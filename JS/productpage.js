@@ -17,6 +17,8 @@ $(document).ready(function(){
 
     $("#product-name").append(productInfo[0].name);
 
+    $(".price").append(productInfo[0].smallprice + " SEK");
+
     //Meddelande när produkt läggs till i varukorgen
 
     $("#cart0").on("click", function(){

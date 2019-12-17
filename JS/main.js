@@ -38,7 +38,6 @@ $(document).ready(function(){
 
     let cart = [];
     let storage = [];
-    let amount = [];
 
     $.each(products, function(i){
 
@@ -156,11 +155,7 @@ $(document).ready(function(){
                 prefix = "../";
             }
 
-            localStorage.getItem('cart') ? 
-            JSON.parse(localStorage.getItem('cart')) : []
-
             localStorage.setItem("cart", JSON.stringify(cart));
-            // let cartItems = localStorage.getItem("cart");
             let cartItems = JSON.parse(localStorage.getItem("cart"));
 
             $.each(cartItems, function(i){
@@ -186,6 +181,13 @@ $(document).ready(function(){
                 cartPriceContainer.append(cartPrice, quantityWrapper);
                 quantityWrapper.append(inputMinus, inputValue, inputPlus);
 
+                $("#btnCO").on("click", function(){
+                    cart.push(cartItems[i]);
+                    addToCart();
+                    putInStorage();
+                    saveCart();
+                    location.href = "html/cart.html";
+                })
                 
 
             })
