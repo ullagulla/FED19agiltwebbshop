@@ -47,6 +47,7 @@ $(document).ready(function() {
         let hoverProduct = $("<div>").addClass("hover-div").attr("id", "hover" +i).on("click", function() {
             storage.push(products[i]);
             putInStorage();
+            addToCart(products[i]);
             location.href = "html/produktsida.html";
         });
         let imgContainer = $("<div>").addClass("prod-img pb-3 pb-md-0");
@@ -234,7 +235,7 @@ $(document).ready(function() {
     function putInStorage() {
             let stringStorage = JSON.stringify(storage);
             let cartStringify = JSON.stringify(cart);
-            localStorage.clear("products");
+            // localStorage.clear("products");
             localStorage.setItem("products", stringStorage);
             localStorage.setItem("stringCart", cartStringify);
     }
