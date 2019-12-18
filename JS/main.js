@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
     //Klass med alla egenskaper för våra objekt som finns längre ned
 
@@ -39,7 +39,7 @@ $(document).ready(function(){
     let cart = [];
     let storage = [];
 
-    function printProducts(){
+    function printProducts() {
 
     $.each(products, function(i){
 
@@ -51,7 +51,7 @@ $(document).ready(function(){
         });
         let imgContainer = $("<div>").addClass("prod-img pb-3 pb-md-0");
         let img = $("<img>").attr({"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i});
-        let prodInfo = $("<div>").addClass("prod-info text-center").attr("id", "info"+i);
+        let prodInfo = $("<div>").addClass("prod-info").attr("id", "info"+i);
         let title = $("<p>").addClass("prod-name mb-0 pl-3 pt-3").html(products[i].name);
         let price = $("<p>").addClass("prod-price mb-0 pl-3").html(products[i].smallprice + " SEK");
         let iconsHover = $("<div>").addClass("icons-hover d-none d-lg-flex").attr("id", "icons-hover"+i);
@@ -107,50 +107,52 @@ $(document).ready(function(){
 
     function hoverIcons() {
 
-        ($(window).resize(function(){
-            let win = $(this);
-            if (win.width() >= 990) {
-                $("#hover"+i).hover(
-                    function(){
-                        $("#info"+i).css({
-                            opacity: "1",
-                            transition: "all 0.5s"
-                        });
-                    }, function(){
-                        $("#info"+i).css({
-                            opacity: "0",
-                            transition: "all 0.5s"
-                        })
-                    }
-                );
-    
-                $("#hover"+i).hover(
-                    function(){
-                        $("#icons-hover"+i).css({
-                            opacity: "1",
-                            transition: "all 0.5s"
-                        });
-                    }, function(){
-                        $("#icons-hover"+i).css({
-                            opacity: "0",
-                            transition: "all 0.5s"
-                        })
-                    }
-                );
-    
-                $("#hover-div"+i).hover(function() {
-                    $(this).find('img').attr("src", "../images/cart.png");
-                      }, function() {
-                    $(this).find('img').attr("src", "../images/cart-white.png");
-                });
-                printProducts();
-            }
-            else {
-                $("#info"+i).css("opacity", "1");
-    
-                $("#icons-hover" +i).css("visibility", "hidden");
-            }
-        }))
+        $.each(products, function(i){
+
+            ($(window).resize(function(){
+                let win = $(this);
+                if (win.width() >= 990) {
+                    $("#hover"+i).hover(
+                        function(){
+                            $("#info"+i).css({
+                                opacity: "1",
+                                transition: "all 0.5s"
+                            });
+                        }, function(){
+                            $("#info"+i).css({
+                                opacity: "0",
+                                transition: "all 0.5s"
+                            })
+                        }
+                    );
+        
+                    $("#hover"+i).hover(
+                        function(){
+                            $("#icons-hover"+i).css({
+                                opacity: "1",
+                                transition: "all 0.5s"
+                            });
+                        }, function(){
+                            $("#icons-hover"+i).css({
+                                opacity: "0",
+                                transition: "all 0.5s"
+                            })
+                        }
+                    );
+        
+                    // $("#hover-div"+i).hover(function() {
+                    //     $(this).find('img').attr("src", "../images/cart.png");
+                    //     }, function() {
+                    //     $(this).find('img').attr("src", "../images/cart-white.png");
+                    // });
+                }
+                else {
+                    $("#info"+i).css("opacity", "1");
+        
+                    $("#icons-hover" +i).css("visibility", "hidden");
+                }
+            }))
+        });
 
     }
 
@@ -238,7 +240,7 @@ $(document).ready(function(){
             localStorage.setItem("stringCart", cartStringify);
     }
 
-    function addToCart(cartProduct){
+    function addToCart(cartProduct) {
             //Klass för produkten som skickas till varukorgen  
 
             let gotProduct = false;
@@ -258,7 +260,7 @@ $(document).ready(function(){
             localStorage.setItem("cart", JSON.stringify(cartItems));
     }
 
-    function cartCount(){
+    function cartCount() {
         let total = 0;
         for (let i = 0; i < cartItems.length; i++) {
             total += cartItems[i].amount;
