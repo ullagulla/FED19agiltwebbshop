@@ -97,6 +97,14 @@ $(document).ready(function () {
 
             }
 
+            $("#remove"+i).on("click", function(){
+                checkoutProducts.splice(i, 1);
+
+                printCheckoutProducts();
+
+                localStorage.setItem('cart', JSON.stringify(checkoutProducts));
+            })
+
             // ökar antal :)
             $(inputPlus).on("click", function () {
                 checkoutProducts[i].amount++;
