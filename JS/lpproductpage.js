@@ -253,4 +253,17 @@ $(document).ready(function(){
         localStorage.setItem("products", stringStorage);
         localStorage.setItem("stringCart", cartStringify);
 }
+function cartEmpty(){
+    let noItems = ($("<p>").attr("id", "empty").html("Your cart is currently empty.."));
+    $(".cart-prod-container").append(noItems);
+    setTimeout(function() {
+        ($(".cart-prod-container").children().length <= 0);{
+            
+        }
+        if ($(".cart-prod-container").children().length ==1) {
+              //noItems.hide();
+            }
+         });
+    }   
+    cartEmpty() 
 });

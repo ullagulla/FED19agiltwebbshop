@@ -282,6 +282,7 @@ body {
       width: fit-content; }
     body .cartnav a.cartbtn {
       margin: 9px;
+      padding: 8px;
       font-size: 20px;
       color: #818181; }
   body .cart-active {
