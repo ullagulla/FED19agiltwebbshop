@@ -35,6 +35,6 @@ $(document).ready(function(){
 
     $(".cancel").on("click", function(){
         $("#myForm").css("display", "none");
-    }) 
+    })
     
 });

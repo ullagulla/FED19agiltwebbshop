@@ -190,7 +190,7 @@ body {
     body .cartnav #myCart {
       padding: 1px; }
     body .cartnav .cart-header {
-      border-bottom: 1px lightgray solid; }
+      border-bottom: 1px #ececec solid; }
       body .cartnav .cart-header #rubrik {
         padding: 6px;
         margin-left: 6px;
