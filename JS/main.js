@@ -187,8 +187,14 @@ $(document).ready(function(){
                     putInStorage();
                     saveCart();
                     location.href = "html/cart.html";
+                }) // TESTADE
+                $(inputPlus).on("click",function(){
+                    let amount =inputValue.value * 1;
+                    localStorage.getItem('cart',JSON.stringify(inputValue));
+                    $(amount).html(inputValue[i].amount);
+                    inputPlus = amount * 1;
+                    console.log(inputPlus);
                 })
-                
 
             })
 
