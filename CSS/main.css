@@ -882,6 +882,8 @@ html {
         font-weight: bold; }
       html body .container .row .col-12 form .col-12 .form-row .form-control::placeholder {
         font-size: 10px; }
+      html body .container .row .col-12 form .col-12 .form-row input.error {
+        background-color: red !important; }
       html body .container .row .col-12 form .col-12 .form-row #inputEmail {
         border-bottom: none;
         border-bottom-right-radius: 0;
@@ -1066,6 +1068,9 @@ html {
         transform: translate(-50%, -50%);
         width: 20px;
         height: 15px; }
+
+.error {
+  background-color: red !important; }
 
 * {
   box-sizing: border-box; }
