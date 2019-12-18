@@ -72,7 +72,7 @@ $(document).ready(function(){
         //Nedan visar info PÅ produkt-bilderna vid hover desktop
 
         $("#heart"+i).on("click", function(event){
-            $(".icons").find("img:first");
+            $(".icons").find("img:first").attr("src", "images/heart-pink.png");
             event.stopPropagation();
         })
 
