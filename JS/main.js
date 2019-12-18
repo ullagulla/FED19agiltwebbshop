@@ -165,7 +165,7 @@ $(document).ready(function(){
 
         $.each(cartItems, function(i){
 
-            let cartProdContainer = $("<div>").addClass("col-12 container");
+            let cartProdContainer = $("<div>").addClass("col-12 container d-flex");
             let imgCartContainer = $("<div>").addClass("col-4 img-cart");
             let imgCart = $("<img>").attr({"src":prefix + cartItems[i].product.picture, "class": "ml-2", "alt": cartItems[i].product.name + " perfume"});
             let cartInfo = $("<div>").addClass("col-4 cart-prod-info");
