@@ -121,12 +121,12 @@ $(document).ready(function(){
         //Nedan funktion höjer värdet på badge (varukorg) med 1 samt sparar objekt vi klickar på I LOCAL STORAGE
 
         $("#hover-cart"+i).on("click", function(event){
+            event.stopPropagation();
 
-            saveCart();
+            //saveCart();
 
             addToCart(products[i]);
 
-            event.stopPropagation();
             printCart();
 
             $(".cart-notification").toggleClass("message-active");
@@ -134,84 +134,98 @@ $(document).ready(function(){
         });
 
         $("#cart"+i).on("click", function(event){
+            event.stopPropagation();
 
-            saveCart();
+            //saveCart();
 
             addToCart(products[i]);
 
-            event.stopPropagation();
             printCart();
 
             $(".cart-notification").toggleClass("message-active");
 
         });
 
-        function printCart() {
-
-            $(".cart-prod-container").html("");
-
-            let prefix = "";
-            if(window.location.href.indexOf("index.html") <= 0) {
-                prefix = "../";
-            }
-
-            localStorage.setItem("cart", JSON.stringify(cart));
-            let cartItems = JSON.parse(localStorage.getItem("cart"));
-
-            $.each(cartItems, function(i){
-
-                let imgCartContainer = $("<div>").addClass("col-4 img-cart");
-                let imgCart = $("<img>").attr({"src":prefix + cartItems[i].product.picture, "class": "ml-2", "alt": cartItems[i].product.name + " perfume"});
-                let cartInfo = $("<div>").addClass("col-4 cart-prod-info");
-                let cartUl = $("<ul>").addClass("cart-name-size pt-4");
-                let cartName = $("<p>").attr("id", "name" +i).html(cartItems[i].product.name);
-                let cartSize = $("<p>").append($("<p>")).attr({"id": "size"}).html("50 ml");
-                let cartPriceContainer = $("<div>").addClass("col-4 cart-prod-price pt-4").attr("id", "cart-prod-price"+i);
-                let cartPrice = $("<p>").attr({"class": "pr-2 text-right price", "id": "price" +i}).html((cartItems[i].product.smallprice)*(cartItems[i].amount) + "  SEK");
-                let quantityWrapper = $("<span>").addClass("input-group pl-2 d-flex justify-content-end");
-                let inputMinus = $("<input>").attr({"type": "button", "id": "button-minus"+i, "value": "-", "class": "button-minus btn pl-0 pr-1", "data-field": "quantity"});
-                let inputValue = $("<input>").attr({"type": "number", "id": "number"+i, "step": 1, "max": "", "value": cartItems[i].amount, "class": "quantity-field", "name": "quantity"});
-                let inputPlus = $("<input>").attr({"type": "button", "id": "button-plus"+i, "value": "+", "class": "button-plus btn p-0 mr-2", "data-field": "quantity"});
-    
-    
-                $(".cart-prod-container").append(imgCartContainer, cartInfo, cartPriceContainer);
-                imgCartContainer.append(imgCart);
-                cartInfo.append(cartUl);
-                cartUl.append(cartName, cartSize);
-                cartPriceContainer.append(cartPrice, quantityWrapper);
-                quantityWrapper.append(inputMinus, inputValue, inputPlus);
-
-                $("#btnCO").on("click", function(){
-                    cart.push(cartItems[i]);
-                    addToCart();
-                    putInStorage();
-                    saveCart();
-                    location.href = "html/cart.html";
-                }) // TESTADE
-                $(inputPlus).on("click",function(){
-                    let amount =inputValue.value * 1;
-                    localStorage.getItem('cart',JSON.stringify(inputValue));
-                    $(amount).html(inputValue[i].amount);
-                    inputPlus = amount * 1;
-                    console.log(inputPlus);
-                })
-
-            })
-
-            //Räknar ut totalen av alla produkter i varukorgen och skriver ut
-            let total = 0;
-
-            for (let i = 0; i < cartItems.length; i++) {
-
-                total += cartItems[i].product.smallprice*cartItems[i].amount;
-                
-            }
-            $("#totPrice").html(total + " SEK");
-    
-        }
+        
 
     });
 
+    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    function printCart() {
+
+        $(".cart-prod-container").html("");
+
+        let prefix = "";
+        if(window.location.href.indexOf("index.html") <= 0) {
+            prefix = "../";
+        }
+
+        //Räknar ut totalen av alla produkter i varukorgen och skriver ut
+        let total = 0;
+
+        $.each(cartItems, function(i){
+
+            let cartProdContainer = $("<div>").addClass("col-12 container");
+            let imgCartContainer = $("<div>").addClass("col-4 img-cart");
+            let imgCart = $("<img>").attr({"src":prefix + cartItems[i].product.picture, "class": "ml-2", "alt": cartItems[i].product.name + " perfume"});
+            let cartInfo = $("<div>").addClass("col-4 cart-prod-info");
+            let cartUl = $("<ul>").addClass("cart-name-size pt-4");
+            let cartName = $("<p>").attr("id", "name" +i).html(cartItems[i].product.name);
+            let cartSize = $("<p>").append($("<p>")).attr({"id": "size"}).html("50 ml");
+            let cartPriceContainer = $("<div>").addClass("col-4 cart-prod-price pt-4").attr("id", "cart-prod-price"+i);
+            let cartPrice = $("<p>").attr({"class": "pr-2 text-right price", "id": "price" +i}).html((cartItems[i].product.smallprice)*(cartItems[i].amount) + "  SEK");
+            let quantityWrapper = $("<span>").addClass("input-group pl-2 d-flex justify-content-end");
+            let inputMinus = $("<input>").attr({"type": "button", "id": "button-minus"+i, "value": "-", "class": "button-minus btn pl-0 pr-1", "data-field": "quantity"});
+            let inputValue = $("<input>").attr({"type": "number", "id": "number"+i, "step": 1, "max": "", "value": cartItems[i].amount, "class": "quantity-field", "name": "quantity"});
+            let inputPlus = $("<input>").attr({"type": "button", "id": "button-plus"+i, "value": "+", "class": "button-plus btn p-0 mr-2", "data-field": "quantity"});
+
+
+            $(".cart-prod-container").append(cartProdContainer);
+            cartProdContainer.append(imgCartContainer, cartInfo, cartPriceContainer);
+            imgCartContainer.append(imgCart);
+            cartInfo.append(cartUl);
+            cartUl.append(cartName, cartSize);
+            cartPriceContainer.append(cartPrice, quantityWrapper);
+            quantityWrapper.append(inputMinus, inputValue, inputPlus);
+
+            $("#btnCO").on("click", function(){
+                cart.push(cartItems[i]);
+                addToCart();
+                putInStorage();
+                saveCart();
+                location.href = "html/cart.html";
+            }) // ökar antal :)
+            $(inputPlus).on("click",function(){
+                cartItems[i].amount++;
+                localStorage.setItem('cart',JSON.stringify(cartItems));
+                
+
+                printCart();
+                cartCount();
+            })
+            $(inputMinus).on("click",function(){
+                cartItems[i].amount--;
+                localStorage.setItem('cart',JSON.stringify(cartItems));
+
+                if (cartItems[i].amount === 1 ){
+                    
+                }
+                
+
+                printCart();
+                cartCount();
+            })
+
+
+            total += cartItems[i].product.smallprice*cartItems[i].amount;
+        })
+
+        
+
+
+        $("#totPrice").html(total + " SEK");
+
+    }
     function putInStorage() {
             let stringStorage = JSON.stringify(storage);
             let cartStringify = JSON.stringify(cart);
@@ -225,10 +239,10 @@ $(document).ready(function(){
     function addToCart(cartProduct){
             //Klass för produkten som skickas till varukorgen  
 
-            saveCart();
+            //saveCart();
 
             let gotProduct = false;
-            cart.forEach(function(item) {
+            cartItems.forEach(function(item) {
                 if(item.product.name === cartProduct.name) {
                     gotProduct =  true;
                     item.amount++;
@@ -236,35 +250,37 @@ $(document).ready(function(){
             });
 
             if (gotProduct === false) {
-                cart.push(new CartProduct(cartProduct, 1));
+                cartItems.push(new CartProduct(cartProduct, 1));
             }
 
             cartCount();
 
-            localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem("cart", JSON.stringify(cartItems));
     }
 
     function cartCount(){
         let total = 0;
-        for (let i = 0; i < cart.length; i++) {
-            total += cart[i].amount;
+        for (let i = 0; i < cartItems.length; i++) {
+            total += cartItems[i].amount;
             
         }
         $(".badge-icon").html(total);
     }
 
-    function saveCart(){
-        let items;
+    // function saveCart(){
+    //     let items;
 
-        if (localStorage.getItem('cart') === null) {
-            items = [];
-        } 
-        else {
-            items = localStorage.getItem("cart");
-        }
-        items = JSON.parse(localStorage.getItem('cart'));
+    //     if (localStorage.getItem('cart') === null) {
+    //         items = [];
+    //     } 
+    //     else {
+    //         items = localStorage.getItem("cart");
+    //     }
+    //     items = JSON.parse(localStorage.getItem('cart'));
 
-        console.log(items);
-    }
+    //     console.log(items);
+    // }
 
+    printCart();
+    cartCount();
 });
