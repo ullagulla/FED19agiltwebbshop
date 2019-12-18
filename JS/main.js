@@ -69,7 +69,7 @@ $(document).ready(function(){
         iconsHover.append(hoverHeart, hoverCart);
         icons.append(heartIcon, cartIcon);
 
-        //Nedan visar info PÅ produkt-bilderna vid hover desktop
+        //Nedan ger ett rosa hjärta vid klick på hjärtat
 
         $("#heart"+i).on("click", function(event){
             $(".icons").find("img:first").attr("src", "images/heart-pink.png");
@@ -102,6 +102,8 @@ $(document).ready(function(){
 
     });
 }
+
+    //Nedan är en funktion som visar info PÅ produkt-bilderna vid hover desktop
 
     function hoverIcons() {
 
@@ -141,6 +143,7 @@ $(document).ready(function(){
                       }, function() {
                     $(this).find('img').attr("src", "../images/cart-white.png");
                 });
+                printProducts();
             }
             else {
                 $("#info"+i).css("opacity", "1");
@@ -152,6 +155,7 @@ $(document).ready(function(){
     }
 
     let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
     function printCart() {
 
         $(".cart-prod-container").html("");
@@ -233,8 +237,6 @@ $(document).ready(function(){
             localStorage.setItem("products", stringStorage);
             localStorage.setItem("stringCart", cartStringify);
     }
-
-    // let cartprod = new CartProduct(products, 1);
 
     function addToCart(cartProduct){
             //Klass för produkten som skickas till varukorgen  
