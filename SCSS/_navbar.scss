@@ -187,11 +187,11 @@ body {
                 }
 
                 .icons {
-                    @include desktop() {}
 
                     .heart-icon {
+                        background-image: url("../images/heart.png");
+                        background-size: cover;
                         cursor: pointer;
-                        width: 28px;
                         height: 23px;
                     }
 
