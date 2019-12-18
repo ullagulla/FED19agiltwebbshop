@@ -247,7 +247,6 @@ $(document).ready(function(){
     function putInStorage() {
             let stringStorage = JSON.stringify(storage);
             let cartStringify = JSON.stringify(cart);
-            localStorage.clear("products");
             localStorage.setItem("products", stringStorage);
             localStorage.setItem("stringCart", cartStringify);
     }
