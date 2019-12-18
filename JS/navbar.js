@@ -17,7 +17,7 @@ $(document).ready(function(){
         $(".openbtn").on("click", function(){
     
             $(".sidenav").toggleClass("active");
-    
+            
         });
     
         $(".closebtn").on("click", function(){
