@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
     //Klass med alla egenskaper för våra objekt som finns längre ned
 
@@ -39,6 +39,8 @@ $(document).ready(function(){
     let cart = [];
     let storage = [];
 
+    function printProducts() {
+
     $.each(products, function(i){
 
         let prodWrapper = $("<div>").addClass("prod-wrapper col-6 col-md-4 col-lg-4 pb-4");
@@ -49,12 +51,12 @@ $(document).ready(function(){
         });
         let imgContainer = $("<div>").addClass("prod-img pb-3 pb-md-0");
         let img = $("<img>").attr({"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i});
-        let prodInfo = $("<div>").addClass("prod-info text-center").attr("id", "info"+i);
+        let prodInfo = $("<div>").addClass("prod-info").attr("id", "info"+i);
         let title = $("<p>").addClass("prod-name mb-0 pl-3 pt-3").html(products[i].name);
         let price = $("<p>").addClass("prod-price mb-0 pl-3").html(products[i].smallprice + " SEK");
         let iconsHover = $("<div>").addClass("icons-hover d-none d-lg-flex").attr("id", "icons-hover"+i);
-        let hoverHeart = $("<img>").addClass("prod-heart pr-1").attr({"src": "images/heart-white.PNG", "id": "hover-heart" +i});
-        let hoverCart = $("<img>").addClass("prod-cart pl-1").attr({"src": "images/cart-white.PNG", "id": "hover-cart" +i});
+        let hoverHeart = $("<img>").addClass("prod-heart pr-1").attr({"src": "images/heart-white-with-black.png", "id": "hover-heart" +i});
+        let hoverCart = $("<img>").addClass("prod-cart pl-1").attr({"src": "images/cart-white-with-black.png", "id": "hover-cart" +i});
         let icons = $("<div>").addClass("prod-icons pr-1 pb-1");
         let heartIcon = $("<img>").addClass("heart-icon pr-1 pt-3").attr({"src": "images/heart.PNG", "id": "heart" +i});
         let cartIcon = $("<img>").addClass("cart-icon pr-1 pr-3 pt-3").attr({"src": "images/cart.PNG", "id": "cart" +i});
@@ -67,54 +69,10 @@ $(document).ready(function(){
         iconsHover.append(hoverHeart, hoverCart);
         icons.append(heartIcon, cartIcon);
 
-        //Nedan visar info PÅ produkt-bilderna vid hover desktop
-
-        if ($(window).width() > 990) {
-
-            $("#hover"+i).hover(
-                function(){
-                    $("#info"+i).css({
-                        opacity: "1",
-                        transition: "all 0.5s"
-                    });
-                }, function(){
-                    $("#info"+i).css({
-                        opacity: "0",
-                        transition: "all 0.5s"
-                    })
-                }
-            );
-
-            $("#hover"+i).hover(
-                function(){
-                    $("#icons-hover"+i).css({
-                        opacity: "1",
-                        transition: "all 0.5s"
-                    });
-                }, function(){
-                    $("#icons-hover"+i).css({
-                        opacity: "0",
-                        transition: "all 0.5s"
-                    })
-                }
-            );
-
-            $("#hover-div"+i).hover(function() {
-                $(this).find('img').attr("src", "../images/cart.png");
-                  }, function() {
-                $(this).find('img').attr("src", "../images/cart-white.png");
-            });
-
-        }
-
-        else {
-            $("#info"+i).css("opacity", "1");
-
-            $("#icons-hover" +i).css("visibility", "hidden");
-        }
+        //Nedan ger ett rosa hjärta vid klick på hjärtat
 
         $("#heart"+i).on("click", function(event){
-            $(".heart1").css("background-color", "pink");
+            $(".icons").find("img:first").attr("src", "images/heart-pink.png");
             event.stopPropagation();
         })
 
@@ -122,8 +80,6 @@ $(document).ready(function(){
 
         $("#hover-cart"+i).on("click", function(event){
             event.stopPropagation();
-
-            //saveCart();
 
             addToCart(products[i]);
 
@@ -136,8 +92,6 @@ $(document).ready(function(){
         $("#cart"+i).on("click", function(event){
             event.stopPropagation();
 
-            //saveCart();
-
             addToCart(products[i]);
 
             printCart();
@@ -146,11 +100,64 @@ $(document).ready(function(){
 
         });
 
-        
-
     });
+}
+
+    //Nedan är en funktion som visar info PÅ produkt-bilderna vid hover desktop
+
+    function hoverIcons() {
+
+        $.each(products, function(i){
+
+            ($(window).resize(function(){
+                let win = $(this);
+                if (win.width() >= 990) {
+                    $("#hover"+i).hover(
+                        function(){
+                            $("#info"+i).css({
+                                opacity: "1",
+                                transition: "all 0.5s"
+                            });
+                        }, function(){
+                            $("#info"+i).css({
+                                opacity: "0",
+                                transition: "all 0.5s"
+                            })
+                        }
+                    );
+        
+                    $("#hover"+i).hover(
+                        function(){
+                            $("#icons-hover"+i).css({
+                                opacity: "1",
+                                transition: "all 0.5s"
+                            });
+                        }, function(){
+                            $("#icons-hover"+i).css({
+                                opacity: "0",
+                                transition: "all 0.5s"
+                            })
+                        }
+                    );
+        
+                    // $("#hover-div"+i).hover(function() {
+                    //     $(this).find('img').attr("src", "../images/cart.png");
+                    //     }, function() {
+                    //     $(this).find('img').attr("src", "../images/cart-white.png");
+                    // });
+                }
+                else {
+                    $("#info"+i).css("opacity", "1");
+        
+                    $("#icons-hover" +i).css("visibility", "hidden");
+                }
+            }))
+        });
+
+    }
 
     let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
     function printCart() {
 
         $(".cart-prod-container").html("");
@@ -165,7 +172,7 @@ $(document).ready(function(){
 
         $.each(cartItems, function(i){
 
-            let cartProdContainer = $("<div>").addClass("col-12 container d-flex");
+            let cartProdContainer = $("<div>").addClass("col-12 container prod-container d-flex");
             let imgCartContainer = $("<div>").addClass("col-4 img-cart");
             let imgCart = $("<img>").attr({"src":prefix + cartItems[i].product.picture, "class": "ml-2", "alt": cartItems[i].product.name + " perfume"});
             let cartInfo = $("<div>").addClass("col-4 cart-prod-info");
@@ -203,15 +210,16 @@ $(document).ready(function(){
                 printCart();
                 cartCount();
             })
+            
             $(inputMinus).on("click",function(){
                 cartItems[i].amount--;
-                localStorage.setItem('cart',JSON.stringify(cartItems));
-
-                if (cartItems[i].amount === 1 ){
+                
+                if (cartItems[i].amount === 0 ){
                     
+                    cartItems.splice(i, 1);
                 }
                 
-
+                localStorage.setItem('cart',JSON.stringify(cartItems));
                 printCart();
                 cartCount();
             })
@@ -220,12 +228,10 @@ $(document).ready(function(){
             total += cartItems[i].product.smallprice*cartItems[i].amount;
         })
 
-        
-
-
         $("#totPrice").html(total + " SEK");
 
     }
+
     function putInStorage() {
             let stringStorage = JSON.stringify(storage);
             let cartStringify = JSON.stringify(cart);
@@ -234,12 +240,8 @@ $(document).ready(function(){
             localStorage.setItem("stringCart", cartStringify);
     }
 
-    // let cartprod = new CartProduct(products, 1);
-
-    function addToCart(cartProduct){
+    function addToCart(cartProduct) {
             //Klass för produkten som skickas till varukorgen  
-
-            //saveCart();
 
             let gotProduct = false;
             cartItems.forEach(function(item) {
@@ -258,7 +260,7 @@ $(document).ready(function(){
             localStorage.setItem("cart", JSON.stringify(cartItems));
     }
 
-    function cartCount(){
+    function cartCount() {
         let total = 0;
         for (let i = 0; i < cartItems.length; i++) {
             total += cartItems[i].amount;
@@ -267,20 +269,8 @@ $(document).ready(function(){
         $(".badge-icon").html(total);
     }
 
-    // function saveCart(){
-    //     let items;
-
-    //     if (localStorage.getItem('cart') === null) {
-    //         items = [];
-    //     } 
-    //     else {
-    //         items = localStorage.getItem("cart");
-    //     }
-    //     items = JSON.parse(localStorage.getItem('cart'));
-
-    //     console.log(items);
-    // }
-
     printCart();
     cartCount();
+    printProducts();
+    hoverIcons();
 });

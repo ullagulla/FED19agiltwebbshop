@@ -178,6 +178,10 @@ html {
                                     font-size: 10px;
                                 }
 
+                                input.error {
+                                    background-color: red!important;
+                                }
+
                                 #inputEmail {
                                     border-bottom: none;
                                     border-bottom-right-radius: 0;
@@ -465,4 +469,8 @@ html {
             }
         }
     }
+}
+
+.error {
+    background-color: red!important;
 }

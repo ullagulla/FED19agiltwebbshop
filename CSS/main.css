@@ -449,7 +449,7 @@ body {
             font-weight: bold;
             color: white;
             left: 45%;
-            top: 20%;
+            top: 30%;
             transform: translate(-45%, -20%);
             font-size: 20px; } }
         body .container-fluid .prod-container .prod-wrapper .prod-info .prod-name {
@@ -480,7 +480,7 @@ body {
       body .container-fluid .prod-container .prod-wrapper .icons-hover {
         opacity: 0;
         position: absolute;
-        top: 40%;
+        top: 47%;
         left: 50%;
         transform: translate(-50%, -50%); }
         body .container-fluid .prod-container .prod-wrapper .icons-hover img {
@@ -571,7 +571,7 @@ body .products-container {
         font-weight: bold;
         color: white;
         left: 45%;
-        top: 20%;
+        top: 30%;
         transform: translate(-45%, -20%);
         font-size: 20px; } }
     body .products-container .row .prod-info .prod-name {
@@ -715,31 +715,26 @@ body .products-container {
       color: white; }
 
 .container .row .open-button {
-  background-color: white;
+  background-color: black;
   color: black;
   padding: 10px;
   border: none;
   cursor: pointer;
   opacity: 0.9;
   position: fixed;
-  bottom: 0px;
+  bottom: 20px;
   right: 28px;
-  width: 150px;
-  border-radius: 0;
-  border: 1px solid black;
+  border-radius: 50%;
   z-index: 1;
   text-transform: uppercase; }
-  .container .row .open-button:hover {
-    background-color: black;
-    color: white; }
   .container .row .open-button img {
-    height: 20px;
-    width: 20px; }
+    height: 25px;
+    width: 25px; }
 
 .container .row .chat-popup {
   display: none;
   position: fixed;
-  bottom: 0px;
+  bottom: 10px;
   right: 15px;
   border: 1px solid #f1f1f1;
   border-radius: 0;
@@ -888,6 +883,8 @@ html {
         font-weight: bold; }
       html body .container .row .col-12 form .col-12 .form-row .form-control::placeholder {
         font-size: 10px; }
+      html body .container .row .col-12 form .col-12 .form-row input.error {
+        background-color: red !important; }
       html body .container .row .col-12 form .col-12 .form-row #inputEmail {
         border-bottom: none;
         border-bottom-right-radius: 0;
@@ -1072,6 +1069,9 @@ html {
         transform: translate(-50%, -50%);
         width: 20px;
         height: 15px; }
+
+.error {
+  background-color: red !important; }
 
 * {
   box-sizing: border-box; }
