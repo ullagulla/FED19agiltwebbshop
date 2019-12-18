@@ -111,9 +111,8 @@ body {
           display: inline-block;
           font-size: 12px; } }
     body .header-wrapper .row .header-container .icons .heart-icon {
-      background-image: url("../images/heart.png");
-      background-size: cover;
       cursor: pointer;
+      width: 28px;
       height: 23px; }
     body .header-wrapper .row .header-container .icons .cart-icon {
       cursor: pointer;
