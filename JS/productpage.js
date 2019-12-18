@@ -27,6 +27,10 @@ $(document).ready(function(){
 
     });
 
+    $("#btn1").on("click", function(){
+        console.log("hej");
+    })
+
     // Chat modal
 
     $(".open-button").on("click", function(){

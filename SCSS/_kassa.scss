@@ -86,6 +86,7 @@ html {
                                 position: relative;
 
                                 .remove {
+                                    cursor: pointer;
                                     position: absolute;
                                     top: 3px;
                                     left: 1px;
@@ -176,10 +177,6 @@ html {
                             .form-row {
                                 .form-control::placeholder {
                                     font-size: 10px;
-                                }
-
-                                input.error {
-                                    background-color: red!important;
                                 }
 
                                 #inputEmail {
@@ -472,5 +469,5 @@ html {
 }
 
 .error {
-    background-color: red!important;
+    border: 1px dotted red!important;
 }
