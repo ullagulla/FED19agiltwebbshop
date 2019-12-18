@@ -14,7 +14,7 @@ $(document).ready(function(){
     
         //Funktion för sidemenu
     
-        $(".openbtn").on("click", function(){
+        $(".openbtn").on("click", function(e){
     
             $(".sidenav").toggleClass("active");
             
