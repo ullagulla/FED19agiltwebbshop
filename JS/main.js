@@ -199,7 +199,6 @@ $(document).ready(function() {
                 cart.push(cartItems[i]);
                 addToCart();
                 putInStorage();
-                saveCart();
                 location.href = "html/cart.html";
             }) // ökar antal :)
             $(inputPlus).on("click",function(){

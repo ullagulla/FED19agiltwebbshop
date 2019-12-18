@@ -839,6 +839,7 @@ html {
           display: inline-block;
           position: relative; }
           html body .container .row .col-12 .order-container .checkoutProd .pic-wrapper .remove {
+            cursor: pointer;
             position: absolute;
             top: 3px;
             left: 1px;
@@ -882,8 +883,6 @@ html {
         font-weight: bold; }
       html body .container .row .col-12 form .col-12 .form-row .form-control::placeholder {
         font-size: 10px; }
-      html body .container .row .col-12 form .col-12 .form-row input.error {
-        background-color: red !important; }
       html body .container .row .col-12 form .col-12 .form-row #inputEmail {
         border-bottom: none;
         border-bottom-right-radius: 0;
@@ -1070,7 +1069,7 @@ html {
         height: 15px; }
 
 .error {
-  background-color: red !important; }
+  border: 1px dotted red !important; }
 
 * {
   box-sizing: border-box; }
