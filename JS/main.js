@@ -53,8 +53,8 @@ $(document).ready(function(){
         let title = $("<p>").addClass("prod-name mb-0 pl-3 pt-3").html(products[i].name);
         let price = $("<p>").addClass("prod-price mb-0 pl-3").html(products[i].smallprice + " SEK");
         let iconsHover = $("<div>").addClass("icons-hover d-none d-lg-flex").attr("id", "icons-hover"+i);
-        let hoverHeart = $("<img>").addClass("prod-heart pr-1").attr({"src": "images/heart-white.PNG", "id": "hover-heart" +i});
-        let hoverCart = $("<img>").addClass("prod-cart pl-1").attr({"src": "images/cart-white.PNG", "id": "hover-cart" +i});
+        let hoverHeart = $("<img>").addClass("prod-heart pr-1").attr({"src": "images/heart-white-with-black.png", "id": "hover-heart" +i});
+        let hoverCart = $("<img>").addClass("prod-cart pl-1").attr({"src": "images/cart-white-with-black.png", "id": "hover-cart" +i});
         let icons = $("<div>").addClass("prod-icons pr-1 pb-1");
         let heartIcon = $("<img>").addClass("heart-icon pr-1 pt-3").attr({"src": "images/heart.PNG", "id": "heart" +i});
         let cartIcon = $("<img>").addClass("cart-icon pr-1 pr-3 pt-3").attr({"src": "images/cart.PNG", "id": "cart" +i});

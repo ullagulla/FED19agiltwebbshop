@@ -448,7 +448,7 @@ body {
             font-weight: bold;
             color: white;
             left: 45%;
-            top: 20%;
+            top: 30%;
             transform: translate(-45%, -20%);
             font-size: 20px; } }
         body .container-fluid .prod-container .prod-wrapper .prod-info .prod-name {
@@ -479,7 +479,7 @@ body {
       body .container-fluid .prod-container .prod-wrapper .icons-hover {
         opacity: 0;
         position: absolute;
-        top: 40%;
+        top: 47%;
         left: 50%;
         transform: translate(-50%, -50%); }
         body .container-fluid .prod-container .prod-wrapper .icons-hover img {
@@ -570,7 +570,7 @@ body .products-container {
         font-weight: bold;
         color: white;
         left: 45%;
-        top: 20%;
+        top: 30%;
         transform: translate(-45%, -20%);
         font-size: 20px; } }
     body .products-container .row .prod-info .prod-name {
