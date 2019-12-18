@@ -715,31 +715,24 @@ body .products-container {
       color: white; }
 
 .container .row .open-button {
-  background-color: white;
   color: black;
   padding: 10px;
   border: none;
   cursor: pointer;
   opacity: 0.9;
   position: fixed;
-  bottom: 0px;
+  bottom: 20px;
   right: 28px;
-  width: 150px;
-  border-radius: 0;
-  border: 1px solid black;
   z-index: 1;
   text-transform: uppercase; }
-  .container .row .open-button:hover {
-    background-color: black;
-    color: white; }
   .container .row .open-button img {
-    height: 20px;
-    width: 20px; }
+    height: 25px;
+    width: 25px; }
 
 .container .row .chat-popup {
   display: none;
   position: fixed;
-  bottom: 0px;
+  bottom: 10px;
   right: 15px;
   border: 1px solid #f1f1f1;
   border-radius: 0;
