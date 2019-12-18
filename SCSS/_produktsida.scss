@@ -157,6 +157,7 @@
         }
 
         .open-button {
+            background-color: black;
             color: black;
             padding: 10px;
             border: none;
@@ -165,13 +166,9 @@
             position: fixed;
             bottom: 20px;
             right: 28px;
-            // border-radius: 20px;
+            border-radius: 50%;
             z-index: 1;
             text-transform: uppercase;
-            // &:hover {
-            //     background-color:#EADCCF;
-            //     color: white;
-            // }
             img {
                 height: 25px;
                 width: 25px;
