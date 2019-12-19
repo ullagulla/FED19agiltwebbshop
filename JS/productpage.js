@@ -156,6 +156,8 @@ $(document).ready(function(){
 
         $("#totPrice").html(total + " SEK");
 
+        $(".cart-notification").toggleClass("message-active");
+
     }
 
 //     function addToCart(cartProduct) {
