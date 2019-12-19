@@ -46,8 +46,9 @@ $(document).ready(function() {
         let prodWrapper = $("<div>").addClass("prod-wrapper col-6 col-md-4 col-lg-4 pb-4");
         let hoverProduct = $("<div>").addClass("hover-div").attr("id", "hover" +i).on("click", function() {
             storage.push(products[i]);
-            putInStorage();
-            addToCart(products[i]);
+            localStorage.setItem("products", JSON.stringify(storage));
+            // putInStorage();
+            // addToCart(products[i]);
             location.href = "html/produktsida.html";
         });
         let imgContainer = $("<div>").addClass("prod-img pb-3 pb-md-0");
@@ -83,9 +84,7 @@ $(document).ready(function() {
             event.stopPropagation();
 
             addToCart(products[i]);
-            //CHALLE
-            
-            //CHALLE
+
             printCart();
 
             $(".cart-notification").toggleClass("message-active");
@@ -99,69 +98,21 @@ $(document).ready(function() {
 
             printCart();
 
-            $(".cart-notification").toggleClass("message-active");
+            setTimeout(function() {
+                $(".cart-notification").toggleClass("message-active").fadeOut(10000);
+            }, 100);
 
         });
 
     });
 }
 
-    //Nedan är en funktion som visar info PÅ produkt-bilderna vid hover desktop
+let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 
-    function hoverIcons() {
-
-        $.each(products, function(i){
-
-            ($(window).resize(function(){
-                let win = $(this);
-                if (win.width() >= 990) {
-                    $("#hover"+i).hover(
-                        function(){
-                            $("#info"+i).css({
-                                opacity: "1",
-                                transition: "all 0.5s"
-                            });
-                        }, function(){
-                            $("#info"+i).css({
-                                opacity: "0",
-                                transition: "all 0.5s"
-                            })
-                        }
-                    );
-        
-                    $("#hover"+i).hover(
-                        function(){
-                            $("#icons-hover"+i).css({
-                                opacity: "1",
-                                transition: "all 0.5s"
-                            });
-                        }, function(){
-                            $("#icons-hover"+i).css({
-                                opacity: "0",
-                                transition: "all 0.5s"
-                            })
-                        }
-                    );
-        
-                    // $("#hover-div"+i).hover(function() {
-                    //     $(this).find('img').attr("src", "../images/cart.png");
-                    //     }, function() {
-                    //     $(this).find('img').attr("src", "../images/cart-white.png");
-                    // });
-                }
-                else {
-                    $("#info"+i).css("opacity", "1");
-        
-                    $("#icons-hover" +i).css("visibility", "hidden");
-                }
-            }))
-        });
-
-    }
-
-    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 
     function printCart() {
+
+        console.log(cartItems[0]);
 
         $(".cart-prod-container").html("");
 
@@ -271,8 +222,62 @@ $(document).ready(function() {
         $(".badge-icon").html(total);
     }
 
+    putInStorage();
     printCart();
     cartCount();
     printProducts();
     hoverIcons();
+
+        //Nedan är en funktion som visar info PÅ produkt-bilderna vid hover desktop
+
+    function hoverIcons() {
+
+        $.each(products, function(i){
+
+            ($(window).resize(function(){
+                let win = $(this);
+                if (win.width() >= 990) {
+                    $("#hover"+i).hover(
+                        function(){
+                            $("#info"+i).css({
+                                opacity: "1",
+                                transition: "all 0.5s"
+                            });
+                        }, function(){
+                            $("#info"+i).css({
+                                opacity: "0",
+                                transition: "all 0.5s"
+                            })
+                        }
+                    );
+        
+                    $("#hover"+i).hover(
+                        function(){
+                            $("#icons-hover"+i).css({
+                                opacity: "1",
+                                transition: "all 0.5s"
+                            });
+                        }, function(){
+                            $("#icons-hover"+i).css({
+                                opacity: "0",
+                                transition: "all 0.5s"
+                            })
+                        }
+                    );
+        
+                    // $("#hover-div"+i).hover(function() {
+                    //     $(this).find('img').attr("src", "../images/cart.png");
+                    //     }, function() {
+                    //     $(this).find('img').attr("src", "../images/cart-white.png");
+                    // });
+                }
+                else {
+                    $("#info"+i).css("opacity", "1");
+        
+                    $("#icons-hover" +i).css("visibility", "hidden");
+                }
+            }))
+        });
+
+    }
 });
