@@ -83,7 +83,9 @@ $(document).ready(function() {
             event.stopPropagation();
 
             addToCart(products[i]);
-
+            //CHALLE
+            
+            //CHALLE
             printCart();
 
             $(".cart-notification").toggleClass("message-active");

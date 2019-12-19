@@ -30,6 +30,7 @@ body {
     .cartnav {
         #myCart {
             padding: 1px;
+            position: sticky;
         }
 
         .cart-header {
@@ -60,7 +61,7 @@ body {
             margin-top: 20px;
             margin-bottom: 10px;
             padding: 0;
-
+            
             .container{
                 padding: 2px;
 
@@ -197,6 +198,7 @@ body {
 
         a.cartbtn {
             margin: 9px;
+            padding: 8px;
             font-size: 20px;
             color: #818181;
         }

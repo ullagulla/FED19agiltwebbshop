@@ -188,7 +188,8 @@ body {
     padding-top: 60px;
     border-left: 1px solid rgba(211, 211, 211, 0.432); }
     body .cartnav #myCart {
-      padding: 1px; }
+      padding: 1px;
+      position: sticky; }
     body .cartnav .cart-header {
       border-bottom: 1px #ececec solid; }
       body .cartnav .cart-header #rubrik {
@@ -282,6 +283,7 @@ body {
       width: fit-content; }
     body .cartnav a.cartbtn {
       margin: 9px;
+      padding: 8px;
       font-size: 20px;
       color: #818181; }
   body .cart-active {

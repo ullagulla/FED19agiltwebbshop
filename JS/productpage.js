@@ -9,6 +9,9 @@ $(document).ready(function(){
 
     let checkoutProducts = JSON.parse(localStorage.getItem("cart")) || [];
 
+    //CHALLE
+    let charliesvagn = JSON.parse(localStorage.getItem("charliesvagn")) || [];
+    //CHALLE
 
     let prefix = "";
     if(window.location.href.indexOf("index.html") < 0) {
@@ -140,23 +143,24 @@ $(document).ready(function(){
     $("#btn1").on("click", function(){
 
         // addToCart(checkoutProducts[0]);
-        checkoutProducts.push(checkoutProducts[0]);
-        localStorage.setItem('cart', checkoutProducts);
+        // checkoutProducts.push(checkoutProducts[0]);
+        // localStorage.setItem('cart', checkoutProducts);
         cartCount();
         printCart();
+        addToCart2(checkoutProducts[0]);
 
         
         $(".cart-notification").toggleClass("message-active");
 
         console.log(checkoutProducts[0]);
     })
-//// CHARLIES PÅHITT
+    //CHALLE
     function addToCart2(cartProduct) {
         //Klass för produkten som skickas till varukorgen  
 
         let gotProduct = false;
         checkoutProducts.forEach(function(item) {
-            if(item.product.name === cartProduct.name) {
+            if(item.product.name === cartProduct.product.name) {
                 gotProduct =  true;
                 item.amount++;
             }
@@ -167,10 +171,10 @@ $(document).ready(function(){
         }
 
         cartCount();
-
+        printCart();
         localStorage.setItem("cart", JSON.stringify(checkoutProducts));
-}   ///// SLUT PÅ PÅHITT
-
+}
+    //CHALLE
     // Chat modal
 
     $(".open-button").on("click", function(){
