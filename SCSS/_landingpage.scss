@@ -89,6 +89,16 @@ body {
                             transition: all 0.5s;
                         }
                     }
+                    &:hover .icons-hover{
+                        @include desktop(){
+                            opacity: 1;
+                        }
+                    }
+                    &:hover .prod-info {
+                        @include desktop(){
+                            opacity: 1;
+                        }
+                    }
 
                     .prod-img {
                         box-shadow: 0px 0px 14px -3px rgba(140, 137, 140, 1);
@@ -163,6 +173,9 @@ body {
                     top: 47%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                    @include desktop(){
+                        display: block!important;
+                    }
 
                     img {
                         z-index: 200;

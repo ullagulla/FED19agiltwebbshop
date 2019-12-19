@@ -59,6 +59,8 @@ $(document).ready(function(){
                 localStorage.setItem("products", JSON.stringify(products[i]));
                 location.href = "produktsida.html";
 
+                $(".cart-notification").css("display", "none");
+
             });
             let imgContainer = $("<div>").addClass("prod-img pb-3 pb-lg-0");
             let img = $("<img>").attr({"src": prefix + products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i});

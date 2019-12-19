@@ -50,6 +50,7 @@ $(document).ready(function() {
             // putInStorage();
             // addToCart(products[i]);
             location.href = "html/produktsida.html";
+            $(".cart-notification").css("display", "none");
         });
         let imgContainer = $("<div>").addClass("prod-img pb-3 pb-md-0");
         let img = $("<img>").attr({"src": products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i});
@@ -234,13 +235,5 @@ let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
     cartCount();
     printProducts();
 
-        //Nedan är en funktion som visar info PÅ produkt-bilderna vid hover desktop
-
-    $(window).resize(function(){
-        printProducts();
-        putInStorage();
-        printCart();
-        cartCount();
-    })
 
 });
