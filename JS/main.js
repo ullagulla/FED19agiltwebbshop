@@ -84,13 +84,10 @@ $(document).ready(function() {
             event.stopPropagation();
 
             addToCart(products[i]);
-<<<<<<< HEAD
             //CHALLE
 
             //CHALLE
-=======
 
->>>>>>> b84a602ccbbecd9cbeaacbb095b34762e8587a3c
             printCart();
 
             $(".cart-notification").toggleClass("message-active");

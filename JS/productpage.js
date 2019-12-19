@@ -197,18 +197,16 @@ $(document).ready(function(){
 
     //Meddelande när produkt läggs till i varukorgen
 
-<<<<<<< HEAD
-    $("#btn1").on("click", function(){
-        // addToCart(checkoutProducts[0]);
-        // checkoutProducts.push(checkoutProducts[0]);
-        // localStorage.setItem('cart', checkoutProducts);
-        cartCount();
-        printCart();
-        addToCart2(checkoutProducts[0]);
+    // $("#btn1").on("click", function(){
+    //     // addToCart(checkoutProducts[0]);
+    //     // checkoutProducts.push(checkoutProducts[0]);
+    //     // localStorage.setItem('cart', checkoutProducts);
+    //     cartCount();
+    //     printCart();
+    //     addToCart2(checkoutProducts[0]);
 
-        console.log(this.click)
-        $(".cart-notification").toggleClass("message-active");
-=======
+    //     console.log(this.click)
+    //     $(".cart-notification").toggleClass("message-active");
     // $("#btn1").on("click", function(){
 
     //     addToCart(parseCart[0]);
@@ -219,7 +217,6 @@ $(document).ready(function(){
 
         
     //     $(".cart-notification").toggleClass("message-active");
->>>>>>> b84a602ccbbecd9cbeaacbb095b34762e8587a3c
 
     //     console.log(i);
     // })
