@@ -175,7 +175,7 @@ body {
   body #myCart {
     padding: 11px; }
   body .cartnav {
-    height: 100%;
+    height: 100vh;
     padding: 10px;
     width: 32vw;
     visibility: hidden;
@@ -203,6 +203,9 @@ body {
       padding: 0; }
       body .cartnav #mainDiv .container {
         padding: 2px; }
+      body .cartnav #mainDiv .cart-prod-container {
+        height: 370px;
+        overflow: scroll; }
       body .cartnav #mainDiv #empty {
         padding: 6px;
         margin-left: 21px;
@@ -242,7 +245,7 @@ body {
     body .cartnav .totalDiv {
       border-top: 1px solid #e9e9e9;
       border-bottom: 1px solid #e9e9e9;
-      margin-top: 100px;
+      margin-top: 16px;
       margin-left: 14px;
       margin-right: 14px;
       padding-top: 5px; }

@@ -141,7 +141,6 @@ $(document).ready(function(){
     //Meddelande när produkt läggs till i varukorgen
 
     $("#btn1").on("click", function(){
-
         // addToCart(checkoutProducts[0]);
         // checkoutProducts.push(checkoutProducts[0]);
         // localStorage.setItem('cart', checkoutProducts);
@@ -149,7 +148,7 @@ $(document).ready(function(){
         printCart();
         addToCart2(checkoutProducts[0]);
 
-        
+        console.log(this.click)
         $(".cart-notification").toggleClass("message-active");
 
         console.log(checkoutProducts[0]);

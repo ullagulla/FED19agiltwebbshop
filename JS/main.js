@@ -84,12 +84,11 @@ $(document).ready(function() {
 
             addToCart(products[i]);
             //CHALLE
-            
+
             //CHALLE
             printCart();
 
             $(".cart-notification").toggleClass("message-active");
-
         });
 
         $("#cart"+i).on("click", function(event){
