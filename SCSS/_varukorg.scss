@@ -214,9 +214,9 @@ body {
         transition: .2s;
         visibility: visible;
         width: 100%;
-        animation-name: cart-animation;
-        animation-duration: 0.3s;
-        animation-fill-mode: forwards;
+        // animation-name: cart-animation;
+        // animation-duration: 1s;
+        // animation-fill-mode: forwards;
 
         @include desktop() {
             width: 32vw;
@@ -248,9 +248,9 @@ body {
 
 }
 
-$animationstart: 500px;
-$animationend: 0px;
-@keyframes cart-animation{
-  0%{transform: translateX($animationstart); opacity:0;}
-  100%{transform: translateX($animationend); opacity: 1;}
-}
+// $animationstart: 500px;
+// $animationend: 0px;
+// @keyframes cart-animation{
+//   0%{transform: translateX($animationstart); opacity:0;}
+//   100%{transform: translateX($animationend); opacity: 1;}
+// }
