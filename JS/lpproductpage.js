@@ -44,7 +44,7 @@ $(document).ready(function(){
     // $.each(products, function(i){
 
     let cart = [];
-    let storage = [];
+    let storage
 
     let prefix = "";
     if(window.location.href.indexOf("index.html") < 0) {
@@ -56,9 +56,9 @@ $(document).ready(function(){
 
             let prodContainer = $("<div>").addClass("prod-container col-6 col-md-4 col-lg-3 pb-4");
             let hoverProduct = $("<div>").addClass("hover-div").attr("id", "hover" +i).on("click", function() {
-                storage.push(products[i]);
+                localStorage.setItem("products", JSON.stringify(products[i]));
                 location.href = "produktsida.html";
-                putInStorage();
+
             });
             let imgContainer = $("<div>").addClass("prod-img pb-3 pb-lg-0");
             let img = $("<img>").attr({"src": prefix + products[i].picture, "alt": products[i].name + " perfume", "id": "pic"+i});
@@ -135,6 +135,11 @@ $(document).ready(function(){
             }
 
             //Nedan ger ett rosa hjärta vid klick på hjärtat
+
+            $("#hover-heart"+i).on("click", function(event){
+                $(".icons").find("img:first").attr("src", "../images/heart-pink.png");
+                event.stopPropagation();
+            })
 
             $("#heart"+i).on("click", function(event){
                 $(".icons").find("img:first").attr("src", "../images/heart-pink.png");

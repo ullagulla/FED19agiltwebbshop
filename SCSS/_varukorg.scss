@@ -67,8 +67,12 @@ body {
 
             }
             .cart-prod-container{
-                height: 370px;
+                height: 58vh;
                 overflow: scroll;
+                overflow-x: hidden;
+                &::-webkit-scrollbar {
+                    background-color: white;
+                }
             }
 
             #empty{

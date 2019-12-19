@@ -5,67 +5,67 @@ $(document).ready(function(){
         this.amount = amount;
     }
 
-    let cartCheck = false;
-
+    
     //Nedan hämtar vår information från Local storage och skriver ut det på produktsidan
-
+    
     let specificProduct = JSON.parse(localStorage.getItem("products"));
-
+    
     let prefix = "";
     if(window.location.href.indexOf("index.html") < 0) {
         prefix = "../";
     }
-
+    
     let parseCart = JSON.parse(localStorage.getItem("cart")) || [];
-
+    
     function printProduct() {
-
+        
         $("#product-img").html("");
         $("#product-img-desktop").html("");
         $("#product-name").html("");
         $(".price").html("");
-
-
-        $.each(specificProduct, function(i){
-            $("#product-img").append($("<img>").attr({"src": prefix + specificProduct[i].picture, "class": "d-block w-100", "alt": specificProduct[i].name + " perfume"}));
-
-            $("#product-img-desktop").append($("<img>").attr({"src": prefix + specificProduct[i].picture, "class": "d-block w-100", "alt": specificProduct[i].name + " perfume"}));
         
         
-            $("#product-name").append(specificProduct[i].name);
-        
-            $(".price").append(specificProduct[i].smallprice + " SEK");
-
+        // $.each(specificProduct, function(i){
+            $("#product-img").append($("<img>").attr({"src": prefix + specificProduct.picture, "class": "d-block w-100", "alt": specificProduct.name + " perfume"}));
+            
+            $("#product-img-desktop").append($("<img>").attr({"src": prefix + specificProduct.picture, "class": "d-block w-100", "alt": specificProduct.name + " perfume"}));
+            
+            
+            $("#product-name").append(specificProduct.name);
+            
+            $(".price").append(specificProduct.smallprice + " SEK");
+            
             $("#btn1").on("click", function(){
                 // let cartis = localStorage.getItem("products");
                 // let parseCart = JSON.parse(cartis);
-                let newItem = new CartProduct(specificProduct[0], 1);
+                let newItem = new CartProduct(specificProduct, 1);
                 // let cartItem = JSON.stringify(newItem);
                 console.log(newItem);
-
+                
                 // localStorage.setItem("cart", cartItem);
-                parseCart.push(newItem);
-
+                // parseCart.push(newItem);
+                
                 console.log(parseCart);
-
-                console.log(parseCart[i].product.name)
-                console.log(specificProduct[i].name)
-
+                
+                
                 if (parseCart.length === 0) {
                     parseCart.push(newItem);
                     localStorage.setItem("cart", JSON.stringify(parseCart));
-
+                    
                 }
-
+                
                 else {
+                    let cartCheck = false;
                     $(parseCart).each(function(i){
+                        console.log(parseCart[i].product.name)
+                        console.log(specificProduct.name)
                         if (parseCart[i].product.name === specificProduct.name) {
                             parseCart[i].amount++;
                             cartCheck = true;
                             console.log("TJO");
                         }
                     });
-                    if (cartCheck = false){
+                    if (cartCheck === false){
                         parseCart.push(newItem);
                     }
                     localStorage.setItem("cart", JSON.stringify(parseCart));
@@ -80,7 +80,7 @@ $(document).ready(function(){
                 
                 $(".cart-notification").toggleClass("message-active");
             })
-        })
+        // })
     }
 
 
@@ -254,5 +254,7 @@ $(document).ready(function(){
     })
 
     printProduct();
+    printCart();
+    cartCount();
     
 });

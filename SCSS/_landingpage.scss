@@ -140,6 +140,9 @@ body {
                     position: absolute;
                     bottom: 40px;
                     right: 10px;
+                    @include desktop {
+                        visibility: hidden;
+                    }
 
                     .heart-icon {
                         width: 27px;
@@ -206,10 +209,6 @@ body {
                 }
 
                 .image-inspo-wrapper {
-                    animation-name: animationone;
-                    animation-duration: 1s;
-                    animation-fill-mode: forwards;
-                    opacity:0;
                     #inspo-image-2 {
                         width: 100%;
                     }
@@ -217,11 +216,4 @@ body {
             }
         }
     }
-}
-
-$animationstart: 500px;
-$animationend: 0px;
-@keyframes animationone{
-  0%{transform: translateX($animationstart); opacity:0;}
-  100%{transform: translateX($animationend); opacity: 1;}
 }

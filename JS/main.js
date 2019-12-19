@@ -37,7 +37,7 @@ $(document).ready(function() {
     //Nedan loopar igenom alla våra objekt och skapar upp dom i html
 
     let cart = [];
-    let storage = [];
+    let storage
 
     function printProducts() {
 
@@ -45,8 +45,8 @@ $(document).ready(function() {
 
         let prodWrapper = $("<div>").addClass("prod-wrapper col-6 col-md-4 col-lg-4 pb-4");
         let hoverProduct = $("<div>").addClass("hover-div").attr("id", "hover" +i).on("click", function() {
-            storage.push(products[i]);
-            localStorage.setItem("products", JSON.stringify(storage));
+            // storage.push(products[i]);
+            localStorage.setItem("products", JSON.stringify(products[i]));
             // putInStorage();
             // addToCart(products[i]);
             location.href = "html/produktsida.html";
@@ -73,6 +73,11 @@ $(document).ready(function() {
 
         //Nedan ger ett rosa hjärta vid klick på hjärtat
 
+        $("#prod-heart"+i).on("click", function(event){
+            $(".icons").find("img:first").attr("src", "images/heart-pink.png");
+            event.stopPropagation();
+        })
+
         $("#heart"+i).on("click", function(event){
             $(".icons").find("img:first").attr("src", "images/heart-pink.png");
             event.stopPropagation();
@@ -91,6 +96,7 @@ $(document).ready(function() {
             printCart();
 
             $(".cart-notification").toggleClass("message-active");
+
         });
 
         $("#cart"+i).on("click", function(event){
@@ -100,9 +106,8 @@ $(document).ready(function() {
 
             printCart();
 
-            setTimeout(function() {
-                $(".cart-notification").toggleClass("message-active").fadeOut(10000);
-            }, 100);
+            $(".cart-notification").toggleClass("message-active");
+
 
         });
 
@@ -114,7 +119,7 @@ let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 
     function printCart() {
 
-        console.log(cartItems[0]);
+        // console.log(cartItems[0]);
 
         $(".cart-prod-container").html("");
 
@@ -228,58 +233,14 @@ let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
     printCart();
     cartCount();
     printProducts();
-    hoverIcons();
 
         //Nedan är en funktion som visar info PÅ produkt-bilderna vid hover desktop
 
-    function hoverIcons() {
+    $(window).resize(function(){
+        printProducts();
+        putInStorage();
+        printCart();
+        cartCount();
+    })
 
-        $.each(products, function(i){
-
-            ($(window).resize(function(){
-                let win = $(this);
-                if (win.width() >= 990) {
-                    $("#hover"+i).hover(
-                        function(){
-                            $("#info"+i).css({
-                                opacity: "1",
-                                transition: "all 0.5s"
-                            });
-                        }, function(){
-                            $("#info"+i).css({
-                                opacity: "0",
-                                transition: "all 0.5s"
-                            })
-                        }
-                    );
-        
-                    $("#hover"+i).hover(
-                        function(){
-                            $("#icons-hover"+i).css({
-                                opacity: "1",
-                                transition: "all 0.5s"
-                            });
-                        }, function(){
-                            $("#icons-hover"+i).css({
-                                opacity: "0",
-                                transition: "all 0.5s"
-                            })
-                        }
-                    );
-        
-                    // $("#hover-div"+i).hover(function() {
-                    //     $(this).find('img').attr("src", "../images/cart.png");
-                    //     }, function() {
-                    //     $(this).find('img').attr("src", "../images/cart-white.png");
-                    // });
-                }
-                else {
-                    $("#info"+i).css("opacity", "1");
-        
-                    $("#icons-hover" +i).css("visibility", "hidden");
-                }
-            }))
-        });
-
-    }
 });

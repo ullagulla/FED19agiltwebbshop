@@ -128,9 +128,9 @@ $(document).ready(function () {
                 localStorage.setItem('cart', JSON.stringify(checkoutProducts));
             })
 
-            $(".subtotal").html(total + " SEK");
-            $(".total").html(total + " SEK");
-
+                $(".subtotal").html(total + " SEK");
+                $(".total").html(total + " SEK");
+                $(".checkout-total").html(total + " SEK <i class='fas fa-heart'></i>");
 
         });
 
@@ -163,6 +163,9 @@ $(document).ready(function () {
     //Vid klick på add-discount knappen så syns texten nedan 
 
     $(".discount-btn").on("click", function () {
+        if ($(".discount-input").val() === "snajsigt") {
+            $(".invalid-code").html("<small>You just won a free sample of our latest perfume <b>'Like so'</b>.<br> It will be sent with your order <i class='fas fa-heart'></i></small>");
+        }
         $(".invalid-code").slideToggle("fast");
     });
 

@@ -204,8 +204,11 @@ body {
       body .cartnav #mainDiv .container {
         padding: 2px; }
       body .cartnav #mainDiv .cart-prod-container {
-        height: 370px;
-        overflow: scroll; }
+        height: 58vh;
+        overflow: scroll;
+        overflow-x: hidden; }
+        body .cartnav #mainDiv .cart-prod-container::-webkit-scrollbar {
+          background-color: white; }
       body .cartnav #mainDiv #empty {
         padding: 6px;
         margin-left: 21px;
@@ -462,6 +465,9 @@ body {
         position: absolute;
         bottom: 40px;
         right: 10px; }
+        @media (min-width: 990px) {
+          body .container-fluid .prod-container .prod-wrapper .prod-icons {
+            visibility: hidden; } }
         body .container-fluid .prod-container .prod-wrapper .prod-icons .heart-icon {
           width: 27px;
           height: 37px;
@@ -501,21 +507,8 @@ body {
       body .image-animation .row .image-wrapper-2 .inspo-text {
         width: 70%;
         flex-wrap: wrap; } }
-    body .image-animation .row .image-wrapper-2 .image-inspo-wrapper {
-      animation-name: animationone;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      opacity: 0; }
-      body .image-animation .row .image-wrapper-2 .image-inspo-wrapper #inspo-image-2 {
-        width: 100%; }
-
-@keyframes animationone {
-  0% {
-    transform: translateX(500px);
-    opacity: 0; }
-  100% {
-    transform: translateX(0px);
-    opacity: 1; } }
+    body .image-animation .row .image-wrapper-2 .image-inspo-wrapper #inspo-image-2 {
+      width: 100%; }
 
 body .prod-page {
   padding-top: 80px; }

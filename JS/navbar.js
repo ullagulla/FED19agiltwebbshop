@@ -40,7 +40,7 @@ $(document).ready(function(){
         })
   
 
-        //funktion för att skicka vidare produkter till varukorg
+       // funktion för att skicka vidare produkter till varukorg
 
     let information = localStorage.getItem("stringCart");
     let productInfo = JSON.parse(information);
@@ -55,39 +55,10 @@ $(document).ready(function(){
         storage.push(productInfo[i]);
         localStorage.clear("productFromCart");
         localStorage.setItem("productFromCart", storage);
-        // location.href = "produktsida.html";
+        location.href = "produktsida.html";
 
 
     });
-
-    // $(".img-cart").append($("<img>").attr({"src":prefix + productInfo[0].picture, "class": "ml-2", "alt": productInfo[0].name + " perfume"}));
-
-    // $("#name").text(productInfo[0].name);
-
-    // $("#price").text(productInfo[0].smallprice + ".00 kr");
-
-    //Nedan gör det möjligt att ta bort en produkt i varukorgen
-
-    // let removeCartItemButtons = $(".removebtn");
-
-    // for (let i = 0; i < removeCartItemButtons.length; i++) {
-    //     var button = removeCartItemButtons[i];
-
-    //     button.addEventListener("click", function(event){
-    //         let buttonClicked = event.target
-    //         buttonClicked.parentElement.parentElement.remove();
-    //     })
-        
-    // }
-
-    // $.forEach(removeCartItemButtons, function() {
-    //     let button = removeCartItemButtons[i];
-    //     button.on("click", function(){
-
-    //         var buttonClicked = event.target
-    //         buttonClicked.parentElement.parentElement.remove();
-    //     })
-    // });
 
 });
 
