@@ -35,6 +35,7 @@ body {
 
         .cart-header {
             border-bottom: 1px rgb(236, 236, 236) solid;
+
             #rubrik {
                 padding: 6px;
                 margin-left: 6px;
@@ -62,20 +63,30 @@ body {
             margin-bottom: 10px;
             padding: 0;
 
-            .container{
+            .container {
                 padding: 2px;
 
             }
-            .cart-prod-container{
+
+            .cart-prod-container {
                 height: 58vh;
                 overflow: scroll;
                 overflow-x: hidden;
+
                 &::-webkit-scrollbar {
                     background-color: white;
                 }
             }
 
-            #empty{
+            .remove {
+                cursor: pointer;
+                position: absolute;
+                top: 3px;
+                left: 14px;
+                font-weight: bold;
+            }
+
+            #empty {
                 padding: 6px;
                 margin-left: 21px;
                 margin-top: 10px;
@@ -161,17 +172,18 @@ body {
 
         #totalBtn {
             margin-top: 20px;
-                a{
-                    width: inherit;
-                }
 
-                #btnCO {
-                    border-radius: 0;
-                    border: 1px solid black;
-                    font-size: 14px;
-                    text-transform: uppercase;
-                    background-color: black!important;
-                 }
+            a {
+                width: inherit;
+            }
+
+            #btnCO {
+                border-radius: 0;
+                border: 1px solid black;
+                font-size: 14px;
+                text-transform: uppercase;
+                background-color: black !important;
+            }
         }
 
         .input-group {
@@ -193,10 +205,11 @@ body {
                 &[type=number]::-webkit-outer-spin-button {
                     -webkit-appearance: none;
                 }
+
                 input[type=number] {
                     -moz-appearance: textfield;
                     -webkit-appearance: none;
-                } 
+                }
             }
 
             .button-plus {
@@ -215,12 +228,11 @@ body {
     .cart-active {
         z-index: 99999;
         padding: 10px;
-        transition: .2s;
         visibility: visible;
         width: 100%;
-        // animation-name: cart-animation;
-        // animation-duration: 1s;
-        // animation-fill-mode: forwards;
+        animation-name: cart-animation;
+        animation-duration: 0.2s;
+        animation-fill-mode: both;
 
         @include desktop() {
             width: 32vw;
@@ -244,6 +256,7 @@ body {
         position: absolute;
         top: 0;
         right: 0px;
+
         img {
             width: 30px;
             height: 30px;
@@ -252,9 +265,17 @@ body {
 
 }
 
-// $animationstart: 500px;
-// $animationend: 0px;
-// @keyframes cart-animation{
-//   0%{transform: translateX($animationstart); opacity:0;}
-//   100%{transform: translateX($animationend); opacity: 1;}
-// }
+$animationstart: 500px;
+$animationend: 0px;
+
+@keyframes cart-animation {
+    0% {
+        transform: translateX($animationstart);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX($animationend);
+        opacity: 1;
+    }
+}

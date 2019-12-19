@@ -16,6 +16,12 @@
     }
 }
 
+@mixin large-desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
 @mixin font-style {
     font-family: 'Work Sans', sans-serif;
 }
@@ -89,13 +95,15 @@ body {
                             transition: all 0.5s;
                         }
                     }
-                    &:hover .icons-hover{
-                        @include desktop(){
-                            opacity: 1;
+
+                    &:hover .icons-hover {
+                        @include desktop() {
+                            visibility: visible;
                         }
                     }
+
                     &:hover .prod-info {
-                        @include desktop(){
+                        @include desktop() {
                             opacity: 1;
                         }
                     }
@@ -120,10 +128,16 @@ body {
                         opacity: 0;
                         font-weight: bold;
                         color: white;
-                        left: 45%;
-                        top: 30%;
-                        transform: translate(-45%, -20%);
+                        left: 47%;
+                        top: 15%;
+                        transform: translate(-47%, -15%);
                         font-size: 20px;
+                    }
+
+                    @include large-desktop() {
+                        left: 47%;
+                        top: 28%;
+                        transform: translate(-47%, -28%);
                     }
 
                     .prod-name {
@@ -150,6 +164,7 @@ body {
                     position: absolute;
                     bottom: 40px;
                     right: 10px;
+
                     @include desktop {
                         visibility: hidden;
                     }
@@ -168,13 +183,14 @@ body {
                 }
 
                 .icons-hover {
-                    opacity: 0;
+                    visibility: hidden;
                     position: absolute;
                     top: 47%;
                     left: 50%;
-                    transform: translate(-50%, -50%);
-                    @include desktop(){
-                        display: block!important;
+                    transform: translate(-47%, -50%);
+
+                    @include desktop() {
+                        display: block !important;
                     }
 
                     img {

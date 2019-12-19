@@ -50,8 +50,9 @@
                 position: -webkit-sticky;
                 position: sticky;
                 top: 20%;
+
                 #sel1 {
-                    border-radius: 0!important;
+                    border-radius: 0 !important;
                 }
             }
 
@@ -93,6 +94,7 @@
         a {
             color: rgb(114, 114, 114);
             font-size: 15px;
+
             &:hover {
                 color: black;
                 text-decoration: none;
@@ -149,8 +151,9 @@
                 border-radius: 0;
                 border: 1px solid black;
                 font-size: 14px;
+
                 &:hover {
-                    background-color: black!important;
+                    background-color: black !important;
                     color: white;
                 }
             }
@@ -169,6 +172,7 @@
             border-radius: 50%;
             z-index: 1;
             text-transform: uppercase;
+
             img {
                 height: 25px;
                 width: 25px;
@@ -222,6 +226,7 @@
             margin-bottom: 10px;
             border-radius: 0;
             border: 1px solid black;
+
             &:hover {
                 background-color: white;
                 color: black;
@@ -232,6 +237,7 @@
             background-color: #EADCCF;
             color: black;
             border: none;
+
             &:hover {
                 border: 1px solid black;
             }

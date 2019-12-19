@@ -70,7 +70,7 @@ body {
                     width: 100%;
                     animation-name: animation1;
                     animation-duration: 0.3s;
-                    animation-fill-mode: backwards;
+                    animation-fill-mode: both;
 
                     @include desktop() {
                         width: 32vw;
@@ -100,16 +100,11 @@ body {
                     position: absolute;
                     top: 0;
                     left: 0px;
+
                     img {
                         width: 30px;
                         height: 30px;
                     }
-                }
-
-                .inactive {
-                    animation-name: animation2;
-                    animation-duration: 0.3s;
-                    animation-fill-mode: forwards;
                 }
 
                 .search-field {
@@ -139,7 +134,7 @@ body {
                         height: 40px;
 
                         &:hover {
-                            @include desktop(){
+                            @include desktop() {
                                 background-color: black;
                                 transition: 0.5s;
                                 border-radius: 50%;
@@ -210,6 +205,7 @@ body {
                 }
             }
         }
+
         .cart-notification {
             position: fixed;
             background-color: white;
@@ -226,19 +222,22 @@ body {
             border-top-right-radius: 0px;
             width: 200px;
             height: 80px;
+
             .message p a {
                 font-weight: bold;
                 color: black;
+
                 &:hover {
                     text-decoration: none;
                     opacity: 0.7;
                 }
             }
         }
-    
+
         .message-active {
             visibility: visible;
-            animation: fadeout 5s ease;
+            animation: fadeout 3s;
+            animation-duration: 7s;
             opacity: 0;
         }
     }
@@ -250,16 +249,23 @@ body {
     }
 }
 
-$animationstart: -150px;
-$animationend: 0px;
-@keyframes animation1{
-  0%{transform: translateX($animationstart); opacity:0;}
-  100%{transform: translateX($animationend); opacity: 1;}
+@keyframes beat {
+    to {
+        transform: scale(1.2);
+    }
 }
 
-$animationstart: 0px;
-$animationend: -150px;
-@keyframes animation2{
-  0%{transform: translateX($animationstart); opacity:1;}
-  100%{transform: translateX($animationend); opacity: 0;}
+$animationstart: -150px;
+$animationend: 0px;
+
+@keyframes animation1 {
+    0% {
+        transform: translateX($animationstart);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX($animationend);
+        opacity: 1;
+    }
 }

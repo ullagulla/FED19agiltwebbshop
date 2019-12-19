@@ -8,6 +8,8 @@
     }
 }
 
+$uppercase : uppercase;
+
 body {
     @include font-style();
     font-size: 13px;
@@ -20,7 +22,7 @@ body {
             background-color: #EAEAEA;
 
             h4 {
-                text-transform: uppercase;
+                text-transform: $uppercase;
             }
 
             #footer-container {
@@ -45,17 +47,17 @@ body {
 
                 #f-menu2 {
                     h4 {
-                        text-transform: uppercase;
+                        text-transform: $uppercase;
                     }
 
                     .faq {
-                        text-transform: uppercase;
+                        text-transform: $uppercase;
                     }
                 }
 
                 #f-menu3 {
                     h4 {
-                        text-transform: uppercase;
+                        text-transform: $uppercase;
                     }
 
                     span {
@@ -80,15 +82,21 @@ body {
                         border-radius: 0;
                     }
                 }
+
                 .btn {
-                    background-color: black!important;
+                    background-color: black !important;
                     border: 1px solid black;
                     font-size: 14px;
+
                     &:hover {
-                        background-color: white!important;
-                        color: black!important;
+                        background-color: white !important;
+                        color: black !important;
                     }
                 }
+            }
+
+            .sign-up-wrapper {
+                margin-right: 1px;
             }
 
             #img-box {
@@ -125,7 +133,7 @@ body {
             }
 
             #brand {
-                text-transform: uppercase;
+                text-transform: $uppercase;
                 margin: auto;
                 font-weight: bold;
             }

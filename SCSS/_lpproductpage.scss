@@ -16,6 +16,12 @@
     }
 }
 
+@mixin large-desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
 @mixin font-style {
     font-family: 'Work Sans', sans-serif;
 }
@@ -30,16 +36,19 @@ body {
                     text-transform: capitalize;
                     font-size: 45px;
                 }
+
                 .txt-info {
                     font-size: 16px;
                 }
             }
+
             .lp-img-container {
                 animation-name: animationlp;
                 animation-duration: 1.7s;
                 animation-fill-mode: forwards;
-                opacity:0;
+                opacity: 0;
                 margin-top: 155px;
+
                 img {
                     width: 100%;
                 }
@@ -49,6 +58,7 @@ body {
 
     .products-container {
         border: none;
+
         .row {
             .prod-container {
                 position: relative;
@@ -65,6 +75,18 @@ body {
                             background: rgba(0, 0, 0, 0.719);
                             filter: brightness(40%);
                             transition: all 0.5s;
+                        }
+                    }
+
+                    &:hover .icons-hover {
+                        @include desktop() {
+                            visibility: visible;
+                        }
+                    }
+
+                    &:hover .prod-info {
+                        @include desktop() {
+                            opacity: 1;
                         }
                     }
 
@@ -86,17 +108,29 @@ body {
                 top: 1px;
 
                 @include desktop {
+                    font-size: 165px !important;
                     opacity: 0;
                     font-weight: bold;
                     color: white;
-                    left: 45%;
-                    top: 30%;
-                    transform: translate(-45%, -20%);
+                    left: 47%;
+                    top: 15%;
+                    transform: translate(-47%, -15%);
                     font-size: 20px;
+                }
+
+                @include large-desktop() {
+                    font-size: 16px !important;
+                    left: 47%;
+                    top: 20%;
+                    transform: translate(-47%, -20%);
                 }
 
                 .prod-name {
                     text-transform: uppercase;
+
+                    @include desktop() {
+                        text-align: center;
+                    }
                 }
 
                 .prod-price {
@@ -115,6 +149,10 @@ body {
                 bottom: 40px;
                 right: 10px;
 
+                @include desktop {
+                    visibility: hidden;
+                }
+
                 .heart-icon {
                     width: 27px;
                     height: 37px;
@@ -129,12 +167,15 @@ body {
             }
 
             .icons-hover {
-                cursor: pointer;
-                opacity: 0;
+                visibility: hidden;
                 position: absolute;
-                top: 50%;
+                top: 47%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                transform: translate(-47%, -50%);
+
+                @include desktop() {
+                    display: block !important;
+                }
 
                 img {
                     width: 40px;
@@ -147,7 +188,15 @@ body {
 
 $animationstart: 500px;
 $animationend: 0px;
-@keyframes animationlp{
-  0%{transform: translateX($animationstart); opacity:0;}
-  100%{transform: translateX($animationend); opacity: 1;}
+
+@keyframes animationlp {
+    0% {
+        transform: translateX($animationstart);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX($animationend);
+        opacity: 1;
+    }
 }

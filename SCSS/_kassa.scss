@@ -20,6 +20,14 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+@mixin remove-border-bottom-and-radius {
+    border-bottom: none;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
 html {
     scroll-behavior: smooth;
 
@@ -35,32 +43,40 @@ html {
                         cursor: pointer;
                         text-transform: capitalize;
                         font-weight: bold;
+
                         &:hover {
                             opacity: 0.8;
                         }
                     }
+
                     .discount-wrapper {
                         display: none;
+
                         .discount-input {
                             border-bottom: 1px solid black;
                             border-top: none;
                             border-right: none;
                             border-left: none;
                         }
+
                         .discount-btn {
                             font-weight: bold;
                             font-size: 13px;
                             margin-top: 7px;
+
                             &:hover {
                                 opacity: 0.8;
                             }
+
                             &:focus {
-                                outline-style: none!important;
+                                outline-style: none !important;
                             }
                         }
+
                         .invalid-code {
                             display: none;
                             font-weight: bold;
+
                             i {
                                 color: red;
                             }
@@ -105,62 +121,65 @@ html {
                                 .perfume-txt {
                                     font-size: 12px;
                                 }
+
                                 #size {
                                     font-size: 12px;
                                 }
-                            span {
-                                font-size: 14px;
-                            }
 
-                            .prod-name-wrapper {
-
-                                .name {
-                                    text-transform: uppercase;
+                                span {
+                                    font-size: 14px;
                                 }
-                            }
 
-                            .inputs {
-                                display: inline !important;
+                                .prod-name-wrapper {
 
-                                .button-minus {
-                                    width: fit-content;
-
-                                    &:active {
-                                        outline: none;
+                                    .name {
+                                        text-transform: uppercase;
                                     }
                                 }
 
-                                .quantity-field {
-                                    border: none;
-                                    width: 10px;
-                                    height: 30px;
+                                .inputs {
+                                    display: inline !important;
 
-                                    &[type=number]::-webkit-inner-spin-button,
-                                    &[type=number]::-webkit-outer-spin-button {
-                                        -webkit-appearance: none;
+                                    .button-minus {
+                                        width: fit-content;
+
+                                        &:active {
+                                            outline: none;
+                                        }
+                                    }
+
+                                    .quantity-field {
+                                        border: none;
+                                        width: 10px;
+                                        height: 30px;
+
+                                        &[type=number]::-webkit-inner-spin-button,
+                                        &[type=number]::-webkit-outer-spin-button {
+                                            -webkit-appearance: none;
+                                        }
+                                    }
+
+                                    .button-plus {
+                                        width: fit-content;
                                     }
                                 }
+                            }
 
-                                .button-plus {
-                                    width: fit-content;
+                            .col-4 {
+                                .text-right {
+                                    font-size: 14px;
                                 }
                             }
                         }
 
-                        .col-4 {
-                            .text-right {
-                                font-size: 14px;
-                            }
+                        .prod-info {
+                            font-size: 14px;
                         }
                     }
-
-                    .prod-info {
-                        font-size: 14px;
-                    }
-                }
 
                     .continue-shopping a {
                         color: black;
+
                         &:hover {
                             text-decoration: none;
                             opacity: 0.8;
@@ -191,11 +210,7 @@ html {
                                 }
 
                                 #inputZip {
-                                    border-bottom: none;
-                                    border-top-right-radius: 0;
-                                    border-top-left-radius: 0;
-                                    border-bottom-right-radius: 0;
-                                    border-bottom-left-radius: 0;
+                                    @include remove-border-bottom-and-radius() {}
 
                                     @include large-tablet() {
                                         border-top-right-radius: 0.25rem;
@@ -203,19 +218,12 @@ html {
                                 }
 
                                 #inputPersonal {
-                                    border-bottom: none;
-                                    border-top-right-radius: 0;
-                                    border-top-left-radius: 0;
-                                    border-bottom-right-radius: 0;
-                                    border-bottom-left-radius: 0;
+                                    @include remove-border-bottom-and-radius() {}
+
                                 }
 
                                 #inputFirstname {
-                                    border-bottom: none;
-                                    border-top-right-radius: 0;
-                                    border-top-left-radius: 0;
-                                    border-bottom-right-radius: 0;
-                                    border-bottom-left-radius: 0;
+                                    @include remove-border-bottom-and-radius() {}
 
                                     @include large-tablet() {
                                         border-right: 0;
@@ -223,27 +231,17 @@ html {
                                 }
 
                                 #inputLastname {
-                                    border-bottom: none;
-                                    border-top-right-radius: 0;
-                                    border-top-left-radius: 0;
-                                    border-bottom-right-radius: 0;
-                                    border-bottom-left-radius: 0;
+                                    @include remove-border-bottom-and-radius() {}
+
                                 }
 
                                 #inputAddress {
-                                    border-bottom: none;
-                                    border-top-right-radius: 0;
-                                    border-top-left-radius: 0;
-                                    border-bottom-right-radius: 0;
-                                    border-bottom-left-radius: 0;
+                                    @include remove-border-bottom-and-radius() {}
+
                                 }
 
                                 #inputCity {
-                                    border-bottom: none;
-                                    border-top-right-radius: 0;
-                                    border-top-left-radius: 0;
-                                    border-bottom-right-radius: 0;
-                                    border-bottom-left-radius: 0;
+                                    @include remove-border-bottom-and-radius() {}
 
                                     @include large-tablet() {
                                         border-bottom: 1px solid #ced4da;
@@ -310,11 +308,8 @@ html {
                                 border: 1px solid #ced4da;
                                 border-radius: 0.25rem;
                                 border-top: none;
-                                border-bottom: none;
-                                border-top-right-radius: 0;
-                                border-top-left-radius: 0;
-                                border-bottom-right-radius: 0;
-                                border-bottom-left-radius: 0;
+
+                                @include remove-border-bottom-and-radius() {}
                             }
 
                             #inputBankTransfer {
@@ -408,6 +403,7 @@ html {
                         font-weight: bold;
                         text-align: center;
                     }
+
                     .modal-footer {
                         .btn {
                             border-radius: 0;
@@ -417,8 +413,9 @@ html {
 
                         .btn-dark {
                             background-color: black !important;
+
                             &:hover {
-                                background-color: white!important;
+                                background-color: white !important;
                                 color: black;
                             }
                         }
@@ -428,8 +425,10 @@ html {
                         font-size: 15px;
                         font-weight: bold;
                     }
+
                     .place-order-container {
                         display: none;
+
                         .btn {
                             border-radius: 0;
                             border: 1px solid black;
@@ -469,5 +468,5 @@ html {
 }
 
 .error {
-    border: 1px dotted red!important;
+    border: 1px dotted red !important;
 }

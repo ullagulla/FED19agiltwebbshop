@@ -7,11 +7,15 @@ $(document).ready(function () {
         prefix = "../";
     }
 
+    //Hämtar listan från localstorage, eller skapar en ny tom lista om listan i LS är tom
+
     let checkoutProducts = JSON.parse(localStorage.getItem("cart")) || [];
 
     function printCheckoutProducts() {
 
         $(".order-container").html("");
+
+        //Loopar igenom listan och skapar upp produkterna i kassan om det finns några varor i listan
 
         $.each(checkoutProducts, function (i) {
 
@@ -97,7 +101,9 @@ $(document).ready(function () {
 
             }
 
-            $("#remove"+i).on("click", function(){
+            //Tar bort en produkt helt från kassan vid klick på X
+
+            $("#remove" + i).on("click", function () {
                 checkoutProducts.splice(i, 1);
 
                 printCheckoutProducts();
@@ -105,7 +111,8 @@ $(document).ready(function () {
                 localStorage.setItem('cart', JSON.stringify(checkoutProducts));
             })
 
-            // ökar antal :)
+            // Ökar antal produkter i kassan
+
             $(inputPlus).on("click", function () {
                 checkoutProducts[i].amount++;
                 localStorage.setItem('cart', JSON.stringify(checkoutProducts));
@@ -114,6 +121,8 @@ $(document).ready(function () {
                 printCheckoutProducts();
 
             })
+
+            //Minskar antal produkter i kassan
 
             $(inputMinus).on("click", function () {
                 checkoutProducts[i].amount--;
@@ -128,9 +137,11 @@ $(document).ready(function () {
                 localStorage.setItem('cart', JSON.stringify(checkoutProducts));
             })
 
-                $(".subtotal").html(total + " SEK");
-                $(".total").html(total + " SEK");
-                $(".checkout-total").html(total + " SEK <i class='fas fa-heart'></i>");
+            //Skriver ut totalen av alla produkter som finns i kassan
+
+            $(".subtotal").html(total + " SEK");
+            $(".total").html(total + " SEK");
+            $(".checkout-total").html(total + " SEK <i class='fas fa-heart'></i>");
 
         });
 
