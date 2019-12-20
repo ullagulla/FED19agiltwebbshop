@@ -210,7 +210,7 @@ html {
                                 }
 
                                 #inputZip {
-                                    @include remove-border-bottom-and-radius() {}
+                                    @include remove-border-bottom-and-radius();
 
                                     @include large-tablet() {
                                         border-top-right-radius: 0.25rem;
@@ -218,12 +218,12 @@ html {
                                 }
 
                                 #inputPersonal {
-                                    @include remove-border-bottom-and-radius() {}
+                                    @include remove-border-bottom-and-radius();
 
                                 }
 
                                 #inputFirstname {
-                                    @include remove-border-bottom-and-radius() {}
+                                    @include remove-border-bottom-and-radius();
 
                                     @include large-tablet() {
                                         border-right: 0;
@@ -231,17 +231,17 @@ html {
                                 }
 
                                 #inputLastname {
-                                    @include remove-border-bottom-and-radius() {}
+                                    @include remove-border-bottom-and-radius();
 
                                 }
 
                                 #inputAddress {
-                                    @include remove-border-bottom-and-radius() {}
+                                    @include remove-border-bottom-and-radius();
 
                                 }
 
                                 #inputCity {
-                                    @include remove-border-bottom-and-radius() {}
+                                    @include remove-border-bottom-and-radius();
 
                                     @include large-tablet() {
                                         border-bottom: 1px solid #ced4da;
@@ -309,7 +309,7 @@ html {
                                 border-radius: 0.25rem;
                                 border-top: none;
 
-                                @include remove-border-bottom-and-radius() {}
+                                @include remove-border-bottom-and-radius();
                             }
 
                             #inputBankTransfer {
